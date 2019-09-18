@@ -149,89 +149,78 @@ iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 
 
-:root { --side-bar-bg-color: #eee8d5; --text-color: #839496; --item-hover-bg-color: #eee8d5; --window-border: 1px solid #93a1a1; --active-file-bg-color: #fdf6e3; --active-file-text-color: #93a1a1; --item-hover-text-color: #93a1a1; }
+:root { --window-border: none; --typora-center-window-title: true; --active-file-bg-color: #f3f3f3; --bg-color: #fcfcfc; --control-text-color: #777; }
+.mac-seamless-mode #typora-sidebar { top: var(--mac-title-bar-height); padding-top: 0px; height: auto; }
+html, body, #write { background: rgb(252, 252, 252); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Raleway, STHeiti, sans-serif; font-weight: 300; }
+h1, h2, h3, h4, h5, h6 { color: rgb(17, 17, 17); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Ubuntu, STHeiti, sans-serif; }
 html { font-size: 16px; }
-body { font-family: Consolas, Mononoki, "Roboto Sans", "Liberation Mono", "Microsoft YaHei", monospace; color: rgb(88, 110, 117); line-height: 1.6; background-color: rgb(253, 246, 227); }
-#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
-#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
-body > :first-child { margin-top: 0px !important; }
-body > :last-child { margin-bottom: 0px !important; }
-a { color: rgb(38, 139, 210); }
-a:hover { color: rgb(203, 75, 22); }
-.md-toc-inner { color: rgb(147, 161, 161) !important; }
-h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: normal; line-height: 1.4; cursor: text; }
-h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
-h1 tt, h1 code { font-size: inherit; }
-h2 tt, h2 code { font-size: inherit; }
-h3 tt, h3 code { font-size: inherit; }
-h4 tt, h4 code { font-size: inherit; }
-h5 tt, h5 code { font-size: inherit; }
-h6 tt, h6 code { font-size: inherit; }
-h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 232, 213); }
-h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 232, 213); }
-h3 { font-size: 1.5em; line-height: 1.43; }
-h4 { font-size: 1.25em; }
-h5 { font-size: 1em; }
-h6 { font-size: 1em; color: rgb(119, 119, 119); }
-p, ul, ol, dl, table { margin: 0.8em 0px; }
-blockquote { margin: 1.6em 3.2em; }
-li > ol, li > ul { margin: 0px; }
-hr { height: 1px; padding: 0px; margin: 24px 0px; background-color: rgb(238, 232, 213); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(238, 232, 213); }
-body > h2:first-child { margin-top: 0px; padding-top: 0px; }
-body > h1:first-child { margin-top: 0px; padding-top: 0px; }
-body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
-body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
-a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
-h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
-li p.first { display: inline-block; }
-ul, ol { padding-left: 30px; }
-ul:first-child, ol:first-child { margin-top: 0px; }
-ul:last-child, ol:last-child { margin-bottom: 0px; }
-blockquote { border-left: 4px solid rgb(181, 137, 0); padding: 0px 15px; color: rgb(147, 161, 161); }
-blockquote blockquote { padding-right: 0px; }
-table { padding: 0px; word-break: initial; }
-table tr { border-top: 1px solid rgb(204, 204, 204); margin: 0px; padding: 0px; }
-table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
-table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
-table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
-table tr th:first-child, table tr td:first-child { margin-top: 0px; }
-table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
-.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
-.md-fences, code, tt { background-color: rgb(238, 232, 213); color: rgb(203, 75, 22); border-radius: 3px; font-family: Consolas, Mononoki, "Roboto Mono", "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
-.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
+#write { max-width: 914px; text-align: justify; }
+#write > h1:first-child { margin-top: 2.75rem; }
+#write > h2:first-child { margin-top: 1.75rem; }
+#write > h3:first-child { margin-top: 1rem; }
+#write > h4:first-child { margin-top: 0.5rem; }
+h1 { font-weight: normal; line-height: 4rem; margin: 4rem 0px 1.75rem; padding: 20px 30px; text-align: center; text-transform: uppercase; }
+h2 { font-weight: normal; line-height: 3rem; margin: 3rem 0px 1.9375rem; padding: 0px 30px; text-align: center; text-transform: uppercase; }
+h3 { font-weight: normal; }
+h4 { font-weight: normal; }
+h5 { font-size: 1.125rem; font-weight: normal; }
+h6 { font-size: 1rem; font-weight: bold; }
+p { color: rgb(17, 17, 17); font-size: 1rem; line-height: 1.75rem; margin: 0px 0px 1.25rem; }
+#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
+#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
+#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
+#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
+@media screen and (max-width: 48em) {
+  blockquote { margin-left: 1rem; margin-right: 0px; padding: 0.5em; }
+  .h1, h1 { font-size: 2.827rem; }
+  .h2, h2 { font-size: 1.999rem; }
+  .h3, h3 { font-size: 1.413rem; }
+  .h4, h4 { font-size: 1.25rem; }
+  .h5, h5 { font-size: 1.15rem; }
+  .h6, h6 { font-size: 1rem; }
+}
+a, .md-def-url { color: rgb(153, 0, 0); text-decoration: none; }
+a:hover { text-decoration: underline; }
+table { margin-bottom: 20px; }
+table th, table td { padding: 8px; line-height: 1.25rem; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); }
+table th { font-weight: bold; }
+table thead th { vertical-align: bottom; }
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
+table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
+code, .md-fences { border: 1px solid rgb(204, 204, 204); padding: 0.1em; font-size: 0.9em; margin-left: 0.2em; margin-right: 0.2em; }
+.md-fences { margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
 .task-list { padding-left: 0px; }
-.task-list-item { padding-left: 32px; }
-.task-list-item input { top: 3px; left: 8px; }
-@media screen and (min-width: 914px) {
+.task-list-item { padding-left: 2.125rem; }
+.task-list-item input { top: 3px; }
+.task-list-item input::before { content: ""; display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; text-align: center; border: 1px solid gray; background-color: rgb(253, 253, 253); margin-left: 0px; margin-top: -0.8rem; }
+.task-list-item input:checked::before, .task-list-item input[checked]::before { content: "◼"; font-size: 0.8125rem; line-height: 0.9375rem; margin-top: -1rem; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .task-list-item input::before { margin-top: -0.2rem; }
+  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
 }
-@media print {
-  html { font-size: 13px; }
-  table, pre { break-inside: avoid; }
-  pre { overflow-wrap: break-word; }
-}
-.md-fences { background-color: rgb(238, 232, 213); }
-#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
-.mathjax-block > .code-tooltip { bottom: 0.375rem; }
-#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
-#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
-.md-image > .md-meta { border-radius: 3px; font-family: Consolas, Mononoki, "Roboto Mono", "Liberation Mono", Courier, monospace; padding: 8px 16px; font-size: 0.9em; color: inherit; }
-.md-tag { color: inherit; }
-.md-toc { margin-top: 10px; padding-bottom: 10px; }
-.sidebar-tabs { border-bottom: none; }
-#typora-quick-open { background-color: rgb(238, 232, 213); }
-#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
-#md-notification::before { top: 10px; }
-.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
-header, .context-menu, .megamenu-content, footer { font-family: Consolas, Mononoki, "Roboto Mono", "Liberation Mono", monospace; }
-.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
-.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
+blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid gray; }
+blockquote, blockquote p { line-height: 1.6; color: rgb(111, 111, 111); }
+#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin-top: -1.5em; color: rgb(153, 153, 153); width: 100vw; max-width: calc(100% + 60px); margin-left: -30px; border-left: 30px solid rgb(248, 248, 248); border-right: 30px solid rgb(248, 248, 248); }
+.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
+p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
+.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
+.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
+.md-image > img { margin-top: 2px; }
+.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
+#typora-source { color: rgb(85, 85, 85); }
+#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
+#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
+#md-notification::before { top: 14px; }
+#md-notification { background: rgb(238, 238, 238); }
+.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
+#typora-sidebar { box-shadow: none; }
+.file-list-item, .show-folder-name .file-list-item { padding-top: 20px; padding-bottom: 20px; line-height: 20px; }
+.file-list-item-summary { height: 40px; line-height: 20px; }
 
 
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name="welcome-to-ruiqi-chen's-homepage" class="md-header-anchor"></a><span>Welcome to Ruiqi Chen&#39;s Homepage</span></h1><p>&nbsp;</p><p><span>Hello, I&#39;m Ruiqi Chen, a junior student from Peking University (PKU), China. I major in Intelligence Science and Technology at the Department of Machine Intelligence, and I am most interested in cognitive science. I plan to apply for PhD programs in cognitive science in the US, and now I am urgently seeking for relevant information. Please contact me if you could help and I would appreciate it a lot.</span></p><p><strong><span>You can find me at (firstname)(lastname)(AT)(pku)(DOT)(edu)(DOT)(com).</span></strong></p><p><strong><span>You can download my CV </span><a href='Ruiqi_Chen_CV.pdf'><span>here</span></a><span>.</span></strong></p><p>&nbsp;</p><h2><a name="news" class="md-header-anchor"></a><span>News</span></h2><ul><li><span>I have just finished a five-week long summer research about EEG functional-connectivity-based microstates and its implications at Prof. </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html'><span>Bo Hong</span></a><span>&#39;s lab at Tsinghua University (THU), China. (</span><a href='summer-research-THU/index.html'><span>Details</span></a><span>)</span></li><li><span>Currently, I am preparing for my undergraduate research project about sequential working memory with the guidance of Prof. </span><a href='http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm'><span>Huan Luo</span></a><span>. (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/'><span>Details</span></a><span>)</span></li><li><span>I participated in the </span><em><span>2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science</span></em><span> at THU this summer. (</span><a href='summer-school/index.html'><span>Details</span></a><span>)</span></li><li><span>I have been taking a lot of courses about cognitive neuroscience at PKU. (</span><a href='#relevant-courses'><span>Details</span></a><span>)</span></li></ul><p>&nbsp;</p><p><strong><span>Last updated:</span></strong><span> 17, Sept. 2019</span></p><p>&nbsp;</p><p>&nbsp;</p><h2><a name="research-experience" class="md-header-anchor"></a><span>Research Experience</span></h2><h3><a name="idg/mcgovern-institute-for-brain-research-\|-tsinghua-university-|-2019.7---2019.8-([details](summer-research-thu/index.html))" class="md-header-anchor"></a><span>IDG/McGovern Institute for Brain Research </span><span>|</span><span> Tsinghua University | 2019.7 - 2019.8 (</span><a href='summer-research-THU/index.html'><span>Details</span></a><span>)</span></h3><p><span>Advisor: Prof. </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html'><span>Bo Hong</span></a><span> (PI)</span></p><p><strong><span>EEG Oddball Experiment</span></strong></p><ul><li><p><span>Designed an auditory oddball experiment with </span><em><span>Psychtoolbox</span></em></p></li><li><p><span>Conducted EEG experiment on </span><em><span>Neuracle</span></em><span> and </span><em><span>Neuroscan</span></em><span> platform</span></p></li><li><p><span>Event-related potential (ERP) analysis with </span><em><span>EEGLAB</span></em></p><ul><li><span>Filtering, artifact rejection / correction, ERP plot, etc.</span></li><li><span>Read part of </span><em><span>An Introduction to the Event-Related Potential Technique</span></em><span> by </span><em><span>Steven Luck</span></em></li></ul></li></ul><p><strong><span>Pilot Study about EEG Functional-Connectivity-Based Microstates</span></strong></p><ul><li><p><span>EEG microstate analysis with </span><em><span>MATLAB</span></em></p><ul><li><span>Global-field-power-based analysis with </span><em><span>Microstate EEGlab Toolbox</span></em></li><li><span>Functional-connectivity-based analysis with the </span><em><span>Statistics and Machine Learning Toolbox</span></em></li></ul></li><li><p><span>Learned a variety of data analysis technique</span></p><ul><li><span>k-means clustering, multidimensional scaling, silhouette evaluation</span></li><li><span>Dynamic general linear model, unsupervised learning</span></li></ul></li></ul><p>&nbsp;</p><h3><a name="idg/mcgovern-institute-for-brain-research-\|-peking-university-|-2019.3---present" class="md-header-anchor"></a><span>IDG/McGovern Institute for Brain Research </span><span>|</span><span> Peking University | 2019.3 - Present</span></h3><p><span>Advisor: Prof. </span><a href='http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm'><span>Huan Luo</span></a><span> (PI)</span></p><h5><a name="**eeg-data-analysis-practice-|-2019.3**" class="md-header-anchor"></a><strong><span>EEG data analysis practice | 2019.3</span></strong></h5><ul><li><span>Implemented an inverted encoding model based on the EEG data collected in a visual working memory task (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/EEG_data_processing_practice'><span>Link</span></a><span>)</span></li><li><span>Reconstructed the tuning curve for the orientation of two Gabor stimuli</span></li><li><span>Practiced MATLAB programming and EEG multivariate pattern analysis</span></li></ul><h5><a name="**project:-the-representation-of-time-and-order-in-working-memory-|-2019.4----present**" class="md-header-anchor"></a><strong><span>Project: The representation of time and order in working memory | 2019.4 -- Present</span></strong><span> </span></h5><ul><li><span>Completed a review with over 11,000 Chinese characters about the temporal organization of visual working memory (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading'><span>Link</span></a><span>)</span></li><li><span>Currently designing an EEG experiment to explore the function of underlying neural oscillations during the temporal organization process in auditory working memory (</span><a href='undergraduate-research/本研思路.html'><span>Link</span></a><span>)</span></li></ul><p>&nbsp;</p><h2><a name="activities" class="md-header-anchor"></a><span>Activities</span></h2><ul><li><span>I participated in the </span><em><span>2019 Tsinghua-Peking McGovern CLS CIBR </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1824.html'><span>Summer Program</span></a><span> for Neuroscience and Cognitive Science</span></em><span> at THU in July 2019. (</span><a href='summer-school/index.html'><span>Details</span></a><span>)</span></li></ul><p>&nbsp;</p><h2><a name="relevant-courses" class="md-header-anchor"></a><span>Relevant Courses</span></h2><h3><a name="probability-theory-and-statistics-(90/100)" class="md-header-anchor"></a><span>Probability Theory and Statistics (90/100)</span></h3><ul><li><span>Basic statistical tools including estimation, hypothesis testing, ANOVA, and regression</span></li></ul><h3><a name="computational-perception-and-scene-analysis-(86/100)" class="md-header-anchor"></a><span>Computational Perception and Scene Analysis (86/100)</span></h3><ul><li><span>Physiological, psychological and computational models for vision and audition, the latter covering neural pathway, pitch encoding, source localization, auditory scene analysis, and speech perception</span></li></ul><h3><a name="experimental-psychology-(90/100)" class="md-header-anchor"></a><span>Experimental Psychology (90/100)</span></h3><ul><li><span>Including experiment design, psychophysical methods, sensation and perception, language, etc.</span></li></ul><h3><a name="practice-of-data-structure-and-algorithm-(87/100)" class="md-header-anchor"></a><span>Practice of Data Structure and Algorithm (87/100)</span></h3><ul><li><span>C++ implementation of graph algorithms including network flow, shortest path, interval tree, etc.</span></li></ul><h3><a name="to-be-continued..." class="md-header-anchor"></a><span>To Be Continued...</span></h3><ul><li><span>I am taking courses about </span><strong><span>cognitive psychology, neuropsychology, computational neuroscience, signals and systems, pattern recognition,</span></strong><span> and </span><strong><span>artificial intelligence</span></strong><span> this semester.</span></li></ul><p>&nbsp;</p><h2><a name="skills" class="md-header-anchor"></a><span>Skills</span></h2><ul><li><strong><span>Programming</span></strong><span>: C/C++, Python, MATLAB</span></li><li><strong><span>EEG experiment:</span></strong><span> Psychtoolbox programming, EEG recording</span></li><li><strong><span>EEG data analysis</span></strong><span>: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering</span></li><li><strong><span>English</span></strong><span>: TOEFL 106 (Speaking 24), CET6 618</span></li></ul><p>&nbsp;</p></div>
+<div  id='write'  class = 'is-node'><h1><a name="welcome-to-ruiqi-chen's-homepage" class="md-header-anchor"></a><span>Welcome to Ruiqi Chen&#39;s Homepage</span></h1><p>&nbsp;</p><p><span>Hello, I&#39;m Ruiqi Chen, a junior student from Peking University (PKU), China. I major in Intelligence Science and Technology at the Department of Machine Intelligence, and I am most interested in cognitive science. I plan to apply for PhD programs in cognitive science in the US, now urgently seeking for relevant information. Please contact me if you could help and I would appreciate it a lot.</span></p><p><strong><span>You can find me at (firstname)(lastname)(AT)(pku)(DOT)(edu)(DOT)(com).</span></strong></p><p><strong><span>You can download my CV </span><a href='Ruiqi_Chen_CV.pdf'><span>here</span></a><span>.</span></strong></p><p>&nbsp;</p><h2><a name="news" class="md-header-anchor"></a><span>News</span></h2><ul><li><span>I have just finished a five-week long summer research about EEG functional-connectivity-based microstates and its implications at Prof. </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html'><span>Bo Hong</span></a><span>&#39;s lab at Tsinghua University (THU), China. (</span><a href='summer-research-THU/index.html'><span>Details</span></a><span>)</span></li><li><span>Currently, I am preparing for my undergraduate research project about sequential working memory with the guidance of Prof. </span><a href='http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm'><span>Huan Luo</span></a><span>. (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/'><span>Details</span></a><span>)</span></li><li><span>I participated in the </span><em><span>2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science</span></em><span> at THU this summer. (</span><a href='summer-school/index.html'><span>Details</span></a><span>)</span></li><li><span>I have been taking a lot of courses about cognitive neuroscience at PKU. (</span><a href='#relevant-courses'><span>Details</span></a><span>)</span></li></ul><p>&nbsp;</p><p><strong><span>Last updated:</span></strong><span> 17, Sept. 2019</span></p><p>&nbsp;</p><p>&nbsp;</p><h2><a name="research-experience" class="md-header-anchor"></a><span>Research Experience</span></h2><h3><a name="idg/mcgovern-institute-for-brain-research-\|-tsinghua-university-|-2019.7---2019.8-([details](summer-research-thu/index.html))" class="md-header-anchor"></a><span>IDG/McGovern Institute for Brain Research </span><span>|</span><span> Tsinghua University | 2019.7 - 2019.8 (</span><a href='summer-research-THU/index.html'><span>Details</span></a><span>)</span></h3><p><span>Advisor: Prof. </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html'><span>Bo Hong</span></a><span> (PI)</span></p><p><strong><span>EEG Oddball Experiment</span></strong></p><ul><li><p><span>Designed an auditory oddball experiment with </span><em><span>Psychtoolbox</span></em></p></li><li><p><span>Performed EEG experiment on </span><em><span>Neuracle</span></em><span> and </span><em><span>Neuroscan</span></em><span> platform</span></p></li><li><p><span>Conducted event-related potential (ERP) analysis with </span><em><span>EEGLAB</span></em></p><ul><li><span>Filtering, artifact rejection / correction, ERP plot, etc.</span></li><li><span>Read part of </span><em><span>An Introduction to the Event-Related Potential Technique</span></em><span> by </span><em><span>Steven Luck</span></em></li></ul></li></ul><p><strong><span>Pilot Study about EEG Functional-Connectivity-Based Microstates</span></strong></p><ul><li><p><span>Conducted EEG microstate analysis with </span><em><span>MATLAB</span></em></p><ul><li><span>Global-field-power-based analysis with </span><em><span>Microstate EEGlab Toolbox</span></em></li><li><span>Functional-connectivity-based analysis with the </span><em><span>Statistics and Machine Learning Toolbox</span></em></li></ul></li><li><p><span>Consolidated a variety of data analysis technique</span></p><ul><li><span>k-means clustering, multidimensional scaling, silhouette evaluation</span></li><li><span>Dynamic general linear model, unsupervised learning</span></li></ul></li></ul><p>&nbsp;</p><h3><a name="idg/mcgovern-institute-for-brain-research-\|-peking-university-|-2019.3---present" class="md-header-anchor"></a><span>IDG/McGovern Institute for Brain Research </span><span>|</span><span> Peking University | 2019.3 - Present</span></h3><p><span>Advisor: Prof. </span><a href='http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm'><span>Huan Luo</span></a><span> (PI)</span></p><h5><a name="**eeg-data-analysis-practice-|-2019.3**" class="md-header-anchor"></a><strong><span>EEG data analysis practice | 2019.3</span></strong></h5><ul><li><span>Implemented an inverted encoding model based on the EEG data collected in a visual working memory task (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/EEG_data_processing_practice'><span>Link</span></a><span>)</span></li><li><span>Reconstructed the tuning curve for the orientation of two Gabor stimuli</span></li><li><span>Practiced MATLAB programming and EEG multivariate pattern analysis</span></li></ul><h5><a name="**project:-the-representation-of-time-and-order-in-working-memory-|-2019.4----present**" class="md-header-anchor"></a><strong><span>Project: The representation of time and order in working memory | 2019.4 -- Present</span></strong><span> </span></h5><ul><li><span>Completed a review with over 11,000 Chinese characters about the temporal organization of visual working memory (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading'><span>Link</span></a><span>)</span></li><li><span>Currently designing an EEG experiment to explore the function of underlying neural oscillations during the temporal organization process in auditory working memory (</span><a href='undergraduate-research/本研思路.html'><span>Link</span></a><span>)</span></li></ul><p>&nbsp;</p><h2><a name="activities" class="md-header-anchor"></a><span>Activities</span></h2><ul><li><span>I participated in the </span><em><span>2019 Tsinghua-Peking McGovern CLS CIBR </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1824.html'><span>Summer Program</span></a><span> for Neuroscience and Cognitive Science</span></em><span> at THU in July 2019. (</span><a href='summer-school/index.html'><span>Details</span></a><span>)</span></li></ul><p>&nbsp;</p><h2><a name="relevant-courses" class="md-header-anchor"></a><span>Relevant Courses</span></h2><h3><a name="probability-theory-and-statistics-(90/100)" class="md-header-anchor"></a><span>Probability Theory and Statistics (90/100)</span></h3><ul><li><span>Basic statistical tools including estimation, hypothesis testing, ANOVA, and regression</span></li></ul><h3><a name="computational-perception-and-scene-analysis-(86/100)" class="md-header-anchor"></a><span>Computational Perception and Scene Analysis (86/100)</span></h3><ul><li><span>Physiological, psychological and computational models for vision and audition, the latter covering neural pathway, pitch encoding, source localization, auditory scene analysis, and speech perception</span></li></ul><h3><a name="experimental-psychology-(90/100)" class="md-header-anchor"></a><span>Experimental Psychology (90/100)</span></h3><ul><li><span>Including experiment design, psychophysical methods, sensation and perception, language, etc.</span></li></ul><h3><a name="practice-of-data-structure-and-algorithm-(87/100)" class="md-header-anchor"></a><span>Practice of Data Structure and Algorithm (87/100)</span></h3><ul><li><span>C++ implementation of graph algorithms including network flow, shortest path, interval tree, etc.</span></li></ul><h3><a name="to-be-continued..." class="md-header-anchor"></a><span>To Be Continued...</span></h3><ul><li><span>I am taking courses about </span><strong><span>cognitive psychology, neuropsychology, computational neuroscience, signals and systems, pattern recognition, visualization</span></strong><span> and </span><strong><span>artificial intelligence</span></strong><span> this semester.</span></li></ul><p>&nbsp;</p><h2><a name="skills" class="md-header-anchor"></a><span>Skills</span></h2><ul><li><strong><span>Programming</span></strong><span>: C/C++, Python, MATLAB</span></li><li><strong><span>EEG experiment:</span></strong><span> Psychtoolbox programming, EEG recording</span></li><li><strong><span>EEG data analysis</span></strong><span>: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering</span></li><li><strong><span>English</span></strong><span>: TOEFL 106 (Speaking 24), CET6 618</span></li></ul><p>&nbsp;</p></div>
 </body>
 </html>
