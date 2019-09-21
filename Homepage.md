@@ -103,5 +103,5 @@ Advisor: Prof. [Huan Luo](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154
 -   **Programming**: C/C++, Python, MATLAB
 -   **EEG experiment:** Psychtoolbox programming, EEG recording
 -   **EEG data analysis**: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering
--   **English**: TOEFL 106 (Speaking 24), CET6 618
+-   **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
 
