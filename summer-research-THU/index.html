@@ -149,79 +149,90 @@ iframe { max-width: 100%; width: 100%; border: none; }
 .highlight td, .highlight tr { border: 0px; }
 
 
-:root { --window-border: none; --typora-center-window-title: true; --active-file-bg-color: #f3f3f3; --bg-color: #fcfcfc; --control-text-color: #777; }
-.mac-seamless-mode #typora-sidebar { top: var(--mac-title-bar-height); padding-top: 0px; height: auto; }
-html, body, #write { background: rgb(252, 252, 252); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Raleway, STHeiti, sans-serif; font-weight: 300; }
-h1, h2, h3, h4, h5, h6 { color: rgb(17, 17, 17); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Ubuntu, STHeiti, sans-serif; }
+:root { --side-bar-bg-color: #eee8d5; --text-color: #839496; --item-hover-bg-color: #eee8d5; --window-border: 1px solid #93a1a1; --active-file-bg-color: #fdf6e3; --active-file-text-color: #93a1a1; --item-hover-text-color: #93a1a1; }
 html { font-size: 16px; }
-#write { max-width: 914px; text-align: justify; }
-#write > h1:first-child { margin-top: 2.75rem; }
-#write > h2:first-child { margin-top: 1.75rem; }
-#write > h3:first-child { margin-top: 1rem; }
-#write > h4:first-child { margin-top: 0.5rem; }
-h1 { font-weight: normal; line-height: 4rem; margin: 4rem 0px 1.75rem; padding: 20px 30px; text-align: center; text-transform: uppercase; }
-h2 { font-weight: normal; line-height: 3rem; margin: 3rem 0px 1.9375rem; padding: 0px 30px; text-align: center; text-transform: uppercase; }
-h3 { font-weight: normal; }
-h4 { font-weight: normal; }
-h5 { font-size: 1.125rem; font-weight: normal; }
-h6 { font-size: 1rem; font-weight: bold; }
-p { color: rgb(17, 17, 17); font-size: 1rem; line-height: 1.75rem; margin: 0px 0px 1.25rem; }
-#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
-#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
-#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
-#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
-@media screen and (max-width: 48em) {
-  blockquote { margin-left: 1rem; margin-right: 0px; padding: 0.5em; }
-  .h1, h1 { font-size: 2.827rem; }
-  .h2, h2 { font-size: 1.999rem; }
-  .h3, h3 { font-size: 1.413rem; }
-  .h4, h4 { font-size: 1.25rem; }
-  .h5, h5 { font-size: 1.15rem; }
-  .h6, h6 { font-size: 1rem; }
-}
-a, .md-def-url { color: rgb(153, 0, 0); text-decoration: none; }
-a:hover { text-decoration: underline; }
-table { margin-bottom: 20px; }
-table th, table td { padding: 8px; line-height: 1.25rem; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); }
-table th { font-weight: bold; }
-table thead th { vertical-align: bottom; }
-table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
-table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
-code, .md-fences { border: 1px solid rgb(204, 204, 204); padding: 0.1em; font-size: 0.9em; margin-left: 0.2em; margin-right: 0.2em; }
-.md-fences { margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
+body { font-family: Consolas, Mononoki, "Roboto Sans", "Liberation Mono", "Microsoft YaHei", monospace; color: rgb(88, 110, 117); line-height: 1.6; background-color: rgb(253, 246, 227); }
+#write { max-width: 860px; margin: 0px auto; padding: 20px 30px 100px; }
+#write > ul:first-child, #write > ol:first-child { margin-top: 30px; }
+body > :first-child { margin-top: 0px !important; }
+body > :last-child { margin-bottom: 0px !important; }
+a { color: rgb(38, 139, 210); }
+a:hover { color: rgb(203, 75, 22); }
+.md-toc-inner { color: rgb(147, 161, 161) !important; }
+h1, h2, h3, h4, h5, h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: normal; line-height: 1.4; cursor: text; }
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor { text-decoration: none; }
+h1 tt, h1 code { font-size: inherit; }
+h2 tt, h2 code { font-size: inherit; }
+h3 tt, h3 code { font-size: inherit; }
+h4 tt, h4 code { font-size: inherit; }
+h5 tt, h5 code { font-size: inherit; }
+h6 tt, h6 code { font-size: inherit; }
+h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 232, 213); }
+h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 232, 213); }
+h3 { font-size: 1.5em; line-height: 1.43; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; color: rgb(119, 119, 119); }
+p, ul, ol, dl, table { margin: 0.8em 0px; }
+blockquote { margin: 1.6em 3.2em; }
+li > ol, li > ul { margin: 0px; }
+hr { height: 1px; padding: 0px; margin: 24px 0px; background-color: rgb(238, 232, 213); border-width: 0px 0px 1px; border-style: none none solid; border-top-color: initial; border-right-color: initial; border-left-color: initial; border-image: initial; overflow: hidden; box-sizing: content-box; border-bottom-color: rgb(238, 232, 213); }
+body > h2:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child { margin-top: 0px; padding-top: 0px; }
+body > h1:first-child + h2 { margin-top: 0px; padding-top: 0px; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child { margin-top: 0px; padding-top: 0px; }
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 { margin-top: 0px; padding-top: 0px; }
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p { margin-top: 0px; }
+li p.first { display: inline-block; }
+ul, ol { padding-left: 30px; }
+ul:first-child, ol:first-child { margin-top: 0px; }
+ul:last-child, ol:last-child { margin-bottom: 0px; }
+blockquote { border-left: 4px solid rgb(181, 137, 0); padding: 0px 15px; color: rgb(147, 161, 161); }
+blockquote blockquote { padding-right: 0px; }
+table { padding: 0px; word-break: initial; }
+table tr { border-top: 1px solid rgb(204, 204, 204); margin: 0px; padding: 0px; }
+table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+table tr th { font-weight: bold; border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr td { border: 1px solid rgb(204, 204, 204); text-align: left; margin: 0px; padding: 6px 13px; }
+table tr th:first-child, table tr td:first-child { margin-top: 0px; }
+table tr th:last-child, table tr td:last-child { margin-bottom: 0px; }
+.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); }
+.md-fences, code, tt { background-color: rgb(238, 232, 213); color: rgb(203, 75, 22); border-radius: 3px; font-family: Consolas, Mononoki, "Roboto Mono", "Liberation Mono", Courier, monospace; padding: 2px 4px 0px; font-size: 0.9em; }
+.md-fences { margin-bottom: 15px; margin-top: 15px; padding: 8px 1em 6px; }
 .task-list { padding-left: 0px; }
-.task-list-item { padding-left: 2.125rem; }
-.task-list-item input { top: 3px; }
-.task-list-item input::before { content: ""; display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; text-align: center; border: 1px solid gray; background-color: rgb(253, 253, 253); margin-left: 0px; margin-top: -0.8rem; }
-.task-list-item input:checked::before, .task-list-item input[checked]::before { content: "◼"; font-size: 0.8125rem; line-height: 0.9375rem; margin-top: -1rem; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-  .task-list-item input::before { margin-top: -0.2rem; }
-  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
+.task-list-item { padding-left: 32px; }
+.task-list-item input { top: 3px; left: 8px; }
+@media screen and (min-width: 914px) {
 }
-blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid gray; }
-blockquote, blockquote p { line-height: 1.6; color: rgb(111, 111, 111); }
-#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin-top: -1.5em; color: rgb(153, 153, 153); width: 100vw; max-width: calc(100% + 60px); margin-left: -30px; border-left: 30px solid rgb(248, 248, 248); border-right: 30px solid rgb(248, 248, 248); }
-.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
-p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
-.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
-.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
-.md-image > img { margin-top: 2px; }
-.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
-#typora-source { color: rgb(85, 85, 85); }
-#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
-#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
-#md-notification::before { top: 14px; }
-#md-notification { background: rgb(238, 238, 238); }
-.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
-#typora-sidebar { box-shadow: none; }
-.file-list-item, .show-folder-name .file-list-item { padding-top: 20px; padding-bottom: 20px; line-height: 20px; }
-.file-list-item-summary { height: 40px; line-height: 20px; }
+@media print {
+  html { font-size: 13px; }
+  table, pre { break-inside: avoid; }
+  pre { overflow-wrap: break-word; }
+}
+.md-fences { background-color: rgb(238, 232, 213); }
+#write pre.md-meta-block { padding: 1rem; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border: 0px; border-radius: 3px; color: rgb(119, 119, 119); margin-top: 0px !important; }
+.mathjax-block > .code-tooltip { bottom: 0.375rem; }
+#write > h3.md-focus::before { left: -1.5625rem; top: 0.375rem; }
+#write > h4.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h5.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+#write > h6.md-focus::before { left: -1.5625rem; top: 0.285714rem; }
+.md-image > .md-meta { border-radius: 3px; font-family: Consolas, Mononoki, "Roboto Mono", "Liberation Mono", Courier, monospace; padding: 8px 16px; font-size: 0.9em; color: inherit; }
+.md-tag { color: inherit; }
+.md-toc { margin-top: 10px; padding-bottom: 10px; }
+.sidebar-tabs { border-bottom: none; }
+#typora-quick-open { background-color: rgb(238, 232, 213); }
+#typora-quick-open-item { background-color: rgb(250, 250, 250); border-color: rgb(254, 254, 254) rgb(229, 229, 229) rgb(229, 229, 229) rgb(238, 238, 238); border-style: solid; border-width: 1px; }
+#md-notification::before { top: 10px; }
+.on-focus-mode blockquote { border-left-color: rgba(85, 85, 85, 0.12); }
+header, .context-menu, .megamenu-content, footer { font-family: Consolas, Mononoki, "Roboto Mono", "Liberation Mono", monospace; }
+.file-node-content:hover .file-node-icon, .file-node-content:hover .file-node-open-state { visibility: visible; }
+.mac-seamless-mode #typora-sidebar { background-color: var(--side-bar-bg-color); }
 
 
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name="summer-research-at-tsinghua-university" class="md-header-anchor"></a><span>Summer Research at Tsinghua University</span></h1><p>&nbsp;</p><p><span>From July to August 2019, I finished a five-week summer research at Prof. Hong Bo</span><span>&#39;</span><span>s laboratory at the IDG/McGovern Institute at Tsinghua University, Beijing, China. With the help of Prof. Hong and PhDs at the lab, I got hands-on experience with the electroencephalogram (EEG) operation, and explored the EEG functional connectivity microstates as well as its relation with natural language processing.</span></p><p><strong><span>Research Experience Outline</span></strong></p><ul><li><p><span>Designed an auditory oddball experiment with </span><em><span>Psychtoolbox</span></em></p></li><li><p><span>Performed EEG experiment on </span><em><span>Neuracle</span></em><span> and </span><em><span>Neuroscan</span></em><span> platform</span></p></li><li><p><span>Conducted an Event-related potential (ERP) analysis with </span><em><span>EEGLAB</span></em></p><ul><li><span>Filtering, artifact rejection / correction, ERP plot, etc.</span></li><li><span>Read part of </span><em><span>An Introduction to the Event-Related Potential Technique</span></em><span> by </span><em><span>Steven Luck</span></em></li></ul></li><li><p><span>Finished EEG microstate analysis with </span><em><span>MATLAB</span></em></p><ul><li><span>Global-field-power-based analysis with </span><em><span>Microstate EEGlab Toolbox</span></em></li><li><span>Functional-connectivity-based analysis with the </span><em><span>Statistics and Machine Learning Toolbox</span></em></li></ul></li><li><p><span>Consolidated a variety of data analysis techniques</span></p><ul><li><span>k-means clustering, multidimensional scaling, silhouette evaluation</span></li><li><span>Dynamic general linear model, unsupervised learning</span></li></ul></li><li><p><span>Gained insights into the brain</span></p><ul><li><span>The perspective of signals and systems</span></li><li><span>The perspective of stochastic process</span></li></ul></li></ul><p><span>Details are presented below.</span></p><p>&nbsp;</p><h2><a name="design-and-perform-the-mmn-experiment" class="md-header-anchor"></a><span>Design and Perform the MMN Experiment</span></h2><p><span>This exercise was a stepstone for me to learn operating EEG experiments as well as to familiarize myself with the design, execution and analysis of an EEG-based psychological experiment.</span></p><p><strong><span>Design an Experiment with </span><em><span>MATLAB</span></em><span> and </span><em><span>Psychtoolbox</span></em></strong></p><p><span>I designed an experiment with the auditory oddball paradigm, following the instruction from </span><a href='http://naplab.ee.columbia.edu/uploads/6/4/8/4/64845489/labinstruction5.pdf'><span>BCILab</span></a><span> to investigate the mismatch negativity (MMN) and P300. My program ran flawlessly and the event trigger was correctly synchronized with the EEG signal. The source code is available for downloading </span><a href='mmn/Task1A.m'><span>here</span></a><span>.</span></p><p><strong><span>Gain Hands-on Experience with EEG recording</span></strong></p><p><span>To prepare myself for operating the experiment, I dived into </span><em><span>An Introduction to the Event-Related Potential Technique</span></em><span> by </span><em><span>Steven Luck</span></em><span> and learnt about principles of EEG recording, preprocessing and analysis (My notes are available </span><a href='mmn/the%20Event-related%20Potential%20Technique.md'><span>here</span></a><span>). Having understood the demonstration by a PhD student, I then collaborated with another intern to perform the experiment on the </span><em><span>Neuracle</span></em><span> digital EEG monitoring system independently, which turned out to be successful.</span></p><p><strong><span>Conduct ERP Analysis with </span><em><span>EEGLAB</span></em></strong></p><p><span>I collected EEG raw data and performed ERP analysis with the </span><em><span>EEGLAB</span></em><span> toolbox in </span><em><span>MATLAB</span></em><span>. Result illustration is presented below. I cultivated EEG signal processing and analysis with </span><em><span>EEGLAB techniques</span></em><span>, including filtering, artifact rejection / correction, epoching and ERP plotting, etc. Notes are accessible </span><a href='mmn/Basic%20EEGLAB%20Processing.md'><span>here</span></a><span>.</span></p><figure>
+<div  id='write'  class = 'is-node'><h1><a name="summer-research-at-tsinghua-university" class="md-header-anchor"></a><span>Summer Research at Tsinghua University</span></h1><p>&nbsp;</p><p><span>From July to August 2019, I finished a five-week summer research at Prof. Hong Bo</span><span>&#39;</span><span>s laboratory at the IDG/McGovern Institute at Tsinghua University, Beijing, China. With the help of Prof. Hong and PhDs at the lab, I got hands-on experience with the electroencephalogram (EEG) operation, explored the EEG functional connectivity microstates as well as its relation with natural language processing.</span></p><p><strong><span>Research Experience Outline</span></strong></p><ul><li><p><span>Designed an auditory oddball experiment with </span><em><span>Psychtoolbox</span></em></p></li><li><p><span>Performed EEG experiment on </span><em><span>Neuracle</span></em><span> and </span><em><span>Neuroscan</span></em><span> platform</span></p></li><li><p><span>Conducted an Event-related potential (ERP) analysis with </span><em><span>EEGLAB</span></em></p><ul><li><span>Filtering, artifact rejection / correction, ERP plot, etc.</span></li><li><span>Read part of </span><em><span>An Introduction to the Event-Related Potential Technique</span></em><span> by </span><em><span>Steven Luck</span></em></li></ul></li><li><p><span>Finished EEG microstate analysis with </span><em><span>MATLAB</span></em></p><ul><li><span>Global-field-power-based analysis with </span><em><span>Microstate EEGlab Toolbox</span></em></li><li><span>Functional-connectivity-based analysis with the </span><em><span>Statistics and Machine Learning Toolbox</span></em></li></ul></li><li><p><span>Consolidated a variety of data analysis techniques</span></p><ul><li><span>k-means clustering, multidimensional scaling, silhouette evaluation</span></li><li><span>Dynamic general linear model, unsupervised learning</span></li></ul></li><li><p><span>Gained insights into the brain</span></p><ul><li><span>The perspective of signals and systems</span></li><li><span>The perspective of stochastic process</span></li></ul></li></ul><p><span>Details are presented below.</span></p><p>&nbsp;</p><h2><a name="design-and-perform-the-mmn-experiment" class="md-header-anchor"></a><span>Design and Perform the MMN Experiment</span></h2><p><span>This exercise was a stepstone for me to learn operating EEG experiments as well as to familiarize myself with the design, execution and analysis of an EEG-based psychological experiment.</span></p><p><strong><span>Design an Experiment with </span><em><span>MATLAB</span></em><span> and </span><em><span>Psychtoolbox</span></em></strong></p><p><span>I designed an experiment with the auditory oddball paradigm, following the instruction from </span><a href='http://naplab.ee.columbia.edu/uploads/6/4/8/4/64845489/labinstruction5.pdf'><span>BCILab</span></a><span> to investigate the mismatch negativity (MMN) and P300. My program ran flawlessly and the event trigger was correctly synchronized with the EEG signal. The source code is available for downloading </span><a href='mmn/Task1A.m'><span>here</span></a><span>.</span></p><p><strong><span>Gain Hands-on Experience with EEG recording</span></strong></p><p><span>To prepare myself for operating the experiment, I dived into </span><em><span>An Introduction to the Event-Related Potential Technique</span></em><span> by </span><em><span>Steven Luck</span></em><span> and learnt about principles of EEG recording, preprocessing and analysis (My notes are available </span><a href='mmn/the%20Event-related%20Potential%20Technique.md'><span>here</span></a><span>). Having understood the demonstration by a PhD student, I then collaborated with another intern to perform the experiment on the </span><em><span>Neuracle</span></em><span> digital EEG monitoring system independently, which turned out to be successful.</span></p><p><strong><span>Conduct ERP Analysis with </span><em><span>EEGLAB</span></em></strong></p><p><span>I collected EEG raw data and performed ERP analysis with the </span><em><span>EEGLAB</span></em><span> toolbox in </span><em><span>MATLAB</span></em><span>. Result illustration is presented below. I cultivated EEG signal processing and analysis with </span><em><span>EEGLAB techniques</span></em><span>, including filtering, artifact rejection / correction, epoching and ERP plotting, etc. Notes are accessible </span><a href='mmn/Basic%20EEGLAB%20Processing.md'><span>here</span></a><span>.</span></p><figure>
 	<p><img src="mmn/mmn_1_result.jpg" style="zoom:50%" onerror="this.style.display = 'none';"></p>
 	<figcaption><center><strong> Figure 1. Average wave of Fz, time locked to stimulus onset </strong></center></figcaption>
 </figure><p>&nbsp;</p><h2><a name="explore-the-eeg-functional-connectivity-microstates" class="md-header-anchor"></a><span>Explore the EEG Functional Connectivity Microstates</span></h2><p><span>EEG microstate has been widely accepted as a powerful tool to investigate functions of our brain. Traditionally, they are defined as the prototypes of the voltage distribution over the scalp at the peak point of the global field power (GFP). The summer research allowed me to perform a pilot study to investigate the possibility of adopting the functional connectivity as another way to segment the EEG signal. Meanwhile, I also explored its potential relation with the processing of natural speech.</span></p><p><strong><span>Data Acquisition and Preprocessing</span></strong></p><p><span>I operated another experiment to collect EEG data from four participants while listening to natural speech, classical music or resting. My code for the experiment is accessible </span><a href='microstate/Task2A.m'><span>here</span></a><span>. I then used </span><em><span>EEGLAB</span></em><span> to preprocess the data and export them to </span><em><span>MATLAB</span></em><span> for further analysis.</span></p><p><strong><span>Clustering and Analysis</span></strong></p><p><span>I used the </span><em><span>Statistics and Machine Learning Toolbox</span></em><span> in </span><em><span>MATLAB</span></em><span> to cluster the EEG data according to the functional connectivity among the channels. Here is an example of a &quot;state&quot;:</span></p><figure>

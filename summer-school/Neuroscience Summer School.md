@@ -15,17 +15,17 @@ In July 2019, I attended the *2019 Tsinghua-Peking McGovern CLS CIBR [Summer Pro
 
 I learnt a lot about neuroscience in the summer program, from the most fundamental level of genes to the highest level of behavioral science, covering a variety of topics including synapse, circuit, diseases and high-level mental processes:
 
-- Epigenetics and its implication with neural diseases (by PI. [Magdalena J Koziol](https://dnalaboratory.org))
-- Structure of the mechanoreceptor protein (by Prof. [Bailong Xiao](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1213.html))
-- Neural basis of chemical senses (by Prof. [Wei Zhang](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1217.html))
-- Neurodegenerative diseases (by Prof. [Yichang Jia](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1207.html))
-- Neural basis of forgetting (by Prof. [Yi Zhong](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1218.html))
-- Neural oscillation and its function (by Prof. [Huan Luo](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm))
+- Epigenetics and its implication with neural diseases (by PI. [Koziol, Magdalena J.](https://dnalaboratory.org))
+- Structure of the mechanoreceptor protein (by Prof. [Xiao, Bailong](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1213.html))
+- Neural basis of chemical senses (by Prof. [Zhang, Wei](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1217.html))
+- Neurodegenerative diseases (by Prof. [Jia, Yichang](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1207.html))
+- Neural basis of forgetting (by Prof. [Zhong, Yi](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1218.html))
+- Neural oscillation and its function (by Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm))
 - ...
 
 <figure>
 	<p><img src = "course.jpg" style = "zoom:10%" /></p>
-	<figcaption><center><strong> Figure 2. Prof. Yi Zhong introducing the standard model for memory consolidation </strong></center></figcaption>
+	<figcaption><center><strong> Figure 2. Prof. Zhong introducing the standard model for memory consolidation </strong></center></figcaption>
 </figure>
 
 
@@ -39,7 +39,7 @@ I became more familiar with the methodology of neurobiology after the training, 
 	<figcaption><center><strong> Figure 3. Visiting the laboratories in Peking University </strong></center></figcaption>
 </figure>
 
-Besides, I was amazed by the degree to which our high-level mental process can be described in a fully biological way. For example, Prof. Yi Zhong introduced his research about the *Rac1* gene which modulates the process of forgetting. Considering that I was researching about working memory at that time, it was such a shame that I had not heard about Prof. Zhong's theory earlier, which really inspired me a lot.
+Besides, I was amazed by the degree to which our high-level mental process can be described in a fully biological way. For example, Prof. Zhong introduced his research about the *Rac1* gene which modulates the process of forgetting. Considering that I was researching about working memory at that time, it was such a shame that I had not heard about Prof. Zhong's theory earlier, which really inspired me a lot.
 
 Cognitive science is a highly interdisciplinary field, requiring us to have a broader horizon. After this summer school, I became more aware of the importance to absorb insights from other disciplines, and also more capable to do so, in order to inspire and support my research in psychology.
 
@@ -51,4 +51,4 @@ During the summer school, I made friends with a lot of fellow students from all 
 
 Besides, the senior students in several laboratory shared with us their PhD life, explaining how the experience equipped them with independent thinking and strong self-study capability. After hearing their story, I believed that hard as it is, going through the PhD is still worthwhile.
 
-I also visited several laboratories during the summer school, which aroused my interest in really doing some research by myself. Therefore, I communicated with Prof. [Bo Hong](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html) at Tsinghua University and finished a five-week-long summer research at his laboratory, which turned out to be very fruitful. For details, please click [here](../summer-research-THU/index.html).
+I also visited several laboratories during the summer school, which aroused my interest in really doing some research by myself. Therefore, I communicated with Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html) at Tsinghua University and finished a five-week-long summer research at his laboratory, which turned out to be very fruitful. For details, please click [here](../summer-research-THU/index.html).

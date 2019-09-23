@@ -12,15 +12,15 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 ## News
 
-- I have just finished a five-week long summer research about EEG functional-connectivity-based microstates and its implications at Prof. [Bo Hong](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
-- Currently, I am preparing for my undergraduate research project about sequential working memory with the guidance of Prof. [Huan Luo](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/))
+- I have just finished a five-week long summer research about EEG functional-connectivity-based microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
+- Currently, I am preparing for my undergraduate research project about sequential working memory with the guidance of Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/))
 
 - I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU this summer. ([Details](summer-school/index.html))
 - I have been taking a lot of courses about cognitive neuroscience at PKU. ([Details](#relevant courses))
 
 
 
-**Last updated:** 17, Sept. 2019
+**Last updated:** 23, Sept. 2019
 
 
 
@@ -30,7 +30,7 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 ### IDG/McGovern Institute for Brain Research \| Tsinghua University | 2019.7 - 2019.8 ([Details](summer-research-THU/index.html))
 
-Advisor: Prof. [Bo Hong](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html) (PI)
+Advisor: Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html) (PI)
 
 **EEG Oddball Experiment**
 
@@ -53,7 +53,7 @@ Advisor: Prof. [Bo Hong](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.ht
 
 ### IDG/McGovern Institute for Brain Research \| Peking University | 2019.3 - Present
 
-Advisor: Prof. [Huan Luo](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm) (PI)
+Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm) (PI)
 
 ##### **EEG data analysis practice | 2019.3**
 
