@@ -8,7 +8,8 @@
     </head>
 </html>
 
-<body id = "write">  <!--specify this id to suit the theme-->
+<body id = "write" class="typora-export">
+    <!--specify this id and class to suit the theme-->
     <h1>
         Visualization of NSFC Funding<br/>in the Past Decade
     </h1>
@@ -18,38 +19,29 @@
         <p>&nbsp;</p>
     </div>
     <h2>Introduction</h2>
-    <p>
-        Descripion: pending. ddddddddddddddddddddddddddddddddddddddddddddddddd
-    </p>
-    <div id = "Disciplines">
-        <p>
-            Here is the illustration of the allocated funding, categorized by the disciplines:
-        </p>
-        <div class = "figBox">
-            <svg id = "disPlot" class = "svgFig">
-                <!--d3 plots here-->
-            </svg>
-        </div>
+
+    <!--Unfortunately, due to the js-beautify extension in vscode, this html file 
+      will preserver all the tabs and spaces in <p></p>, so we can only write
+      it in this ugly style-->
+    <p>Descripion: pending. dddddddddddddddddddddddddddddddddddddddddddddd</p>
+    <p>Here is the illustration of the allocated funding, categorized by the disciplines:</p>
+
+    <div class = "figBox">
+        <svg id = "disPlot" class = "svgFig">
+            <!--d3 plots here-->
+        </svg>
     </div>
-    <div id = "institutes">
-        <p>
-            Here is the illustration of the allocated funding, categorized by the institutes:
-        </p>
-        <div class = "figBox">
-            <svg id = "InsPlot" class = "svgFig">
-                <!--d3 plots here-->
-            </svg>
-        </div>
-    </div>    
-    <div id = "Provinces">
-        <p>
-            Here is the illustration of the allocated funding, categorized by the provinces:
-        </p>
-        <div class = "figBox">
-            <svg id = "ProPlot" class = "svgFig">
-                <!--d3 plots here-->
-            </svg>
-        </div>
+    <p>Here is the illustration of the allocated funding, categorized by the institutes:</p>
+    <div class = "figBox">
+        <svg id = "InsPlot" class = "svgFig">
+            <!--d3 plots here-->
+        </svg>
+    </div>
+    <p>Here is the illustration of the allocated funding, categorized by the provinces:</p>
+    <div class = "figBox">
+        <svg id = "ProPlot" class = "svgFig">
+            <!--d3 plots here-->
+        </svg>
     </div>    
 </body>
 
