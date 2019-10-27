@@ -10,9 +10,10 @@ var plotDis, plotIns, plotPro;
 plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
     // plot the second figure
 
-    // Parameters
+    // Parameters && functions
     let minX = 0, minY = 0, minR = 0, maxRPix = 40;
-    let padding = 50;  // must be larger than maxRPix
+    let padding = 70;  // plotting area padding, must be larger than maxRPix
+    let textPadding = 5;  // between label and shape
     let colormap = function (t) {  // choose a color scheme
         /*single(or pseudo-single)-hue*/
         // return d3.interpolateYlGn(t * 0.8 + 0.2);  // light yellow - dark green
@@ -71,7 +72,7 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
         // accepts the fulfillment value as input.
         
         // debugging
-        console.log(myData);
+        // console.log(myData);
         // alert(data[0].name);
 
         // get the plotting area
@@ -88,7 +89,6 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
             // this implementation is ugly and should be updated by
             //   changing maxDat into an object directly
         }
-
         if (maxX === undefined) {
             maxX = (mainIndex == "Money")?maxDat[5]:maxDat[4];
         }
@@ -108,38 +108,60 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
             .domain([minR, maxR])
             .range([0, maxRPix]);  // let the largest radius be 50px
 
-        // binding data
-        d3.select("#InsPlot").selectAll("circle")
+        // utility functions
+        let getX = function (d) {
+            return (mainIndex == "Money")?
+                xScale(d.sciMoney):
+                xScale(d.sciProj);
+        };
+        let getY = function (d) {
+            return (mainIndex == "Money")?
+                yScale(d.techMoney):
+                yScale(d.techProj);
+        };
+        let getR = function (d) {
+            return (mainIndex == "Money")?
+                rScale(d.tProj):
+                rScale(d.tMoney);
+        };
+
+        // binding data with the circles
+        d3.select("#InsPlot").selectAll(".institutes")
             .data(myData, function (d) {
-                return d.name;  // bind institutions with circles
+                return d.name;  // bind institutes with circles
             })
             .join(
-                enter => enter.append("circle")
-                    .attr("cx", function (d) {
-                        return (mainIndex == "Money")?
-                            xScale(d.sciMoney):
-                            xScale(d.sciProj);
+                enter => enter.append("g")
+                    .attr("class", "institutes")
+                    .call(function (insti) {
+                        insti.append("circle")
+                            .attr("cx", getX).attr("cy", getY).attr("r", getR)
+                            .attr("fill", function (d) {
+                                let tmp = (mainIndex == "Money")?
+                                    d.sciMoney / maxX:
+                                    d.sciProj / maxX;
+                                let rtmp = 1 - d.number / maxDat[0];
+                                return colormap(tmp);  // color by x value
+                                // return colormap(rtmp); // by ranking
+                            });
+                        insti.append("text")
+                            .text(function (d) {
+                                return d.name;
+                            })
+                            .attr("font-size", function (d) {
+                                return getR(d) / 3;
+                            })
+                            .attr("fill", "white")
+                            .attr("x", getX)
+                            .attr("y", function (d) {
+                                return getY(d) + getR(d) / 6;
+                                // half the height of a character
+                                // the scale is reversed, so "+" means lower
+                            })
+                            .attr("text-anchor", "middle");
                     })
-                    .attr("cy", function (d) {
-                        return (mainIndex == "Money")?
-                            yScale(d.techMoney):
-                            yScale(d.techProj);
-                    })
-                    .attr("r", function (d) {
-                        return (mainIndex == "Money")?
-                            rScale(d.tProj):
-                            rScale(d.tMoney);
-                    })
-                    .attr("fill", function (d) {
-                        let tmp = (mainIndex == "Money")?
-                            d.sciMoney / maxX:
-                            d.sciProj / maxX;
-                        let rtmp = 1 - d.number / maxDat[0];
-                        return colormap(tmp);  // color by x value
-                        // return colormap(rtmp); // by ranking
-                    })
-                //update => update  // pending
-            )
+                // , update => update  // pending
+            );         
     });
     
 };

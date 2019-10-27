@@ -2,8 +2,13 @@
     visualization.css - the main css for d3 visualization
 */
 
-.fig {
+.figBox {
+    display: flex; /*applies the flexbox display property*/
+    justify-content: center;
+}
+
+.svgFig {
     width: 720px;
     height: 480px;
-    /* background-color: snow; */
+    /* background-color: black; */
 }
