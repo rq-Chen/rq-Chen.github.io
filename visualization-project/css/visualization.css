@@ -1,0 +1,9 @@
+/*
+    visualization.css - the main css for d3 visualization
+*/
+
+.fig {
+    width: 720px;
+    height: 480px;
+    /* background-color: snow; */
+}

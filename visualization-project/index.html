@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Visualizing the NSFC Funding</title>
+        <link rel="stylesheet" type="text/css" href="css/theme.css"/>
+        <link rel="stylesheet" type="text/css" href="css/visualization.css"/>
+    </head>
+</html>
+
+<body id = "write">  <!--specify this id to suit the theme-->
+    <h1>
+        Visualization of NSFC Funding<br/>in the Past Decade
+    </h1>
+    <div id = "subTitle">  <!--this part should be modified using css-->
+        <p>&nbsp;</p>
+        <p><h5 style = "text-align: center;">Ruiqi Chen</h5></p>
+        <p>&nbsp;</p>
+    </div>
+    <h2>Introduction</h2>
+    <p>
+        Descripion: pending. ddddddddddddddddddddddddddddddddddddddddddddddddd
+    </p>
+    <div id = "Disciplines">
+        <p>
+            Here is the illustration of the allocated funding, categorized by the disciplines:
+        </p>
+        <div>
+            <svg id = "disPlot" class = "fig">
+                <!--d3 plots here-->
+            </svg>
+        </div>
+    </div>
+    <div id = "Institutions">
+        <p>
+            Here is the illustration of the allocated funding, categorized by the institutions:
+        </p>
+        <div>
+            <svg id = "InsPlot" class = "fig">
+                <!--d3 plots here-->
+            </svg>
+        </div>
+    </div>    
+    <div id = "Provinces">
+        <p>
+            Here is the illustration of the allocated funding, categorized by the provinces:
+        </p>
+        <div>
+            <svg id = "ProPlot" class = "fig">
+                <!--d3 plots here-->
+            </svg>
+        </div>
+    </div>    
+</body>
+
+<script src = "js/jquery-3.2.1.min.js"></script>
+<script src = "js/d3.min.js" ></script>
+<script src = "js/nsfcFund.js" ></script>
