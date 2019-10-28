@@ -174,14 +174,25 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
 plotPro = function (year = 2018, axStyle = "linear", yToShown) {
 
     // parameters
-    let padding = 60;
-    let stWid = 2,
-        stOpc = 0.4;
+    let padding = 60, labelSize = 10;
+    let stWid = 2, stOpc = 0.4, tickSi = 6, tickNum = 5;
     if (yToShown === undefined) yToShown = ["tMoney",
         "mthMoney", "chmMoney", "bioMoney", "geoMoney",
         "engMoney", "csMoney", "mgtMoney", "medMoney"
     ];
-    var colormap = function (t) {
+    let chgScale = function (d, i, iMax) {
+        // this function is used to scale the data so that the line
+        //   representing Beijing wiil not be adjacent to the top...
+        let midTop = 0.8;  //  the relative height of the middle axis
+        let tmpRatio = (1 / midTop - 1) / (iMax / 2);
+        // console.log((Math.abs(i - iMax / 2) * tmpRatio + 1));
+        return d * (Math.abs(i - iMax / 2) * tmpRatio + 1);
+        //  Looks like this
+        //  .    .
+        //   .  .
+        //    .
+    };
+    let colormap = function (t) {
         // In this section, we want to emphasize the extremes.
         //   So the color should be clear for both the max and the min.
         //   Therefore, we'd better not use scheme like YlGnBu.
@@ -239,6 +250,7 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
         minDat = Object.assign({}, allYScale); // the minimum
         // CAUTION HERE!!!!
 
+        let loopI = 0, iMax = myData.columns.length - 1;
         for (let curr in maxDat) {
             let tmp = myData.map(function (d) {
                 return d[curr];
@@ -249,9 +261,11 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
                 d3.scaleSqrt();
                 // d3.scaleSymlog();  // symlog allow zero value
             allYScale[curr] = allYScale[curr]
-                .domain([minDat[curr], maxDat[curr]])
+                .domain([minDat[curr],
+                        chgScale(maxDat[curr], loopI++, iMax)])
                 .range([svgH - padding, padding]);
         }
+        delete loopI, iMax;
 
         // utility functions
         let drawLine = function (d) {
@@ -264,6 +278,9 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
                 // change the command above to draw curve
             }
             return myPath.toString();
+        };
+        let formatTick = function (val, i) {
+            return (i % 2 ? val: null);
         };
 
         // bind data and update
@@ -296,8 +313,33 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
                 .each(function (d, i) {
                     d3.select(this).call(
                         d3.axisLeft().scale(allYScale[d])
+                            .ticks(tickNum).tickFormat(formatTick)
+                            .tickSizeInner(tickSi).tickSizeOuter(0)
+                        // creation of axis is a function
                     );
                 })
+                .call(function (d, i) {                    
+                    d3.selectAll(".tick text") // modify the tick number appearance
+                        .clone(true).lower()
+                        // Must be "true"! Otherwise the text content will not be
+                        //   copied, thus providing no background.
+                        // add a background by inserting something under it
+                        .attr("fill", "white")
+                        .attr("stroke", "white")
+                        .attr("stroke-width", 2 * stWid);
+                    d3.selectAll(".axis path, .axis line")
+                        // modify the axes and ticks
+                        .attr("stroke-dasharray", "5, 5")
+                        .attr("stroke-opacity", stOpc);
+                })
+                .call(g => g.append("text")
+                    .text(d => d)
+                    .attr("x", 0)
+                    .attr("font-size", labelSize)
+                    .attr("y", svgH - padding + 1.25 * labelSize)
+                    .attr("text-anchor", "middle")
+                    .attr("fill", "black")
+                )
             )
     });
 };
