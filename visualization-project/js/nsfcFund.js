@@ -11,6 +11,188 @@ var plotDis, plotIns, plotPro, getName;
 getName = (d => d.name);
 
 /* Plotting functions */
+plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
+
+    // parameters
+    let padding = 40, labelSize = 10, opac = 0.3;
+
+    let allDeps= [], myData = [];
+    d3.csv('data/Dis' + year + '.csv', function (d) {
+        let tmp = {
+            name: d.name,
+            applyProj: +d.applyProj,
+            applyMoney: +d.applyMoney,
+            allocProj: +d.allocProj,
+            allocMoney: +d.allocMoney
+            // other property can be computed from them
+        };
+        if (d.name.endsWith("学部")) {
+            myData.push([tmp, []]);
+            allDeps.push(tmp);
+        } else myData[myData.length - 1][1].push(tmp);
+        return tmp;
+    }).then(oriData => {
+
+        // get the plotting area
+        let svgW = $("#DisPlot").width();
+        let svgH = $("#DisPlot").height();
+
+        // select data
+        if (yToShown === undefined)
+            yToShown = allDeps.map(d => d.name);
+        myData = myData.filter(d => {
+            return (yToShown.find(p => {return (p == d[0].name);}) !== undefined);
+        });
+
+        console.log("new section");
+        console.log(myData);  // a tree with two layers
+        console.log("finish");
+
+        // set scales
+        let xScale = d3.scaleLinear().domain([-0.5, myData.length - 0.5])
+            // add 0.5 to put the bars
+            .range([padding, svgW - padding]); // position of the axes 
+        let yScale;
+        if (mainIndex == "Money") {
+            let tmp = allDeps.map(d => d.applyMoney);
+            yScale = d3.scaleLinear().domain([0, d3.max(tmp)])
+                .range([svgH - padding, padding]);
+        } else {
+            let tmp = allDeps.map(d => d.applyProj);
+            yScale = d3.scaleLinear().domain([0, d3.max(tmp)])
+                .range([svgH - padding, padding]);
+        }
+        let allZScale = [];  // 2 for each department (money and projects)
+        // also mapping to x-index
+        for (let i = 0; i < myData.length; i++) {
+            let tmpMoney = myData[i][1].map(d => d.applyMoney);
+            let tmpProj = myData[i][1].map(d => d.applyProj);
+            let moneyScale = d3.scaleLinear().domain([0, d3.max(tmpMoney)])
+                .range([xScale(i), xScale(i - opac)]);
+            let projScale = d3.scaleLinear().domain([0, d3.max(tmpProj)])
+                .range([xScale(i), xScale(i + opac)]);
+            allZScale.push([moneyScale, projScale]);
+        }
+
+        // utility function
+        let addRects = function (sel, index) {
+            let nDis = sel.data().length;
+            let tmpHeight = (mainIndex == "Money")? myData[index][0].applyMoney :
+                myData[index][0].applyProj;
+            sel.append("rect")
+                .attr("class", "money")
+                .attr("x", d => allZScale[index][0](d.applyMoney))
+                .attr("y", (d, i) => yScale(tmpHeight / nDis * (i + 1)))
+                .attr("width", d => {
+                    return xScale(index) - allZScale[index][0](d.applyMoney);
+                })
+                .attr("height", (d, i) => {
+                    return yScale(0) - yScale(tmpHeight / nDis);
+                })
+                .attr("fill", (d,i) => {
+                    return d3.schemeCategory10[i % 10];
+                })
+                .attr("opacity", opac);
+            sel.append("rect")
+                .attr("class", "allMoney")
+                .attr("x", d => allZScale[index][0](d.allocMoney))
+                .attr("y", (d, i) => yScale(tmpHeight / nDis * (i + 1)))
+                .attr("width", d => {
+                    return xScale(index) - allZScale[index][0](d.allocMoney);
+                })
+                .attr("height", (d, i) => {
+                    return yScale(0) - yScale(tmpHeight / nDis);
+                })
+                .attr("fill", (d,i) => {
+                    return d3.schemeCategory10[i % 10];
+                });
+            sel.append("rect")
+                .attr("class", "project")
+                .attr("x", d => allZScale[index][0](d.applyProj))
+                .attr("y", (d, i) => yScale(tmpHeight / nDis * (i + 1)))
+                .attr("width", d => {
+                    return allZScale[index][1](d.applyProj) - xScale(index);
+                })
+                .attr("height", (d, i) => {
+                    return yScale(0) - yScale(tmpHeight / nDis);
+                })
+                .attr("fill", (d,i) => {
+                    return d3.schemeCategory10[i % 10];
+                })
+                .attr("opacity", opac);
+            sel.append("rect")
+                .attr("class", "allProject")
+                .attr("x", d => allZScale[index][0](d.allocProj))
+                .attr("y", (d, i) => yScale(tmpHeight / nDis * (i + 1)))
+                .attr("width", d => {
+                    return allZScale[index][1](d.allocProj) - xScale(index);
+                })
+                .attr("height", (d, i) => {
+                    return yScale(0) - yScale(tmpHeight / nDis);
+                })
+                .attr("fill", (d,i) => {
+                    return d3.schemeCategory10[i % 10];
+                });
+        }
+
+        // bind data and plot
+        d3.select("#DisPlot").selectAll(".department")
+            .data(myData)
+            .join(enter => enter.append("g")
+                .attr("class", "department")
+                .each((d,i,nodes) => {
+                    d3.select(nodes[i]).selectAll(".discipline")
+                        .data(d[1])
+                        .join(
+                            ent => ent.append("g")
+                                .attr("class", "discipline")
+                                .call(addRects, i)                                
+                        );
+                })
+                .call(ent => {
+                    ent.append("line")
+                        .attr("x1", (d,i) => xScale(i))
+                        .attr("y1", yScale(0))
+                        .attr("x2", (d,i) => xScale(i))
+                        .attr("y2", d => {
+                            tmp = (mainIndex == "Money"? yScale(d[0].applyMoney) :
+                                yScale(d[0].applyProj));
+                            return tmp;
+                        })
+                        .attr("stroke", "black")
+                        .append("title")
+                        .text(d => d[0].name);
+                    ent.append("text")
+                        .attr("x", (d,i) => xScale(i))
+                        .attr("y", yScale(0) + labelSize * 1.5)
+                        .attr("text-anchor", "middle")
+                        .attr("fill", "black")
+                        .attr("font-size", labelSize)                        
+                        .text(d => d[0].name);
+                    ent.append("line")
+                        .attr("x1", (d, i) => xScale(i - 0.45))
+                        .attr("y1", d => {
+                            tmp = (mainIndex == "Money"? yScale(d[0].allocMoney) :
+                                yScale(d[0].allocProj));
+                            return tmp;}
+                        )
+                        .attr("x2", (d, i) => xScale(i + 0.45))
+                        .attr("y2", d => {
+                            tmp = (mainIndex == "Money"? yScale(d[0].allocMoney) :
+                                yScale(d[0].allocProj));
+                            return tmp;}
+                        )
+                        .attr("stroke", "black")
+                        .attr("stroke-opacity", 0.4)
+                        .attr("stroke-dasharray", [5, 5]);
+                })
+
+            )
+
+    });    
+};
+
+
 plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
     // plot the second figure
 
@@ -242,7 +424,7 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
             .range([padding, svgW - padding]); // position of the axes
         let allYScale, maxDat, minDat;
 
-        // CAUTION: JS OBJECT ASSIGNMENT IS DEEP COPY!!!!
+        // CAUTION: JS OBJECT ASSIGNMENT IS SHALLOW COPY!!!!
         // Below is the ONLY correct way to create an object with the same keys.
         allYScale = Object.assign({}, myData[0]);
         delete allYScale["name"]; // set a scale for each quantitative attribute
@@ -319,7 +501,8 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
                     );
                 })
                 .call(function (d, i) {                    
-                    d3.selectAll(".tick text") // modify the tick number appearance
+                    d3.select("#ProPlot")
+                    .selectAll(".tick text") // modify the tick number appearance
                         .clone(true).lower()
                         // Must be "true"! Otherwise the text content will not be
                         //   copied, thus providing no background.
@@ -327,7 +510,8 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
                         .attr("fill", "white")
                         .attr("stroke", "white")
                         .attr("stroke-width", 2 * stWid);
-                    d3.selectAll(".axis path, .axis line")
+                    d3.select("#ProPlot")
+                    .selectAll(".axis path, .axis line")
                         // modify the axes and ticks
                         .attr("stroke-dasharray", "5, 5")
                         .attr("stroke-opacity", stOpc);
@@ -344,5 +528,6 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
     });
 };
 
+plotDis();
 plotIns();
 plotPro(2018, "sqrt");
