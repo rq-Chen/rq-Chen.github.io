@@ -14,7 +14,7 @@ getName = (d => d.name);
 plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
 
     // parameters
-    let padding = 40, labelSize = 10, opac = 0.3, tickNum = 10;
+    let padding = 40, labelSize = 10, opac = 0.3, tickNum = 10, linePadding = 8;
 
     let allDeps= [], myData = [];
     d3.csv('data/Dis' + year + '.csv', function (d) {
@@ -166,6 +166,11 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 ent.selectAll(".tick:nth-child(even)").append("line")
                     .raise()
                     .attr("stroke", "currentColor")
+                    .attr("x1", (d, i, nodes) => {
+                        let tmp = nodes[i].previousSibling.getBBox();
+                        console.log("tmp: ", tmp, "nodes: ", nodes[i]);
+                        return tmp.x + tmp.width + linePadding;
+                    })
                     .attr("x2", svgW)
                     .attr("stroke-opacity", opac)
                     .attr("stroke-dasharray", "5,5")
