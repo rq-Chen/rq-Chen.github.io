@@ -95,7 +95,9 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 .attr("fill", (d,i) => {
                     return d3.schemeCategory10[i % 10];
                 })
-                // .attr("opacity", opac);
+                .append("title").text(d => {
+                    return d.name + "，申请金额：" + d.applyMoney;
+                });
             sel.append("rect")
                 .attr("class", "allMoney")
                 .attr("x", d => allZScale[index][0](d.allocMoney))
@@ -108,6 +110,9 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 })
                 .attr("fill", (d,i) => {
                     return d3.schemeCategory10[i % 10];
+                })
+                .append("title").text(d => {
+                    return d.name + "，资助金额：" + d.allocMoney;
                 });
             sel.append("rect")
                 .attr("class", "project")
@@ -122,7 +127,9 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 .attr("fill", (d,i) => {
                     return d3.schemeCategory10[i % 10];
                 })
-                // .attr("opacity", opac);
+                .append("title").text(d => {
+                    return d.name + "，申请项目：" + d.applyProj;
+                });
             sel.append("rect")
                 .attr("class", "allProject")
                 .attr("x", d => allZScale[index][0](d.allocProj))
@@ -135,6 +142,9 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 })
                 .attr("fill", (d,i) => {
                     return d3.schemeCategory10[i % 10];
+                })
+                .append("title").text(d => {
+                    return d.name + "，资助项目：" + d.allocProj;
                 });
             // add background and set opacity
             sel.selectAll(".money, .project").call(ent =>
@@ -168,7 +178,7 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                     .attr("stroke", "currentColor")
                     .attr("x1", (d, i, nodes) => {
                         let tmp = nodes[i].previousSibling.getBBox();
-                        console.log("tmp: ", tmp, "nodes: ", nodes[i]);
+                        // console.log("tmp: ", tmp, "nodes: ", nodes[i]);
                         return tmp.x + tmp.width + linePadding;
                     })
                     .attr("x2", svgW)
@@ -181,26 +191,6 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
             .data(myData)
             .join(enter => enter.append("g")
                 .attr("class", "department")
-                // .call(ent => { // background
-                //     ent.append("rect")
-                //         .attr("class", "background")
-                //         .attr("fill", "white")
-                //         .attr("x", (dd, i) => xScale(i - 0.45))
-                //         .attr("y", dd => {
-                //             let tmp = (mainIndex == "Money"?
-                //                 yScale(dd[0].applyMoney) :
-                //                 yScale(dd[0].applyProj));
-                //             return tmp;
-                //         })
-                //         .attr("height", dd => {
-                //             let tmp = (mainIndex == "Money"?
-                //                 yScale(dd[0].applyMoney) :
-                //                 yScale(dd[0].applyProj));
-                //             return yScale(0) - tmp;
-                //         })
-                //         .attr("width", (dd, i) => (xScale(i + 0.45) -
-                //             xScale(i - 0.45)));
-                // })
                 .each((d,i,nodes) => { // rects
                     d3.select(nodes[i]).selectAll(".discipline")
                         .data(d[1])
@@ -255,7 +245,6 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
     });    
 };
 
-
 plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
     // plot the second figure
 
@@ -264,7 +253,8 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
     let minX = 0,
         minY = 0,
         minR = 0,
-        maxRPix = 40;
+        maxRPix = 40,
+        tickNum = 6;
     let padding = 70; // plotting area padding, must be larger than maxRPix
     let textPadding = 5; // between label and shape
     let colormap = function (t) { // choose a color scheme
@@ -291,33 +281,7 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
             // engineering and management (eng, cs, mgt)
             engMgtProj: +d.engMgtProj,
             engMgtMoney: +d.engMgtMoney
-        };
-        // return {  // change the '.csv' above to 'All.csv' when using this block
-        //     序号 : +d.序号,
-        //     单位名称 : d.单位名称,
-        //     合计项数 : +d.合计项数,
-        //     合计金额 : +d.合计金额,
-        //     数理科学部项数 : +d.数理科学部项数,
-        //     数理科学部金额 : +d.数理科学部金额,
-        //     化学科学部项数 : +d.化学科学部项数,
-        //     化学科学部金额 : +d.化学科学部金额,
-        //     生命科学部项数 : +d.生命科学部项数,
-        //     生命科学部金额 : +d.生命科学部金额,
-        //     地球科学部项数 : +d.地球科学部项数,
-        //     地球科学部金额 : +d.地球科学部金额,
-        //     工程与材料科学部项数 : +d.工程与材料科学部项数,
-        //     工程与材料科学部金额 : +d.工程与材料科学部金额,
-        //     信息科学部项数 : +d.信息科学部项数,
-        //     信息科学部金额 : +d.信息科学部金额,
-        //     管理科学部项数 : +d.管理科学部项数,
-        //     管理科学部金额 : +d.管理科学部金额,
-        //     医学科学部项数 : +d.医学科学部项数,
-        //     医学科学部金额 : +d.医学科学部金额,
-        //     科学学科项数 : +d.科学学科项数,
-        //     科学学科金额 : +d.科学学科金额,
-        //     工程管理学科项数 : +d.工程管理学科项数,
-        //     工程管理学科金额 : +d.工程管理学科金额
-        // };        
+        };      
     }).then(function (myData) {
         // then() make sure the code is executed after loading data
         // So perform all operations here
@@ -377,6 +341,10 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
                 rScale(d.tProj) :
                 rScale(d.tMoney);
         };
+        let formatTick = function (val, i) {
+            if (i % 2) return val;
+                else return null;            
+        };
 
         // binding data with the circles
         d3.select("#InsPlot").selectAll(".institute")
@@ -395,6 +363,12 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
                             let rtmp = 1 - (d.number - 1) / (maxDat[0] - 1);
                             return colormap(tmp); // color by x value
                             // return colormap(rtmp); // by ranking
+                        })
+                        .append("title").text(d => {
+                            let tmp = ((mainIndex == "Money") ?
+                                "总资助项目数：" + d.sciProj :
+                                "总资助金额：" + d.sciMoney);
+                            return d.name + "，" + tmp;
                         });
                     insti.append("text")
                         .text(getName)
@@ -412,8 +386,23 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
                 })
                 // , update => update  // pending
             );
-    });
 
+        d3.select("#InsPlot").selectAll(".xAxis").remove();
+        d3.select("#InsPlot")
+            .append("g").attr("class", "xAxis")
+            .attr("transform", "translate(0," + (yScale(0) + padding / 4) + ")")
+            .call(
+                d3.axisBottom().scale(xScale)
+                    .ticks(tickNum).tickFormat(formatTick).tickSizeOuter(0)
+            );  
+        d3.select("#InsPlot")
+            .append("g").attr("class", "yAxis")
+            .attr("transform", "translate(" + (xScale(0) - padding / 4) + ",0)")
+            .call(
+                d3.axisLeft().scale(yScale)
+                    .ticks(tickNum).tickFormat(formatTick).tickSizeOuter(0)
+            );            
+    });
 };
 
 plotPro = function (year = 2018, axStyle = "linear", yToShown) {
