@@ -14,7 +14,7 @@ getName = (d => d.name);
 plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
 
     // parameters
-    let padding = 40, labelSize = 10, opac = 0.3, tickNum = 5;
+    let padding = 40, labelSize = 10, opac = 0.3, tickNum = 10;
 
     let allDeps= [], myData = [];
     d3.csv('data/Dis' + year + '.csv', function (d) {
@@ -95,7 +95,7 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 .attr("fill", (d,i) => {
                     return d3.schemeCategory10[i % 10];
                 })
-                .attr("opacity", opac);
+                // .attr("opacity", opac);
             sel.append("rect")
                 .attr("class", "allMoney")
                 .attr("x", d => allZScale[index][0](d.allocMoney))
@@ -122,7 +122,7 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 .attr("fill", (d,i) => {
                     return d3.schemeCategory10[i % 10];
                 })
-                .attr("opacity", opac);
+                // .attr("opacity", opac);
             sel.append("rect")
                 .attr("class", "allProject")
                 .attr("x", d => allZScale[index][0](d.allocProj))
@@ -136,13 +136,66 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 .attr("fill", (d,i) => {
                     return d3.schemeCategory10[i % 10];
                 });
+            // add background and set opacity
+            sel.selectAll(".money, .project").call(ent =>
+                    ent.clone(true).lower().attr("fill", "white")
+                )
+                .attr("opacity", opac);
         }
+        let formatTick = function (val, i) {
+            val = val / 1e6;  // change into million dollars
+            if (this.parentNode.nextSibling) {
+                if (i % 2)
+                    return val.toFixed(1);
+                else return null;
+            }
+            else return "￥" + val.toFixed(1) + " million";
+        };
 
+        // axis
+        d3.select("#DisPlot").selectAll(".YAxis").remove();
+        d3.select("#DisPlot").append("g")
+            .attr("class", "YAxis")
+            // .attr("transform", "translate(" + xScale(-0.7) + ",0)")
+            .call(
+                d3.axisRight().scale(yScale).ticks(tickNum)
+                    .tickFormat(formatTick)
+            ).call(ent => {
+                ent.selectAll("line, path").remove();
+                // ent.selectAll("text").style("font-family", "monospace")
+                ent.selectAll(".tick:nth-child(even)").append("line")
+                    .raise()
+                    .attr("stroke", "currentColor")
+                    .attr("x2", svgW)
+                    .attr("stroke-opacity", opac)
+                    .attr("stroke-dasharray", "5,5")
+            })
+        
         // bind data and plot
         d3.select("#DisPlot").selectAll(".department")
             .data(myData)
             .join(enter => enter.append("g")
                 .attr("class", "department")
+                // .call(ent => { // background
+                //     ent.append("rect")
+                //         .attr("class", "background")
+                //         .attr("fill", "white")
+                //         .attr("x", (dd, i) => xScale(i - 0.45))
+                //         .attr("y", dd => {
+                //             let tmp = (mainIndex == "Money"?
+                //                 yScale(dd[0].applyMoney) :
+                //                 yScale(dd[0].applyProj));
+                //             return tmp;
+                //         })
+                //         .attr("height", dd => {
+                //             let tmp = (mainIndex == "Money"?
+                //                 yScale(dd[0].applyMoney) :
+                //                 yScale(dd[0].applyProj));
+                //             return yScale(0) - tmp;
+                //         })
+                //         .attr("width", (dd, i) => (xScale(i + 0.45) -
+                //             xScale(i - 0.45)));
+                // })
                 .each((d,i,nodes) => { // rects
                     d3.select(nodes[i]).selectAll(".discipline")
                         .data(d[1])
@@ -154,6 +207,24 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 })
                 .call(ent => {  // departments
                     ent.append("line")
+                        .attr("x1", (d, i) => xScale(i - 0.45))
+                        .attr("y1", d => {
+                            let tmp = (mainIndex == "Money"?
+                                yScale(d[0].allocMoney) :
+                                yScale(d[0].allocProj));
+                            return tmp;
+                        })
+                        .attr("x2", (d, i) => xScale(i + 0.45))
+                        .attr("y2", d => {
+                            let tmp = (mainIndex == "Money"?
+                                yScale(d[0].allocMoney) :
+                                yScale(d[0].allocProj));
+                            return tmp;
+                        })
+                        .attr("stroke", "grey")
+                        // .attr("stroke-opacity", 0.4)
+                        // .attr("stroke-dasharray", [5, 5]);
+                    ent.append("line")
                         .attr("x1", (d,i) => xScale(i))
                         .attr("y1", yScale(0))
                         .attr("x2", (d,i) => xScale(i))
@@ -162,7 +233,7 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                                 yScale(d[0].applyProj));
                             return tmp;
                         })
-                        .attr("stroke", "black")
+                        .attr("stroke", "white")
                         .attr("stroke-opacity", 0.7)
                         .append("title")
                         .text(d => d[0].name);
@@ -173,34 +244,9 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                         .attr("fill", "black")
                         .attr("font-size", labelSize)                        
                         .text(d => d[0].name);
-                    ent.append("line")
-                        .attr("x1", (d, i) => xScale(i - 0.45))
-                        .attr("y1", d => {
-                            tmp = (mainIndex == "Money"? yScale(d[0].allocMoney) :
-                                yScale(d[0].allocProj));
-                            return tmp;}
-                        )
-                        .attr("x2", (d, i) => xScale(i + 0.45))
-                        .attr("y2", d => {
-                            tmp = (mainIndex == "Money"? yScale(d[0].allocMoney) :
-                                yScale(d[0].allocProj));
-                            return tmp;}
-                        )
-                        .attr("stroke", "black")
-                        .attr("stroke-opacity", 0.4)
-                        .attr("stroke-dasharray", [5, 5]);
                 })
             )
-
-        // axis
-        d3.select("#DisPlot").selectAll(".YAxis").remove();
-        d3.select("#DisPlot").append("g")
-            .attr("class", "YAxis")
-            // .attr("transform", "translate(" + xScale(-0.7) + ",0)")
-            .call(
-                d3.axisRight().scale(yScale).ticks(tickNum)
-            )
-            .selectAll("line, path").remove();
+    
     });    
 };
 
