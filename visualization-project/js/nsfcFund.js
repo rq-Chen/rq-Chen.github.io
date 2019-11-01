@@ -14,7 +14,7 @@ getName = (d => d.name);
 plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
 
     // parameters
-    let padding = 40, labelSize = 10, opac = 0.3;
+    let padding = 40, labelSize = 10, opac = 0.3, tickNum = 5;
 
     let allDeps= [], myData = [];
     d3.csv('data/Dis' + year + '.csv', function (d) {
@@ -43,6 +43,9 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
         myData = myData.filter(d => {
             return (yToShown.find(p => {return (p == d[0].name);}) !== undefined);
         });
+        allDeps = allDeps.filter(d => {
+            return (yToShown.find(p => {return (p == d.name);}) !== undefined);
+        });
 
         console.log("new section");
         console.log(myData);  // a tree with two layers
@@ -68,9 +71,9 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
             let tmpMoney = myData[i][1].map(d => d.applyMoney);
             let tmpProj = myData[i][1].map(d => d.applyProj);
             let moneyScale = d3.scaleLinear().domain([0, d3.max(tmpMoney)])
-                .range([xScale(i), xScale(i - opac)]);
+                .range([xScale(i), xScale(i - 0.4)]);
             let projScale = d3.scaleLinear().domain([0, d3.max(tmpProj)])
-                .range([xScale(i), xScale(i + opac)]);
+                .range([xScale(i), xScale(i + 0.4)]);
             allZScale.push([moneyScale, projScale]);
         }
 
@@ -140,7 +143,7 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
             .data(myData)
             .join(enter => enter.append("g")
                 .attr("class", "department")
-                .each((d,i,nodes) => {
+                .each((d,i,nodes) => { // rects
                     d3.select(nodes[i]).selectAll(".discipline")
                         .data(d[1])
                         .join(
@@ -149,7 +152,7 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                                 .call(addRects, i)                                
                         );
                 })
-                .call(ent => {
+                .call(ent => {  // departments
                     ent.append("line")
                         .attr("x1", (d,i) => xScale(i))
                         .attr("y1", yScale(0))
@@ -160,6 +163,7 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                             return tmp;
                         })
                         .attr("stroke", "black")
+                        .attr("stroke-opacity", 0.7)
                         .append("title")
                         .text(d => d[0].name);
                     ent.append("text")
@@ -186,9 +190,17 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                         .attr("stroke-opacity", 0.4)
                         .attr("stroke-dasharray", [5, 5]);
                 })
-
             )
 
+        // axis
+        d3.select("#DisPlot").selectAll(".YAxis").remove();
+        d3.select("#DisPlot").append("g")
+            .attr("class", "YAxis")
+            // .attr("transform", "translate(" + xScale(-0.7) + ",0)")
+            .call(
+                d3.axisRight().scale(yScale).ticks(tickNum)
+            )
+            .selectAll("line, path").remove();
     });    
 };
 
