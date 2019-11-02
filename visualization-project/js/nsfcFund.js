@@ -5,7 +5,7 @@
     Version: 2019/10/27
 */
 
-var plotDis, plotIns, plotPro, getName;
+var plotDis, plotIns, plotPro, getName, brushPro, titleSize = 14;
 
 /* utility functions */
 getName = (d => d.name);
@@ -14,9 +14,17 @@ getName = (d => d.name);
 plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
 
     // parameters
-    let padding = 40, labelSize = 10, opac = 0.3, tickNum = 10, linePadding = 8;
+    let padding = 50, labelSize = 10, opac = 0.3, tickNum = 10, linePadding = 8;
 
     let allDeps= [], myData = [];
+
+    // get the plotting area and add title
+    let svgW = $("#DisPlot").width();
+    let svgH = $("#DisPlot").height();
+    d3.select("#DisPlot").append("text").text("各学科资助情况")
+        .attr("x", svgW / 2).attr("y", titleSize * 2).attr("text-anchor", "middle")
+        .attr("font-size", titleSize);
+
     d3.csv('data/Dis' + year + '.csv', function (d) {
         let tmp = {
             name: d.name,
@@ -32,10 +40,6 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
         } else myData[myData.length - 1][1].push(tmp);
         return tmp;
     }).then(oriData => {
-
-        // get the plotting area
-        let svgW = $("#DisPlot").width();
-        let svgH = $("#DisPlot").height();
 
         // select data
         if (yToShown === undefined)
@@ -112,7 +116,10 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                     return d3.schemeCategory10[i % 10];
                 })
                 .append("title").text(d => {
-                    return d.name + "，资助金额：" + d.allocMoney;
+                    let tmp = d.name + "，资助金额：" + d.allocMoney +
+                        "（" + (d.allocMoney / d.applyMoney * 100).toFixed(0) + 
+                        "%）";
+                    return tmp;
                 });
             sel.append("rect")
                 .attr("class", "project")
@@ -144,7 +151,10 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                     return d3.schemeCategory10[i % 10];
                 })
                 .append("title").text(d => {
-                    return d.name + "，资助项目：" + d.allocProj;
+                    let tmp = d.name + "，资助项目：" + d.allocProj +
+                        "（" + (d.allocProj / d.applyProj * 100).toFixed(0) + 
+                        "%）";
+                    return tmp;
                 });
             // add background and set opacity
             sel.selectAll(".money, .project").call(ent =>
@@ -153,13 +163,13 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                 .attr("opacity", opac);
         }
         let formatTick = function (val, i) {
-            val = val / 1e6;  // change into million dollars
+            val = val / 1e4;  
             if (this.parentNode.nextSibling) {
                 if (i % 2)
-                    return val.toFixed(1);
+                    return val.toFixed(0);
                 else return null;
             }
-            else return "￥" + val.toFixed(1) + " million";
+            else return val.toFixed(0) + "（亿元）";
         };
 
         // axis
@@ -216,15 +226,34 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                                 yScale(d[0].allocProj));
                             return tmp;
                         })
-                        .attr("stroke", "grey")
+                        .attr("stroke", "grey");
                         // .attr("stroke-opacity", 0.4)
                         // .attr("stroke-dasharray", [5, 5]);
+                    ent.append("text")
+                        .text(d => {
+                            let tmp = (mainIndex == "Money"?
+                                d[0].allocMoney :
+                                d[0].allocProj);
+                            let tmp2 = (mainIndex == "Money"?
+                                d[0].applyMoney :
+                                d[0].applyProj);
+                            return (tmp/1e4).toFixed(2) + " (" + (tmp / tmp2 * 100).toFixed(1) + "%)";
+                        })
+                        .attr("x", (d, i) => xScale(i - 0.35))
+                        .attr("y", d => {
+                            let tmp = (mainIndex == "Money"?
+                                yScale(d[0].allocMoney) :
+                                yScale(d[0].allocProj));
+                            return tmp - linePadding / 4;
+                        })
+                        .attr("font-size", 6).attr("text-anchor", "middle")
+                        .attr("fill", "grey");
                     ent.append("line")
                         .attr("x1", (d,i) => xScale(i))
                         .attr("y1", yScale(0))
                         .attr("x2", (d,i) => xScale(i))
                         .attr("y2", d => {
-                            tmp = (mainIndex == "Money"? yScale(d[0].applyMoney) :
+                            let tmp = (mainIndex == "Money"? yScale(d[0].applyMoney) :
                                 yScale(d[0].applyProj));
                             return tmp;
                         })
@@ -232,6 +261,21 @@ plotDis = function (year = 2018, mainIndex = "Money", yToShown) {
                         .attr("stroke-opacity", 0.7)
                         .append("title")
                         .text(d => d[0].name);
+                    ent.append("text")
+                        .attr("x", (d,i) => xScale(i))
+                        .attr("y", d => {
+                            let tmp = (mainIndex == "Money"? yScale(d[0].applyMoney) :
+                                yScale(d[0].applyProj));
+                            return tmp - linePadding / 4;
+                        })
+                        .attr("text-anchor", "middle")
+                        .attr("font-size", 10)
+                        .attr("fill", "black")
+                        .text(d => {
+                            let tmp = (mainIndex == "Money"? d[0].applyMoney :
+                                d[0].applyProj);
+                            return (tmp / 1e4).toFixed(1);
+                        });
                     ent.append("text")
                         .attr("x", (d,i) => xScale(i))
                         .attr("y", yScale(0) + labelSize * 1.5)
@@ -250,12 +294,14 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
 
     // Parameters && functions
     // It will be better if we can define them in css, but I don't know how.
+    let yearStart = 2017, yearEnd = 2018;
     let minX = 0,
         minY = 0,
         minR = 0,
         maxRPix = 40,
         tickNum = 6;
     let padding = 70; // plotting area padding, must be larger than maxRPix
+    let lineSpace = 12;
     let textPadding = 5; // between label and shape
     let colormap = function (t) { // choose a color scheme
         /*single(or pseudo-single)-hue*/
@@ -267,6 +313,16 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
         // return d3.interpolateViridis(t);  // purple-yellow, cool
         // return d3.interpolatePlasma(t); // purple-yellow, warm
     };
+    let trans = d3.transition()
+        .duration(750)
+        .ease(d3.easeLinear);
+
+    // get the plotting area and add title
+    let svgW = $("#InsPlot").width();
+    let svgH = $("#InsPlot").height();
+    d3.select("#InsPlot").append("text").text("各单位资助情况")
+        .attr("x", svgW / 2).attr("y", titleSize * 2).attr("text-anchor", "middle")
+        .attr("font-size", titleSize);
 
     d3.csv('data/Ins' + year + '.csv', function (d) {
         return {
@@ -292,10 +348,6 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
         // console.log(myData);
         // alert(data[0].name);
 
-        // get the plotting area
-        let svgW = $("#InsPlot").width();
-        let svgH = $("#InsPlot").height();
-
         // set scale
         let maxDat = []; // get the max from each column
         for (let i in myData[0]) {
@@ -315,6 +367,7 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
         if (maxR === undefined) { // radius is different from axes
             maxR = (mainIndex == "Money") ? maxDat[2] : maxDat[3];
         }
+
         let xScale = d3.scaleLinear()
             .domain([minX, maxX])
             .range([padding, svgW - padding]); // leave some padding
@@ -342,7 +395,8 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
                 rScale(d.tMoney);
         };
         let formatTick = function (val, i) {
-            if (i % 2) return val;
+            if (mainIndex == "Money") val = val / 100;
+            if (i % 2 == 0) return val;
                 else return null;            
         };
 
@@ -384,7 +438,6 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
                         })
                         .attr("text-anchor", "middle");
                 })
-                // , update => update  // pending
             );
 
         d3.select("#InsPlot").selectAll(".xAxis").remove();
@@ -394,22 +447,61 @@ plotIns = function (year = 2018, mainIndex = "Money", maxX, maxY, maxR) {
             .call(
                 d3.axisBottom().scale(xScale)
                     .ticks(tickNum).tickFormat(formatTick).tickSizeOuter(0)
-            );  
+            ).call(ent => {
+                ent.append("g").attr("transform", "translate(" + (xScale(maxX) + lineSpace)
+                    + ",0)").append("text").attr("x", 0).attr("y", 0)
+                    .call(currEnt => {
+                        currEnt.append("tspan").attr("x", 0).attr("dy", lineSpace)
+                            .text("自然科学");
+                        currEnt.append("tspan").attr("x", 0).attr("dy", lineSpace).text(() => {
+                            return (mainIndex == "Money")? "总金额（百万元）" : "总项目数";
+                        })
+                    })
+                    .attr("fill", "black")
+                    .attr("text-anchor", "middle");                    
+            });  
+        d3.select("#InsPlot").selectAll(".yAxis").remove();            
         d3.select("#InsPlot")
             .append("g").attr("class", "yAxis")
             .attr("transform", "translate(" + (xScale(0) - padding / 4) + ",0)")
             .call(
                 d3.axisLeft().scale(yScale)
                     .ticks(tickNum).tickFormat(formatTick).tickSizeOuter(0)
-            );            
+            ).call(ent => {
+                ent.append("g").attr("transform", "translate(0," +
+                (yScale(maxY) - lineSpace * 2.5) + ")").append("text").attr("x", 0).attr("y", 0)
+                    .call(currEnt => {
+                        currEnt.append("tspan").attr("x", 0).attr("dy", lineSpace)
+                            .text("工程与管理");
+                        currEnt.append("tspan").attr("x", 0).attr("dy", lineSpace).text(() => {
+                            return (mainIndex == "Money")? "总金额（百万元）" : "总项目数";
+                        })
+                    })
+                    .attr("fill", "black")
+                    .attr("text-anchor", "middle");                    
+            });
+        // d3.select("#InsPlot").selectAll(".tick:nth-child(2)").selectAll("line").remove();
+        
     });
+};
+
+
+var ProOpc = 0.4;
+var ProColormap = function (t) {
+    // In this section, we want to emphasize the extremes.
+    //   So the color should be clear for both the max and the min.
+    //   Therefore, we'd better not use scheme like YlGnBu.
+    //   But the schemes for all figures should be in harmony, of course.
+
+    /* Diverging */
+    return d3.interpolateBrBG(t);
 };
 
 plotPro = function (year = 2018, axStyle = "linear", yToShown) {
 
     // parameters
-    let padding = 60, labelSize = 10;
-    let stWid = 2, stOpc = 0.4, tickSi = 6, tickNum = 5;
+    let padding = 65, textPadding = 30, labelSize = 10;
+    let stWid = 2, tickSi = 6, tickNum = 5;
     if (yToShown === undefined) yToShown = ["tMoney",
         "mthMoney", "chmMoney", "bioMoney", "geoMoney",
         "engMoney", "csMoney", "mgtMoney", "medMoney"
@@ -426,15 +518,36 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
         //   .  .
         //    .
     };
-    let colormap = function (t) {
-        // In this section, we want to emphasize the extremes.
-        //   So the color should be clear for both the max and the min.
-        //   Therefore, we'd better not use scheme like YlGnBu.
-        //   But the schemes for all figures should be in harmony, of course.
-
-        /* Diverging */
-        return d3.interpolateBrBG(t);
+    let labelDict = {
+        number: "序号",
+        name: "地区",
+        tProj: "合计",
+        tMoney: "合计",
+        mthProj: "数理科学部",
+        mthMoney: "数理科学部",
+        chmProj: "化学科学部",
+        chmMoney: "化学科学部",
+        bioProj: "生命科学部",
+        bioMoney: "生命科学部",
+        geoProj: "地球科学部",
+        geoMoney: "地球科学部",
+        engProj: "工程与材料科学部",
+        engMoney: "工程与材料科学部",
+        csProj: "信息科学部",
+        csMoney: "信息科学部",
+        mgtProj: "管理科学部",
+        mgtMoney: "管理科学部",
+        medProj: "医学科学部",
+        medMoney: "医学科学部"
     };
+
+    
+    // get the plotting area and add title
+    let svgW = $("#ProPlot").width();
+    let svgH = $("#ProPlot").height();
+    d3.select("#ProPlot").append("text").text("各省级行政区资助情况")
+        .attr("x", svgW / 2).attr("y", titleSize * 2).attr("text-anchor", "middle")
+        .attr("font-size", titleSize);
 
     d3.csv('data/Pro' + year + '.csv', function (d) {
         return {
@@ -466,10 +579,6 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
         // console.log("new section");
         // console.log(myData);
         // console.log("finish");
-
-        // get the plotting area
-        let svgW = $("#ProPlot").width();
-        let svgH = $("#ProPlot").height();
 
         // set scale
         let xScale = d3.scaleLinear().domain([0, yToShown.length - 1])
@@ -514,7 +623,7 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
             return myPath.toString();
         };
         let formatTick = function (val, i) {
-            return (i % 2 ? val: null);
+            return (i % 2 ? val / 100: null);
         };
 
         // bind data and update
@@ -524,13 +633,53 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
             .join(enter => enter.append("g")
                 .attr("class", "province")
                 .call(provin => {
-                    provin.append("path")
+                    // add label
+                    provin.append("text").attr("class", "label")
+                        .text(getName).attr("x", xScale(0) - textPadding).attr("y", d => 
+                            allYScale[yToShown[0]](d[yToShown[0]]) - textPadding / 2
+                        )
+                        .attr("font-size", labelSize * 1.2)
+                        .attr("text-anchor", "end")
+                        .attr("visibility", "hidden")
+                        .clone(true).lower()
+                        .attr("fill", "white")
+                        .attr("stroke", "white")
+                        .attr("stroke-width", 2 * stWid);
+                    for (let i = 0; i < yToShown.length; i++) {
+                        provin.append("text").attr("class", "label")
+                            .attr("x", xScale(i))
+                            .attr("y", d => allYScale[yToShown[i]](d[yToShown[i]]))
+                            .attr("text-anchor", "middle")
+                            .attr("visibility", "hidden")
+                            .attr("font-size", labelSize * 0.9)
+                            .text(d => {
+                                return labelDict[yToShown[i]] + "：" +
+                                    (d[yToShown[i]] / 100).toFixed(1);
+                            })
+                            .clone(true).lower()
+                            // Must be "true"! Otherwise the text content will not be
+                            //   copied, thus providing no background.
+                            // add a background by inserting something under it
+                            .attr("fill", "white")
+                            .attr("stroke", "white")
+                            .attr("stroke-width", 2 * stWid); 
+                    }
+                    // add path and lower it
+                    provin.append("path").lower()
+                        .attr("d", drawLine)
+                        // .call(ent => {  // enlarge the area for clicking
+                        //     ent.clone(true).lower().attr("stroke", "transparent")
+                        //         .attr("fill", "transparent")
+                        //         .attr("onclick", "brushPro(this.nextSibling)")
+                        //         .attr("stroke-width", stWid * 2)
+                        //         .append("title").text(getName)
+                        // })
                         .attr("fill", "none")
                         .attr("stroke-width", stWid)
-                        .attr("stroke-opacity", stOpc)
+                        .attr("stroke-opacity", ProOpc)
                         .attr("stroke", d =>
-                            colormap((d.number - 1) / (maxDat["number"] - 1)))
-                        .attr("d", drawLine)
+                             ProColormap((d.number - 1) / (maxDat["number"] - 1)))
+                        .attr("onclick", "brushPro(this)")
                         .append("title").text(getName);
                 })
             )
@@ -566,10 +715,10 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
                     .selectAll(".axis path, .axis line")
                         // modify the axes and ticks
                         .attr("stroke-dasharray", "5, 5")
-                        .attr("stroke-opacity", stOpc);
+                        .attr("stroke-opacity", ProOpc);
                 })
                 .call(g => g.append("text")
-                    .text(d => d)
+                    .text(d => labelDict[d])
                     .attr("x", 0)
                     .attr("font-size", labelSize)
                     .attr("y", svgH - padding + 1.25 * labelSize)
@@ -577,7 +726,35 @@ plotPro = function (year = 2018, axStyle = "linear", yToShown) {
                     .attr("fill", "black")
                 )
             )
+        d3.select("#ProPlot").select(".axis").append("text").text("单位：百万元")
+            .attr("text-anchor", "middle").attr("y", padding).attr("font-size", 10).attr("fill", "black");
     });
+};
+
+brushPro = function(ele) {
+    let tmp = 0;  // count the number of red lines
+    d3.select("#ProPlot").selectAll(".province path").each((dd, ii, nodes) => {
+        if (d3.select(nodes[ii]).attr("stroke") == "red") tmp++;
+    });
+    if (d3.select(ele).attr("stroke") != "red") {
+        if (tmp == 0) {
+            d3.select("#ProPlot").selectAll(".axis").attr("visibility", "hidden");
+        }
+        d3.select(ele).attr("stroke", "red").attr("stroke-opacity", 1);
+        d3.select(ele.parentNode).selectAll(".label").attr("visibility", "visible");
+    }
+    else {
+        console.log(tmp);
+        if (tmp == 1) {
+            d3.select("#ProPlot").selectAll(".axis").attr("visibility", "visible");
+        };
+        d3.select(ele).attr("stroke", d => {
+                let tmp = d3.selectAll(".province").data().length;
+                return ProColormap((d.number - 1) / (tmp - 1));
+            })
+            .attr("stroke-opacity", ProOpc);
+        d3.select(ele.parentNode).selectAll(".label").attr("visibility", "hidden");
+    }
 };
 
 plotDis();
