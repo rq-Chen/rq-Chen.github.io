@@ -14,13 +14,13 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 - I have just finished a five-week long summer research about EEG functional-connectivity-based microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
 - Currently, I am preparing for my undergraduate research project about sequential working memory with the guidance of Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/))
-
 - I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU this summer. ([Details](summer-school/index.html))
+- I finished my first data visualization project with *D3.js*. ([Details](visualization-project/index.html))
 - I have been taking a lot of courses about cognitive neuroscience at PKU. ([Details](#relevant courses))
 
 
 
-**Last updated:** 23, Sept. 2019
+**Last updated:** 3, Nov. 2019
 
 
 
@@ -100,7 +100,7 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 ## Skills
 
--   **Programming**: C/C++, Python, MATLAB
+-   **Programming**: C/C++, Python, MATLAB, basic front-end programming (HTML, CSS, Javascript) and data visualization with *D3.js*.
 -   **EEG experiment:** Psychtoolbox programming, EEG recording
 -   **EEG data analysis**: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering
 -   **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
