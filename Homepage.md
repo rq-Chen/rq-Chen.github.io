@@ -6,7 +6,7 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 **You can find me at (firstname)(lastname)(AT)(pku)(DOT)(edu)(DOT)(com).**
 
-**You can download my CV [here](Ruiqi_Chen_CV.pdf).**
+**You can download my CV [here](Ruiqi_Chen_CV_Full.pdf).**
 
 
 
