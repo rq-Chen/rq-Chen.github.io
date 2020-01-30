@@ -6,14 +6,14 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 **You can find me at (firstname)(lastname)(AT)(pku)(DOT)(edu)(DOT)(com).**
 
-**You can download my CV [here](Ruiqi_Chen_CV_Full.pdf).**
+**You can download my CV [here](Ruiqi_Chen_CV.pdf).**
 
 
 
-## News
+## Events
 
-- I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
 - I have been researching on sequential working memory with the guidance of Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](Undergraduate-Research/index.html))
+- I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
 - I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU this summer. ([Details](summer-school/index.html))
 - I trained a deep residual network (*ResNet-20*) with *Keras* on *CIFAR10* and achieved high accuracy. ([Details](deep-learning-startup/index.html))
 - I finished my first data visualization project with *D3.js*. ([Details](visualization-project/index.html))
@@ -21,7 +21,7 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 
 
-**Last updated:** 12/03/2019
+**Last updated:** 01/30/2020
 
 
 
@@ -29,14 +29,14 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 ## Research Experience
 
-### IDG/McGovern Institute for Brain Research \| Tsinghua University | 2019.7 - 2019.8 ([Details](summer-research-THU/index.html))
+### IDG/McGovern Institute for Brain Research \| Tsinghua University | 2019.7 - Present ([Details](summer-research-THU/index.html))
 
 Advisor: Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html) (PI)
 
 **EEG Oddball Experiment**
 
 - Designed an auditory oddball experiment with *Psychtoolbox*
-- Performed EEG experiment on *Neuracle* and *Neuroscan* platform
+- Performed EEG experiment on *Neuroscan* platform
 - Conducted event-related potential (ERP) analysis with *EEGLAB*
   - Filtering, artifact rejection / correction, ERP plot, etc.
   - Read part of *An Introduction to the Event-Related Potential Technique* by *Steven Luck*
@@ -49,6 +49,11 @@ Advisor: Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.h
 - Consolidated a variety of data analysis technique
   - k-means clustering, multidimensional scaling, silhouette evaluation
   - Dynamic general linear model, unsupervised learning
+
+**Functional Connectivity Microstates as Biomarkers of the Mind (Ongoing Project)**
+
+- Established the link between microstates and activity of the Default Mode Network (DMN) among different task conditions
+- Explored the interaction between alpha oscillation and microstates’ internal dynamics
 
 
 
@@ -64,8 +69,9 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 ##### **Project: The representation of time and order in working memory | 2019.4 -- Present** 
 
--   Completed a review with over 11,000 Chinese characters about the temporal organization of visual working memory ([Link](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading))
--   Currently designing an EEG experiment to explore the function of underlying neural oscillations during the temporal organization process in auditory working memory ([Link](undergraduate-research/本研思路.html))
+-   Wrote an intensive review about the temporal organization in working memory and another for the computational models and functions of neural oscillation in working memory ([Link](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading))
+-   Designed an EEG experiment to explore the neural mechanism underlying the manipulation of contents in auditory working memory and collected data from 16 subjects ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Experiment))
+-   Working on the data through ERP and time-frequency analysis currently ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis))
 
 
 
@@ -77,32 +83,36 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 ## Relevant Courses
 
+### Neuropsychology (96/100)
+
+- Anatomy, function and diseases of different brain area
+
+### The Brain and Cognitive Science (92/100)
+
+- Sensation and perception, learning and memory, language, etc.
+
 ### Probability Theory and Statistics (90/100)
 
 -   Basic statistical tools including estimation, hypothesis testing, ANOVA, and regression
-
-### Computational Perception and Scene Analysis (86/100)
-
--   Physiological, psychological and computational models for vision and audition, the latter covering neural pathway, pitch encoding, source localization, auditory scene analysis, and speech perception
 
 ### Experimental Psychology (90/100)
 
 -   Including experiment design, psychophysical methods, sensation and perception, language, etc.
 
+### Computational Perception and Scene Analysis (86/100)
+
+- Physiological, psychological and computational models for vision and audition, the latter covering neural pathway, pitch encoding, source localization, auditory scene analysis, and speech perception
+
 ### Practice of Data Structure and Algorithm (87/100)
 
 -   C++ implementation of graph algorithms including network flow, shortest path, interval tree, etc.
-
-### To Be Continued...
-
-- I am taking courses about **cognitive psychology, neuropsychology, computational neuroscience, signals and systems, pattern recognition** and **artificial intelligence** this semester.
 
 
 
 ## Skills
 
--   **Programming**: C/C++, Python, MATLAB, basic front-end programming (HTML, CSS, Javascript) and data visualization with *D3.js*.
+-   **Programming**: C/C++, Python, MATLAB, basic front-end programming (HTML, CSS, JavaScript) and data visualization with *D3.js*.
 -   **EEG experiment:** Psychtoolbox programming, EEG recording
--   **EEG data analysis**: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering
+-   **EEG data analysis**: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering, phase coupling analysis
 -   **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
 
