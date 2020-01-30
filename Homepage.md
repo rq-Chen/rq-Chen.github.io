@@ -6,13 +6,13 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 **You can find me at (firstname)(lastname)(AT)(pku)(DOT)(edu)(DOT)(com).**
 
-**You can download my CV [here](Ruiqi_Chen_CV.pdf).**
+**You can download my CV [here](Ruiqi_Chen_CV.pdf).** (Email me directly if the link breaks)
 
 
 
 ## Events
 
-- I have been researching on sequential working memory with the guidance of Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](Undergraduate-Research/index.html))
+- I have been researching on sequential working memory with the guidance of Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](undergraduate-research/index.html))
 - I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
 - I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU this summer. ([Details](summer-school/index.html))
 - I trained a deep residual network (*ResNet-20*) with *Keras* on *CIFAR10* and achieved high accuracy. ([Details](deep-learning-startup/index.html))
@@ -57,7 +57,7 @@ Advisor: Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.h
 
 
 
-### IDG/McGovern Institute for Brain Research \| Peking University | 2019.3 - Present ([Details](Undergraduate-Research/index.html))
+### IDG/McGovern Institute for Brain Research \| Peking University | 2019.3 - Present ([Details](undergraduate-research/index.html))
 
 Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm) (PI)
 
