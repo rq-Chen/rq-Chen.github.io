@@ -83,27 +83,27 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 ## Relevant Courses
 
-### Neuropsychology (96/100)
+#### Neuropsychology (96/100)
 
 - Anatomy, function and diseases of different brain area
 
-### The Brain and Cognitive Science (92/100)
+#### The Brain and Cognitive Science (92/100)
 
 - Sensation and perception, learning and memory, language, etc.
 
-### Probability Theory and Statistics (90/100)
+#### Probability Theory and Statistics (90/100)
 
 -   Basic statistical tools including estimation, hypothesis testing, ANOVA, and regression
 
-### Experimental Psychology (90/100)
+#### Experimental Psychology (90/100)
 
 -   Including experiment design, psychophysical methods, sensation and perception, language, etc.
 
-### Computational Perception and Scene Analysis (86/100)
+#### Computational Perception and Scene Analysis (86/100)
 
 - Physiological, psychological and computational models for vision and audition, the latter covering neural pathway, pitch encoding, source localization, auditory scene analysis, and speech perception
 
-### Practice of Data Structure and Algorithm (87/100)
+#### Practice of Data Structure and Algorithm (87/100)
 
 -   C++ implementation of graph algorithms including network flow, shortest path, interval tree, etc.
 
