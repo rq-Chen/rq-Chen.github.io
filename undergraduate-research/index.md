@@ -2,6 +2,8 @@
 
 
 
+I have been researching in the neural basis of sequential working memory in the Lab of [Prof. Luo, Huan](http://psy.pku.edu.cn/english/people/faculty/professor/huanluo/index.htm) for nearly a year. I reviewed the literature, selected the research topic, designed the experiment, collected the data and analyzed the result on my own. This experience enabled me to carry out a research project independently and equipped me with many useful tools including experiment presentation, ERP and time-frequency analysis with Psychtoolbox, EEGLAB and Fieldtrip. More details about my project is available [here](https://github.com/rq-Chen/Undergraduate_Research_at_PKU).
+
 ## Background
 
 ***Selective Entrainment of Theta Oscillations in the Dorsal Stream Causally Enhances Auditory Working Memory Performance***
@@ -21,7 +23,7 @@
 
 Although this paper regarded backward replaying as a kind of mental manipulation, this manipulation is apparently special since it has something to do with the temporal organization of the memory contents. Besides, theta oscillation is often associated with temporal organization in the literature. Therefore, probably this result only reflects the neural mechanism for temporal organization instead of mental manipulation. So we want to design another kind of mental manipulation to examine whether this condition triggers different oscillatory pattern with the original ones.
 
-#### Target
+### Target
 
 - To explore whether this theta oscillation is specifically correlated with the organization of temporal information
 - To explore the neural mechanism underlying different kinds of mental manipulation for auditory working memory
@@ -64,7 +66,7 @@ The pipeline is similar to the original one, but we incorporate two more kinds o
 
     <img src = 'CzERP.png' style = "zoom:40%" />
 
-  - time-frequency analysis:
+  - Time-frequency analysis:
 
     <img src = 'O1.png' style = "zoom:40%" />
 
