@@ -2,11 +2,11 @@
 
 **Update:** we have finished the preliminary analysis! Now going on with a modified experiment design and larger dataset. I post several figures here (details will be explained soon):
 
-|                        |                            Result                            |
-| :--------------------: | :----------------------------------------------------------: |
-|       Propotion        | ![newMondProp](C:\Users\Truckey\Documents\GitHub\rq-Chen.github.io\summer-research-THU\newMondProp.png) |
-| Transition Probability | ![newMondProp](C:\Users\Truckey\Documents\GitHub\rq-Chen.github.io\summer-research-THU\newMondTransProb.png) |
-|      Connectivity      | ![newMondProp](C:\Users\Truckey\Documents\GitHub\rq-Chen.github.io\summer-research-THU\newMondNegCon.png) |
+|                        |               Result               |
+| :--------------------: | :--------------------------------: |
+|       Propotion        |   ![Proportion](newMondProp.png)   |
+| Transition Probability | ![TransProb](newMondTransProb.png) |
+|      Connectivity      |  ![Connection](newMondNegCon.png)  |
 
 
 
