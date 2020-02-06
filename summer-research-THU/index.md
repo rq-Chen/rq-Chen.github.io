@@ -1,14 +1,12 @@
 # Summer Research at Tsinghua University
 
-**Update:** we have finished the preliminary analysis! Now going on with a modified experiment design and larger dataset. I post several figures here (details will be explained soon):
+**Update:** We have finished the data analysis! Now going on with a modified experiment design and larger dataset. Several representative figures are shown here. For details: [Microstate Project](../microstate-research/).
 
 |                        |               Result               |
 | :--------------------: | :--------------------------------: |
-|       Propotion        |   ![Proportion](newMondProp.png)   |
+|       Proportion       |   ![Proportion](newMondProp.png)   |
 | Transition Probability | ![TransProb](newMondTransProb.png) |
 |      Connectivity      |  ![Connection](newMondNegCon.png)  |
-
-
 
 ---
 
@@ -99,7 +97,7 @@ Besides, I compared the results among different conditions as well as different 
 
 I presented my result twice at the lab plenary meeting, which was highly praised by Prof. Hong. He believed that my preliminary research demonstrated the feasibility and credibility of this new approach as well as its potential advantages over the tradition one.
 
-We are now conducting a formal study to further investigate this topic.
+We are now conducting a formal study to further investigate this topic ([Link](../microstate-research/)).
 
 
 

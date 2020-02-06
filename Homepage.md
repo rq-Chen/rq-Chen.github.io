@@ -4,13 +4,13 @@
 
 Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I major in Intelligence Science and Technology at the Department of Machine Intelligence, and I am most interested in cognitive science. I plan to apply for PhD programs in cognitive science in the US or Europe, now urgently seeking for relevant information. Please contact me if you could help and I would appreciate it a lot.
 
-**You can find me at (firstname)(lastname)(AT)(pku)(DOT)(edu)(DOT)(com).**
+**You can find me at (crq)(AT)(pku)(DOT)(edu)(DOT)(com).**
 
-**You can download my CV [here](Ruiqi_Chen_CV.pdf).** (Email me directly if the link breaks)
+**You can download my CV [here](Ruiqi_Chen_CV.pdf).**
 
 
 
-## Events
+## Highlights
 
 - I have been researching on sequential working memory with the guidance of Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](undergraduate-research/index.html))
 - I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
@@ -21,7 +21,7 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 
 
-**Last updated:** 01/30/2020
+**Last updated:** 02/06/2020
 
 
 
@@ -50,9 +50,9 @@ Advisor: Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.h
   - k-means clustering, multidimensional scaling, silhouette evaluation
   - Dynamic general linear model, unsupervised learning
 
-**Functional Connectivity Microstates as Biomarkers of the Mind (Ongoing Project)**
+**Functional Connectivity Microstates as Biomarkers of the Mind ([Ongoing Project](microstate-research/))**
 
-- Established the link between microstates and activity of the Default Mode Network (DMN) among different task conditions
+- Established the link between the proportion/transition probability/connection strength of a specific microstate and activity of the Default Mode Network under different task conditions
 - Explored the interaction between alpha oscillation and microstates’ internal dynamics
 
 
