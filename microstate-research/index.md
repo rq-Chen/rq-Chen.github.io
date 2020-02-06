@@ -29,7 +29,7 @@ Interestingly, we found the connectivity-based microstates analogous to the trad
 The activity of DMN has been associated with GFP microstate C [(Brechet et al., 2019)](https://doi.org/10.1016/j.neuroimage.2019.03.029), which corresponded to our FC microstate "Mondrian" (by the way, we gave it this nickname since its connectivity matrix resembled Mondrian's' paintings). Therefore, we examined the dynamics of this microstate under different experimental conditions. Although we only had few data, it could be concluded from the result that the Mondrian state was more significant when eyes were closed, indicating its potential connection with the DMN.
 
 <figure>
-	<p><img src = "NewMondAvrLen.png" style = "zoom:40%" /></p>
+	<p><img src = "newMondAvrLen.png" style = "zoom:40%" /></p>
 	<figcaption>
         <strong> Figure 3. The average length of consecutive Mondrian states under different conditions with different k </strong>
         <p>We tried different number of clusters in the k-means algorithm and the result was similar. The X value indicated the length of the sliding window (in ms). The Y value indicated the mean number of time windows in a consecutive Mondrian series. It's clear that the Mondrian state was more significant in the RestC and MusicC condition (when eyes were closed).</p>
@@ -37,7 +37,7 @@ The activity of DMN has been associated with GFP microstate C [(Brechet et al., 
 </figure>
 
 <figure>
-	<p><img src = "NewMondProp.png" style = "zoom:40%" /></p>
+	<p><img src = "newMondProp.png" style = "zoom:40%" /></p>
 	<figcaption>
         <strong> Figure 4. The proportion of Mondrian state </strong>
         <p>Similar to the previous result, it's clear that the Mondrian state took up a larger proportion when eyes were closed.</p>
@@ -47,7 +47,7 @@ The activity of DMN has been associated with GFP microstate C [(Brechet et al., 
 In order to find out the essential connections that differs between conditions, we examined the strongest negative connections in the Mondrian state so as to avoid the volume conduction problem. It turned out that these connections were mainly frontoparietal, connecting two important area in DMN. Therefore, we averaged the connection strength between these two clusters of channels and the results were in accordance with Figure 3 and 4:
 
 <figure>
-	<p><img src = "NewMondNegCon.png" style = "zoom:40%" /></p>
+	<p><img src = "newMondNegCon.png" style = "zoom:40%" /></p>
 	<figcaption>
         <strong> Figure 5. The connection strength between frontal and parietal clusters </strong>
         <p>Similar to the previous result, the frontoparietal connection was stronger when eyes were closed.</p>
