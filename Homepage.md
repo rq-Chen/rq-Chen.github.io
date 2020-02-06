@@ -67,11 +67,12 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 -   Reconstructed the tuning curve for the orientation of two Gabor stimuli
 -   Practiced MATLAB programming and EEG multivariate pattern analysis
 
-##### **Project: The representation of time and order in working memory | 2019.4 -- Present** 
+##### **Project: The representation of time and order in working memory | 2019.4 - Present** 
 
 -   Wrote an intensive review about the temporal organization in working memory and another for the computational models and functions of neural oscillation in working memory ([Link](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading))
 -   Designed an EEG experiment to explore the neural mechanism underlying the manipulation of contents in auditory working memory and collected data from 16 subjects ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Experiment))
--   Working on the data through ERP and time-frequency analysis currently ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis))
+-   Replicated the ERP result in [(Albouy et al., Neuron, 2017)](https://www.cell.com/neuron/pdf/S0896-6273(17)30198-8.pdf)
+-   Working on the time-frequency analysis currently ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis))
 
 
 
@@ -85,7 +86,7 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 #### Neuropsychology (96/100)
 
-- Anatomy, function and diseases of different brain area
+- Anatomy, function and diseases of the cortex and thalamus
 
 #### The Brain and Cognitive Science (92/100)
 
@@ -93,11 +94,11 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 #### Probability Theory and Statistics (90/100)
 
--   Basic statistical tools including estimation, hypothesis testing, ANOVA, and regression
+- Central limit theorem, parameter estimation, hypothesis testing, ANOVA, regression, etc.
 
 #### Experimental Psychology (90/100)
 
--   Including experiment design, psychophysical methods, sensation and perception, language, etc.
+- Experiment design, psychophysical methods, sensation and perception, language, etc.
 
 #### Computational Perception and Scene Analysis (86/100)
 
@@ -105,14 +106,14 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 #### Practice of Data Structure and Algorithm (87/100)
 
--   C++ implementation of graph algorithms including network flow, shortest path, interval tree, etc.
+- C++ implementation of graph algorithms including network flow, shortest path, interval tree, etc.
 
 
 
 ## Skills
 
--   **Programming**: C/C++, Python, MATLAB, basic front-end programming (HTML, CSS, JavaScript) and data visualization with *D3.js*.
--   **EEG experiment:** Psychtoolbox programming, EEG recording
--   **EEG data analysis**: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering, phase coupling analysis
--   **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
+- **Programming**: C/C++, Python, MATLAB, basic front-end programming (HTML, CSS, JavaScript) and data visualization with *D3.js*.
+- **EEG experiment:** Psychtoolbox programming, EEG recording
+- **EEG data analysis**: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering, phase coupling analysis
+- **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
 
