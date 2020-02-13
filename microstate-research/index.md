@@ -54,4 +54,4 @@ In order to find out the essential connections that differs between conditions, 
     </figcaption>
 </figure>
 
-We are now designing new experiments to incorporate more conditions, especially the self-oriented conditions that reflects the activity of DMN. Please contact me if you want to know the latest result: (crq)(AT)(pku)(DOT)(edu)(DOT)(com).
+We are now designing new experiments to incorporate more conditions, especially the self-oriented conditions that reflects the activity of DMN. And we also want to test our method with a larger dataset. Please contact me if you want to know the latest result: (crq)(AT)(pku)(DOT)(edu)(DOT)(com).
