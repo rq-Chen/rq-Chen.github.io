@@ -100,6 +100,10 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 - Experiment design, psychophysical methods, sensation and perception, language, etc.
 
+#### Computational Neuroscience (89/100)
+
+- Hodgkin-Huxley equations, E-I balanced network, continuous attractor network, etc.
+
 #### Computational Perception and Scene Analysis (86/100)
 
 - Physiological, psychological and computational models for vision and audition, the latter covering neural pathway, pitch encoding, source localization, auditory scene analysis, and speech perception
@@ -107,6 +111,10 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 #### Practice of Data Structure and Algorithm (87/100)
 
 - C++ implementation of graph algorithms including network flow, shortest path, interval tree, etc.
+
+#### To Be Continued...
+
+- I'm going to take courses about **Machine Learning**, **Stochastic Processes**, **Psychological Statistics**, **Physiological Psychology**, and **Functional Anatomy of Central Nervous System** in the next term!
 
 
 

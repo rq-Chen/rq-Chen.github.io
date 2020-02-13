@@ -54,19 +54,13 @@ The pipeline is similar to the original one, but we incorporate two more kinds o
 - The data was preprocessed by EEGLAB. ([Details]([https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Processing](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory Working Memory/Processing)))
 - Preliminary behavioral, ERP and time-frequency analysis was done by MATLAB ([Detais]([https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory Working Memory/Analysis))):
 
-  - Accuracy
-
-    <img src = 'accuracy.png' style = "zoom:40%" />
-
   - Reaction time:
 
     <img src = 'reaction time.png' style = "zoom:40%" />
 
-  - ERP:
+  - Cluster-level permutation-based ANOVA for delay period ERP amplitude:
 
-    <img src = 'CzERP.png' style = "zoom:40%" />
+    <img src = 'Bin_F_TP.png' style = "zoom:40%" />
 
-  - Time-frequency analysis:
-
-    <img src = 'O1.png' style = "zoom:40%" />
+    This result was consistent with the reference paper that the left centroparietal channels' ERPs were significantly modulated by task conditions. For comparison see [Figure 2](https://els-jbs-prod-cdn.literatumonline.com/cms/attachment/880b178a-385c-4d53-9ff8-598c72ebbc45/gr2.jpg) in the original paper.
 
