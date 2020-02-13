@@ -26,7 +26,7 @@ Interestingly, we found the connectivity-based microstates analogous to the trad
 
 ## The "Mondrian" state and Default Mode Network (DMN)
 
-The activity of DMN has been associated with GFP microstate C [(Brechet et al., 2019)](https://doi.org/10.1016/j.neuroimage.2019.03.029), which corresponded to our FC microstate "Mondrian" (by the way, we gave it this nickname since its connectivity matrix resembled Mondrian's' paintings). Therefore, we examined the dynamics of this microstate under different experimental conditions. Although we only had few data, it could be concluded from the result that the Mondrian state was more significant when eyes were closed, indicating its potential connection with the DMN.
+The activity of DMN has been associated with GFP microstate C [(Brechet et al., 2019)](https://doi.org/10.1016/j.neuroimage.2019.03.029), which corresponded to our FC microstate "Mondrian" (by the way, we gave it this nickname since its connectivity matrix resembled Mondrian's paintings). Therefore, we examined the dynamics of this microstate under different experimental conditions. Although we only had few data, it could be concluded from the result that the Mondrian state was more significant when eyes were closed, indicating its potential connection with the DMN.
 
 <figure>
 	<p><img src = "newMondAvrLen.png" style = "zoom:40%" /></p>
