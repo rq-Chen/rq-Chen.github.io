@@ -55,3 +55,7 @@ In order to find out the essential connections that differs between conditions, 
 </figure>
 
 We are now designing new experiments to incorporate more conditions, especially the self-oriented conditions that reflects the activity of DMN. And we also want to test our method with a larger dataset. Please contact me if you want to know the latest result: (crq)(AT)(pku)(DOT)(edu)(DOT)(com).
+
+
+
+<center><a href='https://www.symptoma.es/'>Symptoma</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=70ce7ced8310868c6335dcc9d3b78b9c808bfc8d'></script><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/638391/t/1"></script></center>

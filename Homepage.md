@@ -125,3 +125,6 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 - **EEG data analysis**: ERP analysis, spectrotemporal analysis, multivariate pattern analysis, dynamic general linear model, unsupervised clustering, phase coupling analysis
 - **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
 
+
+
+<center><a href='https://www.symptoma.es/'>Symptoma</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=70ce7ced8310868c6335dcc9d3b78b9c808bfc8d'></script><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/638391/t/1"></script></center>
