@@ -14,14 +14,15 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 - I have been researching on sequential working memory with the guidance of Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](undergraduate-research/index.html))
 - I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
-- I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU this summer. ([Details](summer-school/index.html))
+- I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU in summer. ([Details](summer-school/index.html))
+- I contributed to the well-known *Fieldtrip toolbox* with a [bug fix](https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316). I also helped fix the [bugs](https://github.com/sccn/eeglab/issues/61) in `binica.m` of *EEGLAB toolbox* before.
 - I trained a deep residual network (*ResNet-20*) with *Keras* on *CIFAR10* and achieved high accuracy. ([Details](deep-learning-startup/index.html))
 - I finished my first data visualization project with *D3.js*. ([Details](visualization-project/index.html))
 - I have been taking a lot of courses about cognitive neuroscience at PKU. ([Details](#relevant courses))
 
 
 
-**Last updated:** 02/06/2020
+**Last updated:** 02/25/2020
 
 
 
