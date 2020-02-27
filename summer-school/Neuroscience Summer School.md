@@ -1,11 +1,11 @@
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/deep-learning-startup/index.html">Before: Deep Learning startup</a>
+    		<a href = "https://rq-chen.github.io/deep-learning-startup/index.html">Before: Deep Learning startup</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/summer-research-THU/index.html">Next: Summer research at THU</a>
+    		<a href = "https://rq-chen.github.io/summer-research-THU/index.html">Next: Summer research at THU</a>
     	</span>
     </center>
 </div>
@@ -74,11 +74,11 @@ I also visited several laboratories during the summer school, which aroused my i
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/deep-learning-startup/index.html">Before: Deep Learning startup</a>
+    		<a href = "https://rq-chen.github.io/deep-learning-startup/index.html">Before: Deep Learning startup</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/summer-research-THU/index.html">Next: Summer research at THU</a>
+    		<a href = "https://rq-chen.github.io/summer-research-THU/index.html">Next: Summer research at THU</a>
     	</span>
     </center>
 </div></br></br>

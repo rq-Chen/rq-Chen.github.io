@@ -1,11 +1,11 @@
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/visualization-project/index.html">Before: Visualization project</a>
+    		<a href = "https://rq-chen.github.io/visualization-project/index.html">Before: Visualization project</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/summer-school/index.html">Next: Summer school</a>
+    		<a href = "https://rq-chen.github.io/summer-school/index.html">Next: Summer school</a>
     	</span>
     </center>
 </div>
@@ -182,11 +182,11 @@ A little problem is that the training process seems to be too slow (170 sec/epoc
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/visualization-project/index.html">Before: Visualization project</a>
+    		<a href = "https://rq-chen.github.io/visualization-project/index.html">Before: Visualization project</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/summer-school/index.html">Next: Summer school</a>
+    		<a href = "https://rq-chen.github.io/summer-school/index.html">Next: Summer school</a>
     	</span>
     </center>
 </div>

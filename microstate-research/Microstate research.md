@@ -1,11 +1,11 @@
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/summer-research-THU/index.html">Before: Summer research at THU</a>
+    		<a href = "https://rq-chen.github.io/summer-research-THU/index.html">Before: Summer research at THU</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/undergraduate-research/index.html">Next: Working memory project</a>
+    		<a href = "https://rq-chen.github.io/undergraduate-research/index.html">Next: Working memory project</a>
     	</span>
     </center>
 </div>
@@ -210,11 +210,11 @@ I thank Prof. Bo Hong for his patient and insightful guidance on our research, a
 <div>
     <center>
 		<span style = "float: left">
-			<a link = "https://rq-chen.github.io/summer-research-THU/index.html">Before: Summer research at THU</a>
+			<a href = "https://rq-chen.github.io/summer-research-THU/index.html">Before: Summer research at THU</a>
 		</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
 		<span style = "float: right">
-			<a link = "https://rq-chen.github.io/undergraduate-research/index.html">Next: Working memory project</a>
+			<a href = "https://rq-chen.github.io/undergraduate-research/index.html">Next: Working memory project</a>
 		</span>
     </center>
 </div></br></br>

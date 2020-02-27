@@ -1,11 +1,11 @@
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/summer-school/index.html">Before: Summer school</a>
+    		<a href = "https://rq-chen.github.io/summer-school/index.html">Before: Summer school</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/microstate-research/index.html">Next: Microstate research</a>
+    		<a href = "https://rq-chen.github.io/microstate-research/index.html">Next: Microstate research</a>
     	</span>
     </center>
 </div>
@@ -209,11 +209,11 @@ We are now designing new experiments to incorporate more conditions, especially 
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/summer-school/index.html">Before: Summer school</a>
+    		<a href = "https://rq-chen.github.io/summer-school/index.html">Before: Summer school</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/microstate-research/index.html">Next: Microstate research</a>
+    		<a href = "https://rq-chen.github.io/microstate-research/index.html">Next: Microstate research</a>
     	</span>
     </center>
 </div></br></br>

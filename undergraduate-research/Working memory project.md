@@ -1,11 +1,11 @@
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/microstate-research/index.html">Before: Microstate research</a>
+    		<a href = "https://rq-chen.github.io/microstate-research/index.html">Before: Microstate research</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/index.html">Next: None</a>
+    		<a href = "https://rq-chen.github.io/index.html">Next: None</a>
     	</span>
     </center>
 </div>
@@ -85,11 +85,11 @@ The pipeline is similar to the original one, but we incorporate two more kinds o
 <div>
     <center>
     	<span style = "float: left">
-    		<a link = "https://rq-chen.github.io/microstate-research/index.html">Before: Microstate research</a>
+    		<a href = "https://rq-chen.github.io/microstate-research/index.html">Before: Microstate research</a>
     	</span>
-        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a link = "https://rq-chen.github.io/index.html">Next: None</a>
+    		<a href = "https://rq-chen.github.io/index.html">Next: None</a>
     	</span>
     </center>
 </div>
