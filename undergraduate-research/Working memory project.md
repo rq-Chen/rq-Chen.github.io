@@ -1,3 +1,17 @@
+<div>
+    <center>
+    	<span style = "float: left">
+    		<a link = "https://rq-chen.github.io/microstate-research/index.html">Before: Microstate research</a>
+    	</span>
+        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+    	<span style = "float: right">
+    		<a link = "https://rq-chen.github.io/index.html">Next: None</a>
+    	</span>
+    </center>
+</div>
+
+---
+
 # Undergraduate Research in Working Memory
 
 
@@ -66,4 +80,16 @@ The pipeline is similar to the original one, but we incorporate two more kinds o
 
 
 
-<center><a href='https://www.symptoma.es/'>Symptoma</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=70ce7ced8310868c6335dcc9d3b78b9c808bfc8d'></script><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/638391/t/1"></script></center>
+---
+
+<div>
+    <center>
+    	<span style = "float: left">
+    		<a link = "https://rq-chen.github.io/microstate-research/index.html">Before: Microstate research</a>
+    	</span>
+        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+    	<span style = "float: right">
+    		<a link = "https://rq-chen.github.io/index.html">Next: None</a>
+    	</span>
+    </center>
+</div>

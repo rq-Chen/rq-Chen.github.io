@@ -1,3 +1,17 @@
+<div>
+    <center>
+    	<span style = "float: left">
+    		<a link = "https://rq-chen.github.io/summer-school/index.html">Before: Summer school</a>
+    	</span>
+        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+    	<span style = "float: right">
+    		<a link = "https://rq-chen.github.io/microstate-research/index.html">Next: Microstate research</a>
+    	</span>
+    </center>
+</div>
+
+---
+
 # Summer Research at Tsinghua University
 
 **Update:** We replicated our result with a more rigorous pipeline in a larger [dataset](https://dataverse.tdl.org/dataverse/rsed2017)! Several representative figures are shown here. For details see [Microstate project](../microstate-research/index.html).
@@ -188,14 +202,18 @@ In order to find out the essential connections that differs between conditions, 
 
 We are now designing new experiments to incorporate more conditions, especially the self-oriented conditions that reflects the activity of DMN. And we also want to test our method with a larger dataset. The latest result is in [here](../microstate-research/index.html).
 
+
+
 ---
 
 <div>
-	<span style = "float: left">
-	<a link = "https://rq-chen.github.io/index.html">Back to homepage</a>
-	</span>
-	<span style = "float: right">
-	<a link = "https://rq-chen.github.io/microstate-research/index.html">Next topic: Microstate Project</a>
-	</span>
-</div>
-<div><center><a href='https://www.symptoma.es/'>Symptoma</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=70ce7ced8310868c6335dcc9d3b78b9c808bfc8d'></script><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/638391/t/1"></script></center></div>
+    <center>
+    	<span style = "float: left">
+    		<a link = "https://rq-chen.github.io/summer-school/index.html">Before: Summer school</a>
+    	</span>
+        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+    	<span style = "float: right">
+    		<a link = "https://rq-chen.github.io/microstate-research/index.html">Next: Microstate research</a>
+    	</span>
+    </center>
+</div></br></br>

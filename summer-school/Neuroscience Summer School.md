@@ -1,3 +1,17 @@
+<div>
+    <center>
+    	<span style = "float: left">
+    		<a link = "https://rq-chen.github.io/deep-learning-startup/index.html">Before: Deep Learning startup</a>
+    	</span>
+        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+    	<span style = "float: right">
+    		<a link = "https://rq-chen.github.io/summer-research-THU/index.html">Next: Summer research at THU</a>
+    	</span>
+    </center>
+</div>
+
+---
+
 # Neuroscience Summer School
 
 
@@ -52,3 +66,19 @@ During the summer school, I made friends with a lot of fellow students from all 
 Besides, the senior students in several laboratory shared with us their PhD life, explaining how the experience equipped them with independent thinking and strong self-study capability. After hearing their story, I believed that hard as it is, going through the PhD is still worthwhile.
 
 I also visited several laboratories during the summer school, which aroused my interest in really doing some research by myself. Therefore, I communicated with Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html) at Tsinghua University and finished a five-week-long summer research at his laboratory, which turned out to be very fruitful. For details, please click [here](../summer-research-THU/index.html).
+
+
+
+---
+
+<div>
+    <center>
+    	<span style = "float: left">
+    		<a link = "https://rq-chen.github.io/deep-learning-startup/index.html">Before: Deep Learning startup</a>
+    	</span>
+        <a link = "https://rq-chen.github.io/index.html">Homepage</a>
+    	<span style = "float: right">
+    		<a link = "https://rq-chen.github.io/summer-research-THU/index.html">Next: Summer research at THU</a>
+    	</span>
+    </center>
+</div></br></br>
