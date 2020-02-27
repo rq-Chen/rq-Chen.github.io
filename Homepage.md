@@ -12,6 +12,7 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 ## Highlights
 
+- I conducted EEG functional connectivity microstate analysis on an open dataset and found a microstate biomarker of the activity of the Default Mode Network. ([Details](microstate-research/index.html))
 - I have been researching on sequential working memory with the guidance of Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm). ([Details](undergraduate-research/index.html))
 - I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
 - I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU in summer. ([Details](summer-school/index.html))
@@ -22,7 +23,7 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 
 
-**Last updated:** 02/25/2020
+**Last updated:** 02/28/2020
 
 
 
@@ -127,5 +128,3 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 - **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
 
 
-
-<center><a href='https://www.symptoma.es/'>Symptoma</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=70ce7ced8310868c6335dcc9d3b78b9c808bfc8d'></script><script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/638391/t/1"></script></center>
