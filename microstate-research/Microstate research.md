@@ -155,7 +155,7 @@ Second, it is unclear whether the difference in microstate properties really ref
 
 ### Data availability
 
-The EEG data was published [here](https://doi.org/10.18738/T8/ANS9Q1). All the codes will be available [here](https://github.com/rq-Chen/Summer_Research_THU) after publish.
+The EEG data was published [here](https://doi.org/10.18738/T8/ANS9Q1). All the codes will be available [here](https://github.com/rq-Chen/Summer_Research_THU) after publish (not yet).
 
 ### Preprocessing
 
