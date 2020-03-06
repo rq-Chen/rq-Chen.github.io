@@ -105,9 +105,8 @@ The last two figures are posted just for illustration of our analysis method and
 ## Method
 
 - EEG data was collected from 16 participants.
-- The data was preprocessed in EEGLAB. ([Details]([https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Processing](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory Working Memory/Processing)))
-- Preliminary behavioral, ERP and time-frequency analysis was done by Fieldtrip ([Detais]([https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory Working Memory/Analysis))):
-
+- The data was preprocessed in EEGLAB. ([Details](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Processing))
+- Preliminary behavioral, ERP and time-frequency analysis was done by Fieldtrip ([Detais](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis)):
 
 
 
