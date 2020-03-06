@@ -62,21 +62,52 @@ The pipeline is similar to the original one, but we incorporate two more kinds o
 
 
 
+## Preliminary Result (Ongoing)
+
+### Behavioral
+
+**Reaction time:**
+
+<img src = 'RT.png' style = "zoom:40%" />
+
+**Accuracy:**
+
+<img src = "Accuracy.png" style = "zoom:40%" />
+
+### Event-related potential
+
+Cluster-level permutation-based ANOVA over four conditions for delay period ERP amplitude:
+
+<img src = 'Bin_F_TP.png' style = "zoom:40%" />
+
+This result was consistent with the reference paper that the left centroparietal channels' ERPs were significantly modulated by task conditions. For comparison see [Figure 2](https://els-jbs-prod-cdn.literatumonline.com/cms/attachment/880b178a-385c-4d53-9ff8-598c72ebbc45/gr2.jpg) in the aforementioned paper.
+
+### Time-frequency analysis
+
+**Average oscillatory power in the delay period:**
+
+<img src = "TP_Power.png" style = "zoom:40%" />
+
+Here the power was z-scored against the baseline between -1~0s before the onset of S1. We can see that the four condition generally follows the same activation pattern: mild decrease in global beta power, strong increase in occipital alpha power and no significant change in global theta power. (This will be tested by averaging all data and perform a cluster level t-test later.) Besides, as we predicted, only the REVERSED condition which requires the temporal reorganization of memory contents triggered an increase of theta power. Therefore, we computed the difference between every manipulated condition and the SIMPLE condition and we are currently working on it.
+
+**Difference in oscillatory power:**
+
+<img src = "TP_Power_Diff.png" style = "zoom:40%" />
+
+**Time courses of the oscillatory power:**
+
+<img src = "TF.png" style = "zoom:40%" />
+
+The last two figures are posted just for illustration of our analysis method and we will update the result soon.
+
+
+
 ## Method
 
 - EEG data was collected from 16 participants.
-- The data was preprocessed by EEGLAB. ([Details]([https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Processing](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory Working Memory/Processing)))
-- Preliminary behavioral, ERP and time-frequency analysis was done by MATLAB ([Detais]([https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory Working Memory/Analysis))):
+- The data was preprocessed in EEGLAB. ([Details]([https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Processing](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory Working Memory/Processing)))
+- Preliminary behavioral, ERP and time-frequency analysis was done by Fieldtrip ([Detais]([https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory Working Memory/Analysis))):
 
-  - Reaction time:
-
-    <img src = 'reaction time.png' style = "zoom:40%" />
-
-  - Cluster-level permutation-based ANOVA for delay period ERP amplitude:
-
-    <img src = 'Bin_F_TP.png' style = "zoom:40%" />
-
-    This result was consistent with the reference paper that the left centroparietal channels' ERPs were significantly modulated by task conditions. For comparison see [Figure 2](https://els-jbs-prod-cdn.literatumonline.com/cms/attachment/880b178a-385c-4d53-9ff8-598c72ebbc45/gr2.jpg) in the original paper.
 
 
 

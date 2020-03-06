@@ -13,7 +13,7 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 ## Highlights
 
 - I conducted EEG functional connectivity microstate analysis on an open dataset. I illustrated the consistency between functional-connectivity-based and voltage-distribution-based microstates and found a microstate biomarker of the activity of the Default Mode Network. ([Details](microstate-research/index.html))
-- I designed an auditory working memory experiment and demonstrated the ERP amplitude modulation of left centroparietal area over different kinds of mental manipulations of the memory contents. ([Details](undergraduate-research/index.html))
+- I designed an auditory working memory experiment and demonstrated the ERP amplitude modulation of left centroparietal area over different kinds of mental manipulations of the memory contents. Working on the time-frequency analysis currently. ([Details](undergraduate-research/index.html))
 - I contributed to the well-known *Fieldtrip toolbox* with a [bug fix](https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316). I also helped fix the [bugs](https://github.com/sccn/eeglab/issues/61) in `binica.m` of *EEGLAB toolbox* before.
 - I trained a deep residual network (*ResNet-20*) with *Keras* on *CIFAR10* and achieved high accuracy. ([Details](deep-learning-startup/index.html))
 - I finished my first data visualization project with *D3.js*. ([Details](visualization-project/index.html))
@@ -69,7 +69,7 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 -   Working on the time-frequency analysis currently ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis))
 -   Wrote an intensive review about the temporal organization in working memory and another for the computational models and functions of neural oscillation in working memory ([Link](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading))
 
-**[Working Memory Decoding Analysis](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/EEG_data_processing_practice) | 2019.3**
+**[Working Memory Decoding Analysis](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/EEG_Visual_Decoding) | 2019.3**
 
 - Implemented an inverted encoding model based on the EEG data collected in a visual working memory task
 - Reconstructed the tuning curve for the orientation of two Gabor stimuli
