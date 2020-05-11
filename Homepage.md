@@ -13,7 +13,7 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 ## Highlights
 
 - I conducted EEG functional connectivity microstate analysis on an open dataset. I illustrated the consistency between functional-connectivity-based and voltage-distribution-based microstates and found a microstate biomarker of the activity of the Default Mode Network. ([Details](microstate-research/index.html))
-- I designed an auditory working memory experiment and demonstrated the ERP amplitude modulation of left centroparietal area over different kinds of mental manipulations of the memory contents. Working on the time-frequency analysis currently. ([Details](undergraduate-research/index.html))
+- I designed an auditory working memory experiment and demonstrated the ERP amplitude modulation of left centroparietal area over different kinds of mental manipulations of the memory contents. Working on the time-frequency and decoding analysis currently. ([Details](undergraduate-research/index.html))
 - I contributed to the well-known *Fieldtrip toolbox* with a [bug fix](https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316). I also helped fix the [bugs](https://github.com/sccn/eeglab/issues/61) in `binica.m` of *EEGLAB toolbox* before.
 - I trained a deep residual network (*ResNet-20*) with *Keras* on *CIFAR10* and achieved high accuracy. ([Details](deep-learning-startup/index.html))
 - I finished my first data visualization project with *D3.js*. ([Details](visualization-project/index.html))
