@@ -100,13 +100,23 @@ Here the power was z-scored against the baseline between -1~0s before the onset 
 
 The last two figures are posted just for illustration of our analysis method and we will update the result soon.
 
+### Decoding Analysis
 
+We try to investigate the time course of mental manipulation as well as their neural mechanism through decoding. Since there are 108 kinds of stimuli in our experiment, it's hard to decode them directly. Therefore, we categorized them using their contour and built an LSTM network to classify the binned EEG signal. We trained the network with a short clip of data and tested it over the whole retention period:
+
+| Trained at the beginning | Trained in the middle     | Trained at the end     |
+| ------------------------ | ------------------------- | ---------------------- |
+| ![](accContourBegin.png) | ![](accContourMiddle.png) | ![](accContourEnd.png) |
+
+We can see that the representation is relatively stable, so the decoder can generalize across a wide range of time. Below is the confusion matrix for the first decoder:
+
+<img src = 'tgRDM.gif' style = 'zoom:40%' />
 
 ## Method
 
 - EEG data was collected from 16 participants.
 - The data was preprocessed in EEGLAB. ([Details](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Processing))
-- Preliminary behavioral, ERP and time-frequency analysis was done by Fieldtrip ([Detais](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis)):
+- Preliminary behavioral, ERP, time-frequency and decoding analysis was done by Fieldtrip ([Detais](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis)):
 
 
 
