@@ -5,7 +5,7 @@
     	</span>
         <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a href = "https://rq-chen.github.io/index.html">Next: None</a>
+    		<a href = "https://rq-chen.github.io/traveling-wave/index.html">Next: Traveling wave project</a>
     	</span>
     </center>
 </div>
@@ -129,7 +129,7 @@ We can see that the representation is relatively stable, so the decoder can gene
     	</span>
         <a href = "https://rq-chen.github.io/index.html">Homepage</a>
     	<span style = "float: right">
-    		<a href = "https://rq-chen.github.io/index.html">Next: None</a>
+    		<a href = "https://rq-chen.github.io/traveling-wave/index.html">Next: Traveling wave project</a>
     	</span>
     </center>
 </div>

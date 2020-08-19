@@ -1,3 +1,17 @@
+<div>
+    <center>
+    	<span style = "float: left">
+    		<a href = "https://rq-chen.github.io/undergraduate-research/index.html">Before: Working memory project</a>
+    	</span>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
+    	<span style = "float: right">
+    		<a href = "https://rq-chen.github.io/index.html">Next: None</a>
+    	</span>
+    </center>
+</div>
+
+---
+
 # SImulation & Detection of Cortical Traveling Waves
 
 I explored the interesting topic of cortical traveling waves (TWs) during summer 2020 with the guidance of Prof. [Sven Bestmann](http://www.bestmannlab.com/). I acquired a lot of new skills and gained new insights into the essence of oscillatory signals. Here is the summary of my work (ongoing):
@@ -298,3 +312,17 @@ Second, we need to increase the complexity of TW structures and the level of noi
 Third, we may use some statistics to quantify the performance of different algorithms, so as to find out the optimal one.
 
 Finally, we may apply these methods to experimental data.
+
+---
+
+<div>
+    <center>
+    	<span style = "float: left">
+    		<a href = "https://rq-chen.github.io/undergraduate-research/index.html">Before: Working memory project</a>
+    	</span>
+        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
+    	<span style = "float: right">
+    		<a href = "https://rq-chen.github.io/index.html">Next: None</a>
+    	</span>
+    </center>
+</div>

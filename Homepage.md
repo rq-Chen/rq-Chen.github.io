@@ -12,20 +12,37 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 ## Highlights
 
+- I explored the simulation and detection of cortical traveling waves during summer 2020 with the guidance of Prof. [Sven Bestmann](http://www.bestmannlab.com/). I implemented different methods on my synthetic dataset and I am now evaluating their performance under different conditions. ([Details](/traveling-wave/))
 - I conducted EEG functional connectivity microstate analysis on an open dataset. I illustrated the consistency between functional-connectivity-based and voltage-distribution-based microstates and found a microstate biomarker of the activity of the Default Mode Network. ([Details](microstate-research/index.html))
 - I designed an auditory working memory experiment and demonstrated the ERP amplitude modulation of left centroparietal area over different kinds of mental manipulations of the memory contents. Working on the time-frequency and decoding analysis currently. ([Details](undergraduate-research/index.html))
 - I contributed to the well-known *Fieldtrip toolbox* with a [bug fix](https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316). I also helped fix the [bugs](https://github.com/sccn/eeglab/issues/61) in `binica.m` of *EEGLAB toolbox* before.
+- I compared the performace of different word-embedding strategies and RNN decoders on the IMDb dataset ([Details](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Programming/Sentiment Classification)).
 - I trained a deep residual network (*ResNet-20*) with *Keras* on *CIFAR10* and achieved high accuracy. ([Details](deep-learning-startup/index.html))
 - I finished my first data visualization project with *D3.js*. ([Details](visualization-project/index.html))
 - I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
 - I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU in summer. ([Details](summer-school/index.html))
-- I have been taking a lot of courses about cognitive neuroscience at PKU. ([Details](#relevant courses))
 
-**Last updated:** 02/29/2020
+**Last updated:** 08/19/2020
 
 
 
 ## Research Experience
+
+### Institute of Neurology | University College London (Remote) | 2020.7 - Present
+
+Advisor: Prof. [Bestmann, Sven](http://www.bestmannlab.com/team)
+
+**Project (Independent): [Simulation & Detection of Cortical Traveling Waves](/traveling-wave/)**
+
+-  Simulated an EEG dataset with spherical traveling wave and close-to-real voltage distribution and power spectrum; now working on the simulation of intracranial signals with planar waves
+
+-  Demonstrated that the PCA method in [(Alexander et. al., 2019)](https://doi.org/10.1371/journal.pcbi.1007316) could not reliably estimate the spatial frequency and source of the traveling wave through experimental and theoretical analysis
+
+- Revealed that the clustering method in [(Alexander et. al., 2016)](https://doi.org/10.1371/journal.pone.0148413) might suffer from pattern misclassification and “blurring” during averaging, and consequently imprecise estimation of the spatiotemporal structure
+
+- Proved that directly clustering the data samples provided satisfactory results and common phase removal might increase the sensitivity of the clustering algorithm
+
+- Now implementing more methods from the literature and evaluating their performance under noise
 
 ### IDG/McGovern Institute for Brain Research \| Tsinghua University | 2019.7 - Present
 
@@ -79,6 +96,12 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 ## Programming Projects
 
+**[Word Embedding Strategies & RNN Decoders for Sentiment Classification](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Programming/Sentiment Classification) | 2020.4**
+
+- Compared the performance of three word embedding strategies (Skip-gram, CBOW & Task-oriented) and three decoding networks (LSTM, GRU, simple RNN) on the IMDb dataset after controlling the number of parameters
+
+- Found that LSTM generalized best while simple RNN was highly unstable; Task-oriented encoding is optimal
+
 **[Training a Deep Neural Network on CIFAR-10](https://rq-chen.github.io/deep-learning-startup/) | 2019.12**
 
 - Trained a *ResNet-20* model from scratch on *CIFAR-10* dataset and achieved high accuracy
@@ -100,52 +123,17 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 ## Relevant Courses
 
-#### Neuropsychology (96/100)
+- **Cognitive Neuroscience:** Neuropsychology (96/100), The Brain and Cognitive Science (92/100), Experimental Psychology (90/100), Physiological Psychology (90/100)
 
-- Anatomy, function and diseases of the cortex and thalamus
+- **Computational Modeling:** Computational Modeling for Psychology and Neuroscience (92/100), Computational Neuroscience (89/100), Computational Perception and Scene Analysis (86/100)
 
-#### The Brain and Cognitive Science (92/100)
-
-- Sensation and perception, language, problem solving and deduction, etc.
-
-#### Probability Theory and Statistics (90/100)
-
-- Central limit theorem, parameter estimation, hypothesis testing, ANOVA, regression, etc.
-
-#### Experimental Psychology (90/100)
-
-- Experiment design, psychophysical methods, memory, social cognition, etc.
-
-#### Computational Neuroscience (89/100)
-
-- Hodgkin-Huxley equations, E-I balanced network, continuous attractor network, etc.
-
-#### Practice of Data Structure and Algorithm (87/100)
-
-- C++ implementation of graph algorithms including network flow, shortest path, interval tree, etc.
-
-#### Computational Perception and Scene Analysis (86/100)
-
-- Physiological, psychological and computational models for vision and audition
-
-#### Signals and Systems (84/100)
-
-- Continuous and discrete Fourier Transform, Laplace and z Transform, filtering, etc.
-
-#### Introduction to Pattern Recognition (83/100)
-
-- Bayes decision theory, SVM, logistic regression, artificial neural network, decision tree, clustering, PCA, etc.
-
-#### To Be Continued...
-
-- I'm going to take courses about **Machine Learning**, **Stochastic Processes**, **Psychological Statistics**, **Physiological Psychology**, and **Functional Anatomy of Central Nervous System** in the next term!
-
-
+- **Mathematics:** Psychological Statistics II (90/100), Probability Theory and Statistics (90/100), Introduction to Stochastic Processes (84/100), Signals and Systems (84/100), Introduction to Pattern Recognition (83/100)
 
 ## Skills
 
-- **Programming**: C/C++, Python (NumPy, TensorFlow, OpenCV), MATLAB (EEGLAB, Fieldtrip, Psychtoolbox), HTML, CSS, JavaScript, SVG, R & SPSS (expected this semester)
-- **Electrophysiology**: EEG recording, ERP & time frequency analysis, multivariate pattern analysis, dynamic general linear model, cluster analysis, phase coupling analysis
+- **Programming**: (Proficient) MATLAB (EEGLAB,  Fieldtrip, Psychtoolbox), Python (TensorFlow, OpenCV);  (Intermediate) C/C++, HTML, CSS, JavaScript (d3), SVG; (Basic) R, SPSS
+- **Signal Analysis**: EEG recording & preprocessing, ERP & time frequency analysis, MVPA, dynamic GLM, clustering & classification, connectivity, microstates, traveling wave
+- **Modeling**: Bayesian modeling & MCMC, Inverted Encoding Model (IEM), Convolutional & Recurrent Neural Network (CNN & RNN)
 - **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
 
 
