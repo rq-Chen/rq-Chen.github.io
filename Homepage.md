@@ -127,13 +127,13 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 - **Computational Modeling:** Computational Modeling for Psychology and Neuroscience (92/100), Computational Neuroscience (89/100), Computational Perception and Scene Analysis (86/100)
 
-- **Mathematics:** Psychological Statistics II (90/100), Probability Theory and Statistics (90/100), Introduction to Stochastic Processes (84/100), Signals and Systems (84/100), Introduction to Pattern Recognition (83/100)
+- **Mathematics:** Psychological Statistics II (90/100), Probability Theory and Statistics (90/100), Introduction to Stochastic Processes (84/100), Signals and Systems (84/100), Introduction to Pattern Recognition (83/100), Set Theory and Graph Theory (81.5/100)
 
 ## Skills
 
 - **Programming**: (Proficient) MATLAB (EEGLAB,  Fieldtrip, Psychtoolbox), Python (TensorFlow, OpenCV);  (Intermediate) C/C++, HTML, CSS, JavaScript (d3), SVG; (Basic) R, SPSS
 - **Signal Analysis**: EEG recording & preprocessing, ERP & time frequency analysis, MVPA, dynamic GLM, clustering & classification, connectivity, microstates, traveling wave
 - **Modeling**: Bayesian modeling & MCMC, Inverted Encoding Model (IEM), Convolutional & Recurrent Neural Network (CNN & RNN)
-- **English**: GRE 338 (AW 4), TOEFL 106 (Speaking 24), CET6 618
+- **English**: GRE Verbal 168, Quantitative 170, Analytic Writing 4; TOEFL 106 (Speaking 24); CET6 618
 
 
