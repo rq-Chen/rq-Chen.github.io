@@ -12,11 +12,11 @@ Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I m
 
 ## Highlights
 
-- I explored the simulation and detection of cortical traveling waves during summer 2020 with the guidance of Prof. [Sven Bestmann](http://www.bestmannlab.com/). I implemented different methods on my synthetic dataset and I am now evaluating their performance under different conditions. ([Details](/traveling-wave/))
+- I explored the simulation and detection of cortical traveling waves during summer 2020 with the guidance of Prof. [Sven Bestmann](http://www.bestmannlab.com/). I implemented different methods on my synthetic dataset and evaluated their performance under different SNRs. ([Details](/traveling-wave/))
 - I conducted EEG functional connectivity microstate analysis on an open dataset. I illustrated the consistency between functional-connectivity-based and voltage-distribution-based microstates and found a microstate biomarker of the activity of the Default Mode Network. ([Details](microstate-research/index.html))
 - I designed an auditory working memory experiment and demonstrated the ERP amplitude modulation of left centroparietal area over different kinds of mental manipulations of the memory contents. Working on the time-frequency and decoding analysis currently. ([Details](undergraduate-research/index.html))
 - I contributed to the well-known *Fieldtrip toolbox* with a [bug fix](https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316). I also helped fix the [bugs](https://github.com/sccn/eeglab/issues/61) in `binica.m` of *EEGLAB toolbox* before.
-- I compared the performace of different word-embedding strategies and RNN decoders on the IMDb dataset ([Details](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Programming/Sentiment Classification)).
+- I compared the performance of different word-embedding strategies and RNN decoders on the IMDb dataset ([Details](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Programming/Sentiment Classification)).
 - I trained a deep residual network (*ResNet-20*) with *Keras* on *CIFAR10* and achieved high accuracy. ([Details](deep-learning-startup/index.html))
 - I finished my first data visualization project with *D3.js*. ([Details](visualization-project/index.html))
 - I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
@@ -34,15 +34,13 @@ Advisor: Prof. [Bestmann, Sven](http://www.bestmannlab.com/team)
 
 **Project (Independent): [Simulation & Detection of Cortical Traveling Waves](/traveling-wave/)**
 
--  Simulated an EEG dataset with spherical traveling wave and close-to-real voltage distribution and power spectrum; now working on the simulation of intracranial signals with planar waves
-
--  Demonstrated that the PCA method in [(Alexander et. al., 2019)](https://doi.org/10.1371/journal.pcbi.1007316) could not reliably estimate the spatial frequency and source of the traveling wave through experimental and theoretical analysis
-
-- Revealed that the clustering method in [(Alexander et. al., 2016)](https://doi.org/10.1371/journal.pone.0148413) might suffer from pattern misclassification and “blurring” during averaging, and consequently imprecise estimation of the spatiotemporal structure
-
-- Proved that directly clustering the data samples provided satisfactory results and common phase removal might increase the sensitivity of the clustering algorithm
-
-- Now implementing more methods from the literature and evaluating their performance under noise
+-  **Experiment 2:** Simulated mesoscopic cortical traveling waves of different speeds, in different frequency bands under different levels of Signal-to-Noise-Ratio (SNR), with more than 300,000 trials in total
+-  Quantified the precision of linear-regression-based estimation of wave orientation and speed 
+-  Illustrated that the estimation of orientation improved as SNR and spatial frequency increased, but there might be an optimal spatial frequency interval for the estimation of speed
+-  Found that performing a single regression at each time point would be generally better than over the whole trial, and estimating by the median of speed distribution would be more accurate than the mean
+-  **Experiment 1:** Simulated macroscopic spherical traveling wave with rapidly changing sources, and evaluated the performance of different traveling wave detection algorithms on the dataset ([Link](https://rq-chen.github.io/traveling-wave/Exp1/))
+-  Revealed that neither the clustering method in [(Alexander et. al., 2016)](https://doi.org/10.1371/journal.pone.0148413) nor the PCA method in [(Alexander et. al., 2019)](https://doi.org/10.1371/journal.pcbi.1007316)  could reliably classify the spatial structure of the traveling wave
+-  Demonstrated that directly clustering the data samples at each time point provided satisfactory results and common phase offset removal might increase the sensitivity of the clustering algorithm
 
 ### IDG/McGovern Institute for Brain Research \| Tsinghua University | 2019.7 - Present
 
