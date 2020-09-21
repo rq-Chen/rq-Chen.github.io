@@ -134,6 +134,6 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 - **Programming**: (Proficient) MATLAB (EEGLAB,  Fieldtrip, Psychtoolbox), Python (TensorFlow, OpenCV);  (Intermediate) C/C++, HTML, CSS, JavaScript (d3), SVG; (Basic) R, SPSS
 - **Signal Analysis**: EEG recording & preprocessing, ERP & time frequency analysis, MVPA, dynamic GLM, clustering & classification, connectivity, microstates, traveling wave
 - **Modeling**: Bayesian modeling & MCMC, Inverted Encoding Model (IEM), Convolutional & Recurrent Neural Network (CNN & RNN)
-- **English**: GRE Verbal 168, Quantitative 170, Analytic Writing 4; TOEFL 106 (Speaking 24); CET6 618
+- **English**: GRE Verbal 168, Quantitative 170, Analytic Writing 4; TOEFL 112 (Speaking 23); CET6 618
 
 
