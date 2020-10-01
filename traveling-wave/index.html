@@ -232,7 +232,7 @@ p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
     	</span>
     </center>
 </div><hr /><h1><a name="evaluating-the-performance-of-linear-regression-on-the-detection-of-cortical-traveling-waves" class="md-header-anchor"></a><span>Evaluating the Performance of Linear Regression on the Detection of Cortical Traveling Waves</span></h1><h2><a name="introduction" class="md-header-anchor"></a><span>Introduction</span></h2><p><span>With the guidance of Prof. </span><a href='http://www.bestmannlab.com/'><span>Sven Bestmann</span></a><span>, I analyzed the performance of linear regression on the detection of mesocopic cortical traveling waves of different speeds, in different frequency bands under different levels of Signal-to-Noise-Ratio (SNR), with more than 300,000 trials in total. It turned out that the estimation of orientation improved as SNR and spatial frequency increased, but there might be an optimal spatial frequency interval for the estimation of speed. Besides, performing a single regression at each time point would be generally better than over the whole trial, and estimating by the median of speed distribution would be more accurate than the mean.</span></p><p><span>(Here we only show part of the results.)</span></p><h2><a name="results" class="md-header-anchor"></a><span>Results</span></h2><h3><a name="orientation" class="md-header-anchor"></a><span>Orientation</span></h3><p><span>We performed a 4-way ANOVA on our data (between-group factors: 7 SNR * 4 Frequency band * 4 TW speed, within-group factor: 5 OriMethods) in SPSS 26. Since there were a huge number of simulations, and 400 trials in each simulation, it&#39;s not surprising that every term turned out to have a significant effect:</span></p><figure>
-	<p><img src="stat/oriANOVA.png" style="zoom:40%" onerror="this.style.display = 'none';"></p>
+	<p><img src="stat/OriANOVA.png" style="zoom:40%" onerror="this.style.display = 'none';"></p>
 	<figcaption>
         <strong>Figure 1. ANOVA table for orientation</strong>
         <p>Output from SPSS 26. Note that we only show part of the within-group effects, but the p-values not shown were just another list of .000</p>
@@ -244,7 +244,7 @@ p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
         <p>Color indicates the mean value of Pearson correlation coefficient between the sine value of estimated and real orientations in each condition over 30 simulations. Labels on the X and Y axes indicate the SNR and frequency band in each subplot respectively. Labels on the x and y axes of each subplot indicate the detection method and mean TW speed respectively.</p>
     </figcaption>
 </figure><p><span>It&#39;s clear that the slower the TW, the higher the temporal frequency, the higher the SNR, the better the detection, and all algorithms performed equally well except that regression over samples (method A and B) would be better with high SNR.</span></p><h3><a name="speed" class="md-header-anchor"></a><span>Speed</span></h3><figure>
-	<p><img src="stat/spANOVA.png" style="zoom:40%" onerror="this.style.display = 'none';"></p>
+	<p><img src="stat/SpANOVA.png" style="zoom:40%" onerror="this.style.display = 'none';"></p>
 	<figcaption>
         <strong>Figure 3. ANOVA table for speed</strong>
         <p>Output from SPSS 26. Note that we only show part of the within-group effects, but the p-values not shown were just another list of .000</p>

@@ -27,7 +27,7 @@ With the guidance of Prof. [Sven Bestmann](http://www.bestmannlab.com/), I analy
 We performed a 4-way ANOVA on our data (between-group factors: 7 SNR * 4 Frequency band * 4 TW speed, within-group factor: 5 OriMethods) in SPSS 26. Since there were a huge number of simulations, and 400 trials in each simulation, it's not surprising that every term turned out to have a significant effect:
 
 <figure>
-	<p><img src = "stat/oriANOVA.png" style = "zoom:40%"/></p>
+	<p><img src = "stat/OriANOVA.png" style = "zoom:40%"/></p>
 	<figcaption>
         <strong>Figure 1. ANOVA table for orientation</strong>
         <p>Output from SPSS 26. Note that we only show part of the within-group effects, but the p-values not shown were just another list of .000</p>
@@ -49,7 +49,7 @@ It's clear that the slower the TW, the higher the temporal frequency, the higher
 ### Speed
 
 <figure>
-	<p><img src = "stat/spANOVA.png" style = "zoom:40%"/></p>
+	<p><img src = "stat/SpANOVA.png" style = "zoom:40%"/></p>
 	<figcaption>
         <strong>Figure 3. ANOVA table for speed</strong>
         <p>Output from SPSS 26. Note that we only show part of the within-group effects, but the p-values not shown were just another list of .000</p>
