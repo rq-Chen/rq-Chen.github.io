@@ -14,7 +14,17 @@
 
 # Undergraduate Research in Working Memory
 
+**Update: **I am now working with PhD candidate Ying Fan on an auditory working memory experiment. I simulated a recurrent neural network to explore whether the frequency and position of stimuli are represented seperately in the network, dependent on the experiment setting. 
 
+Here is the model structure:
+
+<img src = "model.png" style = "zoom:20%" />
+
+There are 182 time steps in each trial at a sampling rate of 20Hz, and I simulated 7200 trials with all combinations of stimuli and cue types, according to the original design. The input layer contains a (pseudo-) continous attractor for frequency with 20 neurons and 4 extra neurons for visual cue. The recurrent layer contains 32 neurons (activation: tanh) which receive both the feed-forward input and their own output in the previous time step. They are connected to the only output neuron (activation: sigmoid), which indicates whether the target stimulus is higher or lower in pitch than the cued stimulus. Only the loss during response period will be counted.
+
+The model contains 1857 trainable parameters. By manipulating the SNR (currently 0dB) of the input, currently the accuracy of the network is around 90% after 30 epochs of training. We are now analyzing the weights and dynamics of the network during the experiment to figure out the representation of different features.
+
+## Introduction
 
 I have been researching in the neural basis of sequential working memory in the Lab of [Prof. Luo, Huan](http://psy.pku.edu.cn/english/people/faculty/professor/huanluo/index.htm) for nearly a year. I reviewed the literature, selected the research topic, designed the experiment, collected the data and analyzed the result on my own. This experience enabled me to carry out a research project independently and equipped me with many useful tools including experiment presentation, ERP and time-frequency analysis with Psychtoolbox, EEGLAB and Fieldtrip. More details about my project is available [here](https://github.com/rq-Chen/Undergraduate_Research_at_PKU).
 
