@@ -34,13 +34,13 @@ Advisor: Prof. [Bestmann, Sven](http://www.bestmannlab.com/team)
 
 **Project (Independent): [Simulation & Detection of Cortical Traveling Waves](/traveling-wave/)**
 
--  **Experiment 2:** Simulated mesoscopic cortical traveling waves of different speeds, in different frequency bands under different levels of Signal-to-Noise-Ratio (SNR), with more than 300,000 trials in total
--  Quantified the precision of linear-regression-based estimation of wave orientation and speed 
--  Illustrated that the estimation of orientation improved as SNR and spatial frequency increased, but there might be an optimal spatial frequency interval for the estimation of speed
--  Found that performing a single regression at each time point would be generally better than over the whole trial, and estimating by the median of speed distribution would be more accurate than the mean
--  **Experiment 1:** Simulated macroscopic spherical traveling wave with rapidly changing sources, and evaluated the performance of different traveling wave detection algorithms on the dataset ([Link](https://rq-chen.github.io/traveling-wave/Exp1/))
--  Revealed that neither the clustering method in [(Alexander et. al., 2016)](https://doi.org/10.1371/journal.pone.0148413) nor the PCA method in [(Alexander et. al., 2019)](https://doi.org/10.1371/journal.pcbi.1007316)  could reliably classify the spatial structure of the traveling wave
--  Demonstrated that directly clustering the data samples at each time point provided satisfactory results and common phase offset removal might increase the sensitivity of the clustering algorithm
+-  Simulated stable mesoscopic cortical traveling waves of different speeds, in different frequency bands under different levels of Signal-to-Noise-Ratio (SNR), with more than 300,000 trials in total
+   -  Quantified the precision of linear-regression-based estimation of wave orientation and speed 
+   -  Illustrated that the estimation of orientation improved as SNR and spatial frequency increased, but there might be an optimal spatial frequency interval for the estimation of speed
+   -  Found that performing a single regression at each time point would be generally better than over the whole trial, and estimating by the median of speed distribution would be more accurate than the mean
+-  Simulated dynamic macroscopic spherical traveling wave with rapidly changing sources, and evaluated the performance of different traveling wave detection algorithms on the dataset ([Link](https://rq-chen.github.io/traveling-wave/Exp1/))
+   -  Revealed that neither the clustering method in [(Alexander et. al., 2016)](https://doi.org/10.1371/journal.pone.0148413) nor the PCA method in [(Alexander et. al., 2019)](https://doi.org/10.1371/journal.pcbi.1007316)  could reliably classify the spatial structure of the traveling wave
+   -  Demonstrated that directly clustering the data samples at each time point provided satisfactory results and common phase offset removal might increase the sensitivity of the clustering algorithm
 
 ### IDG/McGovern Institute for Brain Research \| Tsinghua University | 2019.7 - Present
 
@@ -80,8 +80,8 @@ Advisor: Prof. [Luo, Huan](http://mgv.pku.edu.cn/english/people/lbd/sopacs/22015
 
 -   Designed an EEG experiment to explore the neural mechanism underlying the manipulation of contents in auditory working memory and collected data from 16 subjects ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Experiment))
 -   Pre-processed the data with *EEGLAB* and analyzed the results with *Fieldtrip*
--   Learned the rationale of cluster-level permutation test and applied it to ERP analysis, result being consistent with [(Albouy et al., Neuron, 2017)](https://www.cell.com/neuron/pdf/S0896-6273(17)30198-8.pdf); helped fix a [bug](https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316) in *Fieldtrip* during the process
--   Working on the time-frequency analysis currently ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis))
+-   Learned the rationale of cluster-level permutation test and applied it to ERP & time-frequency analysis ([Codes](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis)), result being consistent with [(Albouy et al., Neuron, 2017)](https://www.cell.com/neuron/pdf/S0896-6273(17)30198-8.pdf); helped fix a [bug](https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316) in *Fieldtrip* during the process
+-   Now exploring the neural representation of feature and sequential position in Recurrent Neural Network (RNN) by simulations
 -   Wrote an intensive review about the temporal organization in working memory and another for the computational models and functions of neural oscillation in working memory ([Link](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading))
 
 **[Working Memory Decoding Analysis](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/EEG_Visual_Decoding) | 2019.3**

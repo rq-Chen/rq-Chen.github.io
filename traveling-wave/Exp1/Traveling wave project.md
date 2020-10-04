@@ -14,7 +14,9 @@
 
 # SImulation & Detection of Cortical Traveling Waves
 
-I explored the interesting topic of cortical traveling waves (TWs) during summer 2020 with the guidance of Prof. [Sven Bestmann](http://www.bestmannlab.com/). I acquired a lot of new skills and gained new insights into the essence of oscillatory signals. Below is my first experiment about the detection of spherical TWs at a macroscopic scale. For my second (and more formal) experiment about planar TWs at mesoscopic scale, click [here](https://rq-chen.github.io/traveling-wave/index.html).
+I explored the interesting topic of cortical traveling waves (TWs) during summer 2020 with the guidance of Prof. [Sven Bestmann](http://www.bestmannlab.com/). I acquired a lot of new skills and gained new insights into the essence of oscillatory signals. Below is my first experiment about the detection of spherical TWs at a macroscopic scale.
+
+**Update:** For my second (and more formal) experiment about planar TWs at mesoscopic scale, click [here](https://rq-chen.github.io/traveling-wave/index.html).
 
 ## Simulation of Cortical Traveling Waves
 
