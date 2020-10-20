@@ -14,15 +14,51 @@
 
 # Undergraduate Research in Working Memory
 
-**Update: **I am now working with PhD candidate Ying Fan on an auditory working memory experiment. I simulated a recurrent neural network to explore whether the frequency and position of stimuli are represented seperately in the network, dependent on the experiment setting. 
+**Update: **I am now working with PhD candidate Ying Fan on an auditory working memory experiment. I simulated a recurrent neural network to explore how frequency and position of stimuli are represented in the network, dependent on the experiment setting. Here are some basic results (details available upon request):
 
-Here is the model structure:
+**Experiment and Network Design:**
 
-<img src = "model.png" style = "zoom:20%" />
+<img src = "RNN/IO.png" style = "zoom:50%" />
 
-There are 182 time steps in each trial at a sampling rate of 20Hz, and I simulated 7200 trials with all combinations of stimuli and cue types, according to the original design. The input layer contains a (pseudo-) continous attractor for frequency with 20 neurons and 4 extra neurons for visual cue. The recurrent layer contains 32 neurons (activation: tanh) which receive both the feed-forward input and their own output in the previous time step. They are connected to the only output neuron (activation: sigmoid), which indicates whether the target stimulus is higher or lower in pitch than the cued stimulus. Only the loss during response period will be counted.
+During each trial, participants will hear a sequence of three tones and see a cue, then compare the cued item with a target after a white noise impulse. We manipulated the difficulty of the task and explored the difference in feature representation in the network.
 
-The model contains 1857 trainable parameters. By manipulating the SNR (currently 0dB) of the input, currently the accuracy of the network is around 90% after 30 epochs of training. We are now analyzing the weights and dynamics of the network during the experiment to figure out the representation of different features.
+The artificial neural network contains only one LSTM layer and one output layer. The 24-dimensional input is encoded in a (pseudo-) continous attractor for frequency with 20 neurons and 4 extra neurons for visual cue. The input is processed by the LSTM layer and transformed into another 24-dimensional output, then sent to the only one output neuron.
+
+**Training: **
+
+<img src = "RNN/Training.png" style = "zoom:60%"/>
+
+Due to RNN's extremely powerful memory, we have to make sure it "understands" the experiment rather than memorizes each trial. This figure demonstrates that our model successfully utilized cue information and achieved high accuracy.
+
+**Encoding:**
+
+<img src = "RNN/FreqPosCorr1.png" style = "zoom:50%"/>
+
+We performed traditional Representational Similarity Analysis (RSA) on the "neural activity" of the network. Here we show the results from 8 neurons, data categorized by (frequency, position) pairs (6 * 3 = 18 groups).
+
+<img src = "RNN/TuningCurve1.png" style = "zoom:50%"/>
+
+We plotted the tuning curves of each neuron. It's clear that some neurons only encode frequency (e.g. the bottom-left one) but some encode frequency and position jointly.
+
+<img src = "RNN/EncodingTend.png" style = "zoom:50%"/>
+
+We explored the proportion of variance explained by frequency or position for each neuron. We can see that most neurons mainly encode frequency, but some encode both.
+
+**Stimulation:**
+
+<img src = "RNN/Cue1.png" style = "zoom:50%"/>
+
+We also explored how the network reacted after cue and noise impulse. We see that after the cue, the network still represent frequency and position jointly.
+
+<img src = "RNN/Noise1.png" style = "zoom:50%"/>
+
+However, after the noise impulse, the information for position is no longer presevered.
+
+**Influence of task difficulty:**
+
+We also explored the influence of task difficulty on the way how network represented information. Generally speaking, we found that the more difficult the task, the more integrated the representation of frequency and position. (Results available upon request.)
+
+
 
 ## Introduction
 
