@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>经验</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px !important; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+
+
+:root { --window-border: none; --typora-center-window-title: true; --active-file-bg-color: #f3f3f3; --bg-color: #fcfcfc; --control-text-color: #777; }
+.mac-seamless-mode #typora-sidebar { top: var(--mac-title-bar-height); padding-top: 0px; height: auto; }
+html, body, #write { background: rgb(252, 252, 252); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Raleway, STHeiti, sans-serif; font-weight: 300; }
+h1, h2, h3, h4, h5, h6 { color: rgb(17, 17, 17); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Ubuntu, STHeiti, sans-serif; }
+html { font-size: 16px; }
+#write { max-width: 914px; text-align: justify; }
+#write > h1:first-child { margin-top: 2.75rem; }
+#write > h2:first-child { margin-top: 1.75rem; }
+#write > h3:first-child { margin-top: 1rem; }
+#write > h4:first-child { margin-top: 0.5rem; }
+h1 { font-weight: normal; line-height: 4rem; margin: 4rem 0px 1.75rem; padding: 20px 30px; text-align: center; text-transform: uppercase; }
+h2 { font-weight: normal; line-height: 3rem; margin: 3rem 0px 1.9375rem; padding: 0px 30px; text-align: center; text-transform: uppercase; }
+h3 { font-weight: normal; }
+h4 { font-weight: normal; }
+h5 { font-size: 1.125rem; font-weight: normal; }
+h6 { font-size: 1rem; font-weight: bold; }
+p { color: rgb(17, 17, 17); font-size: 1rem; line-height: 1.75rem; margin: 0px 0px 1.25rem; }
+#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
+#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
+#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
+#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
+@media screen and (max-width: 48em) {
+  blockquote { margin-left: 1rem; margin-right: 0px; padding: 0.5em; }
+  .h1, h1 { font-size: 2.827rem; }
+  .h2, h2 { font-size: 1.999rem; }
+  .h3, h3 { font-size: 1.413rem; }
+  .h4, h4 { font-size: 1.25rem; }
+  .h5, h5 { font-size: 1.15rem; }
+  .h6, h6 { font-size: 1rem; }
+}
+a, .md-def-url { color: rgb(153, 0, 0); text-decoration: none; }
+a:hover { text-decoration: underline; }
+table { margin-bottom: 20px; }
+table th, table td { padding: 8px; line-height: 1.25rem; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); }
+table th { font-weight: bold; }
+table thead th { vertical-align: bottom; }
+table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
+table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
+code, .md-fences { border: 1px solid rgb(204, 204, 204); padding: 0.1em; font-size: 0.9em; margin-left: 0.2em; margin-right: 0.2em; }
+.md-fences { margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
+.task-list { padding-left: 0px; }
+.task-list-item { padding-left: 2.125rem; }
+.task-list-item input { top: 3px; }
+.task-list-item input::before { content: ""; display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; text-align: center; border: 1px solid gray; background-color: rgb(253, 253, 253); margin-left: 0px; margin-top: -0.8rem; }
+.task-list-item input:checked::before, .task-list-item input[checked]::before { content: "◼"; font-size: 0.8125rem; line-height: 0.9375rem; margin-top: -1rem; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .task-list-item input::before { margin-top: -0.2rem; }
+  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
+}
+blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid gray; }
+blockquote, blockquote p { line-height: 1.6; color: rgb(111, 111, 111); }
+#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin-top: -1.5em; color: rgb(153, 153, 153); width: 100vw; max-width: calc(100% + 60px); margin-left: -30px; border-left: 30px solid rgb(248, 248, 248); border-right: 30px solid rgb(248, 248, 248); }
+.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
+p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
+.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
+.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
+.md-image > img { margin-top: 2px; }
+.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
+#typora-source { color: rgb(85, 85, 85); }
+#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
+#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
+#md-notification::before { top: 14px; }
+#md-notification { background: rgb(238, 238, 238); }
+.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
+#typora-sidebar { box-shadow: none; }
+.file-list-item, .show-folder-name .file-list-item { padding-top: 20px; padding-bottom: 20px; line-height: 20px; }
+.file-list-item-summary { height: 40px; line-height: 20px; }
+
+
+</style>
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'><h1><a name="cs转申心理学/神经科学phd的五件事" class="md-header-anchor"></a><span>CS转申心理学/神经科学PhD的五件事</span></h1><p>&nbsp;</p><p><span>首先贡献几个收藏，这些可能比我说的有用多了：</span></p><p><strong><span>综合类</span></strong></p><p><a href='https://brainphd-cn.github.io/handbook/'><span>脑科学博士申请指南</span></a><span> 这是最最最全面最有针对性的指导了。然而这里面各位都是神……而且偏重神经方向，甚至是计算神经方向。</span></p><p><a href='https://cse.google.com/cse?cx=012183838960579517236:cbizsv38utk&amp;hl=zh-CN'><span>Programmable Search Engine</span></a><span> 这是一个专搜几大留学论坛的搜索引擎（需要梯子）。</span></p><p><a href='http://www.1point3acres.com/bbs/thread-13643-1-1.html'><span>美国留学申请新手指南和时间表【一亩三分地论坛研究生申请版】</span></a><span> 一亩三分地里神经科学相关信息实在太少，但是对于比较普遍的问题（比如规划、文书、套磁等等）可以说是第一选择。</span></p><p><a href='http://bbs.gter.net/forum-877-1.html'><span>自然科学 寄托家园留学论坛</span></a><span> 其实我没怎么看过寄托，但这里的心理学和神经科学信息稍微多一点，另外寄托会有offer签证群啥的，方便抱团。</span></p><p><a href='https://thegradcafe.com/'><span>GradCafe</span></a><span> 这个我其实完全没看过……个人感觉上面这三个网站挑一个喜欢的就行了。</span></p><p><strong><span>经验类</span></strong></p><p><a href='https://lucyblogs.wordpress.com/2018/08/02/all-about-phd-applications/'><span>All About PhD Applications – Lucy Blogs</span></a><span> 非常详细的申请总结。</span></p><p><a href='https://pg.ucsd.edu/PhD-application-tips.htm'><span>Philip Guo - A Five-Minute Guide to Ph.D. Program Applications</span></a><span> 从招生官角度给出的建议！</span></p><p><a href='https://www.1point3acres.com/bbs/thread-585851-1-1.html'><span>也从审材料的角度讲讲如何准备cs phd申请</span></a><span> 很详细，对于其他PhD也是有启发价值的。</span></p><p><strong><span>套磁类</span></strong></p><p><a href='https://lucklab.ucdavis.edu/blog/2018/9/17/emailing-faculty'><span>Why and how to email faculty prior to applying to graduate school — Luck Lab</span></a><span> 超级大牛Luck的套磁指导！当时坚定了我继续套下去的信心……</span></p><p><a href='https://neurotree.org/neurotree/index.php'><span>Neurotree</span></a><span> 学术家谱。对于了解老师的研究背景还是挺有帮助的。</span></p><p><a href='https://www.ratemyprofessors.com/'><span>Rate My Professors</span></a><span> 其实上课同学的评价跟研究生的体验可能很不一样，不过还是有参考价值的。</span></p><p><a href='http://psychgradsearch.wikidot.com/'><span>Psychology Grad School Wiki</span></a><span> 有些老师会在这个网站打广告招人。</span></p><p><strong><span>签证类</span></strong></p><p><a href='https://www.checkee.info/'><span>Check Reporter</span></a></p><p><a href='https://www.visachecked.com/'><span>Track United States Visa Status with Statistics</span></a></p><p><a href='https://tuixue.online/visa/'><span>美签可预约时间</span></a></p><p><span>接下来从我自己的经历谈谈对脑科学PhD申请的反思吧。</span></p><p>&nbsp;</p><h2><a name="背景" class="md-header-anchor"></a><span>背景</span></h2><ul><li><p><span>Top 2，智能科学与技术（大部分CS/AI，少量认知科学）</span></p></li><li><p><span>GPA：3.59/4.0 (排名31/92)，CS的课大约3.5，心理学和神经科学大约3.8</span></p></li><li><p><span>GRE：338（V168，Q170），AW4</span></p></li><li><p><span>T：112（R30，L30，S23，W29）</span></p></li><li><p><span>三段比较深入的科研，都与申请方向相关，导师都属于比较年轻产出不错的那种，三封应该都是强推：</span></p><ul><li><span>本校：一年半，大部分时间听听组会划水，做了一个EEG实验和一个神经网络模拟，都还算完整</span></li><li><span>隔壁：半年（包括一个半月暑研），做了一个还算完整的EEG项目</span></li><li><span>UCL：远程暑研两个月，做了一个还算完整的simulation项目</span></li><li><span>另外还有一个画好饼的毕设项目（计算神经科学相关），PS和面试里还是起了作用</span></li></ul></li><li><p><span>一个暑校</span></p></li><li><p><span>无论文，无任何奖项</span></p></li></ul><p>&nbsp;</p><p><span>时间线大概是：</span></p><ul><li><span>大二上，蹭几个lab的组会</span></li><li><span>大二下，决定做认知神经科学，开始选心院的课，托福一战</span></li><li><span>大二暑假，效率最高的一段时间。去了生命科学联合中心办的神经科学夏令营，然后在隔壁暑研，同时考出GRE</span></li><li><span>大三上，做本研，接着做暑研</span></li><li><span>大三寒假，暑研收尾，套磁下一个暑研</span></li><li><span>大三下，上网课，看红楼梦，思考哲学，欣赏大自然</span></li><li><span>大三暑假，暑研，托福二战</span></li><li><span>大四上，本研收尾，选校套磁，写文书</span></li><li><span>大四寒假，面试</span></li><li><span>大年二十九，收到WashU的offer！</span></li></ul><p>&nbsp;</p><p><span>申请21fall（全奖）PhD，结果如下：</span></p><figure><table><thead><tr><th><span>项目</span></th><th><span>套磁回复</span></th><th><span>结果</span></th></tr></thead><tbody><tr><td><span>NYU Neuro</span></td><td><span>模板</span></td><td><span>Rej</span></td></tr><tr><td><span>WUSTL Neuro</span></td><td><span>积极</span></td><td><span>Offer</span></td></tr><tr><td><span>UCSD CogSci &amp; Neuro（都申了）</span></td><td><span>较积极</span></td><td><span>Rej</span></td></tr><tr><td><span>Northwestern Neuro</span></td><td><span>积极</span></td><td><span>Rej</span></td></tr><tr><td><span>Vanderbilt Psy</span></td><td><span>另一个老师反套</span></td><td><span>已面试</span></td></tr><tr><td><span>UNC Neuro</span></td><td><span>模板</span></td><td><span>Rej</span></td></tr><tr><td><span>UNC Psy</span></td><td><span>较积极</span></td><td><span>Rej</span></td></tr><tr><td><span>UW-Madison Psy</span></td><td><span>无</span></td><td><span>Rej</span></td></tr><tr><td><span>BU Neuro</span></td><td><span>模板</span></td><td><span>Rej</span></td></tr><tr><td><span>BU Psy</span></td><td><span>模板</span></td><td><span>Rej</span></td></tr><tr><td><span>Brown Neuro</span></td><td><span>模板</span></td><td><span>Rej</span></td></tr><tr><td><span>IU Psy</span></td><td><span>无</span></td><td><span>Rej</span></td></tr><tr><td><span>UIowa</span></td><td><span>非常积极</span></td><td><span>Offer</span></td></tr></tbody></table></figure><p>&nbsp;</p><h2><a name="phd申请的五件事" class="md-header-anchor"></a><span>PhD申请的五件事</span></h2><h3><a name="越早越好" class="md-header-anchor"></a><span>越早越好</span></h3><p><span>出国、保研还是工作，选择读博还是读硕，这是进入大学后最应该尽快想清楚的问题。大三下学期一张白纸决定出国的比比皆是，实习科研面面俱到犹豫不决的也不在少数。虽然多晚开始都还有机会，但对于出国申请，尤其是PhD申请来说，集中精力早做准备永远是效率最高的。最简单的理由是，PhD需要三封推荐信，而且最好是科研相关，因此最自然的方法是两个暑研和一个校内。这也就意味着需要在大二下学期就决定研究生的大方向————比如，人工智能还是生物智能？如果更卷一点，甚至可以大二就出国暑研，多一封国外推荐信。</span></p><p><span>可是该怎么选择呢？我怎么知道我喜欢科研还是业界？我怎么知道我喜欢哪个研究方向？我亲身经历得出的答案是：直觉。事实是，作为一名本科菜鸡，你对以上所有选项都不可能了解（大佬请忽略这句话）。你能做的只有去试一试，比如听听组会，把握一个大概，然后跟着感觉走。不要担心选错，因为大部分情况下，两条道路都可以十分精彩。而且，科研是一辈子的事，本科毕业想换方向可以gap，博士毕业想换方向可以多做两期博后，就算真的后悔了，试错也比空想有意义得多。</span></p><h3><a name="抱团取暖" class="md-header-anchor"></a><span>抱团取暖</span></h3><p><span>抱团，是中华文明源远流长的丰厚传统，是中华民族生生不息的精神根基，是……是每一个DIY申请者的必修功课。面对着巨大的信息不对称，抱团取暖是唯一的选择。这不仅是为了互通有无，也能给你在孤独申请路上带来最大的安全感。然而众所周知，有些群活着，它已经死了。不妨尝试转一点你看到的信息，或者随便问点什么问题，只要有三四个愿意这样分享的人，这个群就会成为申请季的最大宝藏。</span></p><p><span>在这里也感谢被我死死抱住的大腿群主。您快开中介吧！整个群都去给你宣传！</span></p><h3><a name="编织故事" class="md-header-anchor"></a><span>编织故事</span></h3><p><span>这可能是对我帮助最大的一点。直到申请之前不久，我都相信自己想做的是认知神经科学，应该申请Psychology PhD。至于具体的方向，也就只能根据以前的项目随便拎个工作记忆出来了，实际上，老师想做啥我都乐意。然而直到我开始构思PS，非得提出条线索串起我毫无关联的三个项目时，我才发现这条线索的价值。</span></p><p><span>当时我面对着一个工作记忆的RNN模拟，一个脑电功能连接，一个皮层行波检测，绞尽脑汁想要编出一个抢眼的开头。可能是这些年瞎捣鼓哲学培养的概括能力终于起了作用，一个词浮现在了我脑海里————“connections”。RNN是由连接支撑的计算模型，脑电功能连接就是连接模式的动态，行波则是区域连接的实现方式，成了！</span></p><p><span>然而，我突然被这个本来生搬硬套出来的词震住了————我意识到，它竟然如此精准地勾连了我最感兴趣的众多题目：self-organization，network neuroscience，neural computation ... 刹那间，一切都清晰了起来。于是我飞快地打下了开头：</span></p><blockquote><p><span>It was May 27th, 2017 when AlphaGo declared its decisive victory against human. All of a sudden, new words like “neural networks”, “connectionism”, “emergence” began flying around us everyday. To me, it seemed that humans had finally discovered the key to our mysterious mind – connections. </span></p></blockquote><p><span>这是我全篇最得意的一段话。事实上，我甚至一时兴起把这玩意儿扯到了Diversity Statement里，拎出安乐哲的儒家角色伦理学来解释我对神经网络的兴趣。我十分怀疑WashU是看了这份诡谲的Diversity Statement想见识见识这个疯子，才给我发面试的……</span></p><p><span>这是我的经验，也许有些特殊。如果重新来过，我可能会这么选择：挑出自己最感兴趣的题目，最喜欢的论文，和最满意的研究项目，然后在脑子里做个因子分析————其实也就是写作PS的过程。这也革新了我对PS的看法————PS的套路如此，也许正是为了让申请者在流水账之余，有一个重新审视自己的机会吧。</span></p><h3><a name="match，match，match" class="md-header-anchor"></a><span>Match，Match，Match</span></h3><p><span>扫一眼我的申请结果就会发现，套磁回复与最终结果之间的正相关简直不要太明显，尤其是committee弱的心理学项目。而我这个头尾丰收中间全拒的结果也说明了match比排名重要得多……当初选校时，我同样苦于实在找不到案例，不得不把US News专排前一百的美国学校全扫了一遍，最后申请的跨度也极大（前几到八十几）。事实证明这是有效的。我感觉在脑科学PhD申请中，“选校”应该直接改称“选Lab”，你必须表现出非常明确的科学兴趣（比如，WashU要求填一个ten word descriptive sentence），必须精确到实验室，甚至一个具体项目。与CS这种偏技术的专业相比，脑科学研究的问题更为未知。只有目标清晰，才能让导师相信你能持之以恒地在这个方向上最终做出一些贡献。因此，match这个原则应该贯穿套磁、文书和面试的全过程。</span></p><h3><a name="高自信，低期待" class="md-header-anchor"></a><span>高自信，低期待</span></h3><p><span>简单来说，就是要时刻相信自己是全天下最强的（我的CV不如人只是因为我懒得卷哼），但是也要相信只有少数学校能慧眼识珠。高自信不用说了，虽然嘴上喊着女神捞我，但实际上就算去了哈佛我也觉得没什么高攀不起的。但是，正常人都知道哈佛实际上看都不会看你一眼，所以降低目标很重要。决定申请PhD的时候，我就做好了全聚德然后gap做RA的准备。交完申请，我的期望是UIowa + 50%可能中一个主申 + 1%彩票（顺便说一下，15个PhD中2-3个是常态，不要指望比我好太多————除非你申低了）。我一次也没看过GradCafe和网申状态，反正知道别人有interview了也不会能给你变出来一个（就好像考完试从不对答案一样）。甚至现在已经接了offer，我也还有签证过不了然后继续失学的心理准备。还是那句话，科研是一辈子的事，只要你对自己的实力有清晰的认识，稍微绕点远路最终还是能到达目标的。当然，还是要祝愿所有的申请者（包括我自己）都一路顺风，拿下dream offer成功上岸！</span></p><p>&nbsp;</p><p><span>本文允许转载，转载请</span><span>*</span><span>*</span><strong><span>不要</span></strong><span>*</span><span>*</span><span>注明出处。</span></p></div>
+</body>
+</html>
