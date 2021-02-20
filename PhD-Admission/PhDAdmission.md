@@ -79,21 +79,21 @@
 
 申请21fall（全奖）PhD，结果如下：
 
-| 项目                          | 套磁回复       | 结果   |
-| ----------------------------- | -------------- | ------ |
-| NYU Neuro                     | 模板           | Rej    |
-| WUSTL Neuro                   | 积极           | Offer  |
-| UCSD CogSci & Neuro（都申了） | 较积极         | Rej    |
-| Northwestern Neuro            | 积极           | Rej    |
-| Vanderbilt Psy                | 另一个老师反套 | 已面试 |
-| UNC Neuro                     | 模板           | Rej    |
-| UNC Psy                       | 较积极         | Rej    |
-| UW-Madison Psy                | 无             | Rej    |
-| BU Neuro                      | 模板           | Rej    |
-| BU Psy                        | 模板           | Rej    |
-| Brown Neuro                   | 模板           | Rej    |
-| IU Psy                        | 无             | Rej    |
-| UIowa                         | 非常积极       | Offer  |
+| 项目                          | 套磁回复       | 结果  |
+| ----------------------------- | -------------- | ----- |
+| NYU Neuro                     | 模板           | Rej   |
+| WUSTL Neuro                   | 积极           | Offer |
+| UCSD CogSci & Neuro（都申了） | 较积极         | Rej   |
+| Northwestern Neuro            | 积极           | Rej   |
+| Vanderbilt Psy                | 另一个老师反套 | Offer |
+| UNC Neuro                     | 模板           | Rej   |
+| UNC Psy                       | 较积极         | Rej   |
+| UW-Madison Psy                | 无             | Rej   |
+| BU Neuro                      | 模板           | Rej   |
+| BU Psy                        | 模板           | Rej   |
+| Brown Neuro                   | 模板           | Rej   |
+| IU Psy                        | 无             | Rej   |
+| UIowa                         | 非常积极       | Offer |
 
 
 
