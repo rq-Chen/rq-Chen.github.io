@@ -2,9 +2,9 @@
 
 
 
-Hello, I'm Ruiqi Chen, a junior student from Peking University (PKU), China. I major in Intelligence Science and Technology at the Department of Machine Intelligence, and I am most interested in cognitive neuroscience. I plan to apply for PhD programs in cognitive neuroscience in the US or Europe, now urgently seeking for relevant information. Please contact me if you could help and I would appreciate it a lot.
+Hello, I'm Ruiqi Chen, a pre-doc student in the Neurosciences Program at Washington University of St. Louis.
 
-**You can find me at (crq)(AT)(pku)(DOT)(edu)(DOT)(com).**
+**You can find me at (last name)(DOT)(first name)(AT)(wustl)(DOT)(edu).**
 
 **You can download my CV [here](Ruiqi_Chen_CV.pdf).**
 
