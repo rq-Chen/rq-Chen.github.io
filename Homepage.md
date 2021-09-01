@@ -2,7 +2,7 @@
 
 
 
-Hello, I'm Ruiqi Chen, a pre-doc student in the Neurosciences Program at Washington University of St. Louis.
+Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChen)), a pre-doc student in the Neurosciences Program at Washington University in St. Louis.
 
 **You can find me at (last name)(DOT)(first name)(AT)(wustl)(DOT)(edu).**
 
@@ -12,6 +12,22 @@ Hello, I'm Ruiqi Chen, a pre-doc student in the Neurosciences Program at Washing
 
 ## Highlights
 
+- I will begin my first rotation in WUSTL with Prof. [ShiNung Ching](https://engineering.wustl.edu/faculty/ShiNung-Ching.html) to investigate the function of multiple timescales in working memory and reinforcement learning through optimization and dynamic system analysis of RNN models.
+- I was admitted to the [Neurosciences PhD Program](https://dbbs.wustl.edu/divprograms/neuro/Pages/default.aspx) at Washington University in St. Louis! (Some [advice](PhD-Admission/index.html) for future Chinese applicants)
+
+
+
+**Last updated:** Aug/31/2021
+
+
+
+---
+
+
+
+## Undergraduate
+
+- I finished my undergraduate thesis with Prof. [Si Wu](https://mgv.pku.edu.cn/english/people/lbd/soeeace/267528.htm) on gait recognition with reservoir computing.
 - I simulated an auditory sequential working memory experiment with recurrent neural networks and explored the neural representation of frequency and sequential position in the network, result being consistent with previous finding on humans. ([Details](microstate-research/index.html))
 - I explored the simulation and detection of cortical traveling waves during summer 2020 with the guidance of Prof. [Sven Bestmann](http://www.bestmannlab.com/). I implemented different methods on my synthetic dataset and evaluated their performance under different SNRs. ([Details](/traveling-wave/))
 - I conducted EEG functional connectivity microstate analysis on an open dataset. I illustrated the consistency between functional-connectivity-based and voltage-distribution-based microstates and found a microstate biomarker of the activity of the Default Mode Network. ([Details](microstate-research/index.html))
@@ -23,13 +39,11 @@ Hello, I'm Ruiqi Chen, a pre-doc student in the Neurosciences Program at Washing
 - I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html)'s lab at Tsinghua University (THU), China. ([Details](summer-research-THU/index.html))
 - I participated in the *2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science* at THU in summer. ([Details](summer-school/index.html))
 
-**Last updated:** 11/03/2020
 
 
+## Undergraduate Research Experience
 
-## Research Experience
-
-### Institute of Neurology | University College London (Remote) | 2020.7 - Present
+### Institute of Neurology | University College London (Remote) | 2020.7 - 2020.10
 
 Advisor: Prof. [Bestmann, Sven](http://www.bestmannlab.com/team)
 
