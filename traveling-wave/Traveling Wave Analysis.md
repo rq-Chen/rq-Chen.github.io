@@ -156,16 +156,3 @@ So there are 5 methods for the estimation of orientation and speed:
   - Regression over cycles, median (`medCySp`)
   - Regression over the whole trial (`trSp`)
 
----
-
-<div>
-    <center>
-    	<span style = "float: left">
-    		<a href = "https://rq-chen.github.io/traveling-wave/Exp1/index.html">Before: Macroscopic traveling wave</a>
-    	</span>
-        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
-    	<span style = "float: right">
-    		<a href = "https://rq-chen.github.io/index.html">Next: None</a>
-    	</span>
-    </center>
-</div>

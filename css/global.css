@@ -242,6 +242,11 @@ ul :first-child, ol :first-child {
 	margin-bottom: 1%
 }
 
+/* List indent */
+ul, ol {
+	padding-left: 2em;
+}
+
 
 /* --------------------------- end of my modifications ------------------------ */
 
@@ -275,6 +280,12 @@ ul :first-child, ol :first-child {
 	.h6,
 	h6 {
 		font-size: 1rem;
+	}
+
+	/* New */
+	ul, ol {
+		padding-left: 1em;
+		overflow-wrap: break-word;
 	}
 }
 

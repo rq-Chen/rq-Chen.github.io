@@ -144,6 +144,7 @@ conda activate YOURENVNAME
 <p><img src = "TrainingProcess.png" style = "zoom:40%" /></p>
 <p>A little problem is that the training process seems to be too slow (170 sec/epoch, while the benchmark on GTX 1080Ti (just 140% more powerful than my GPU, according to the <a href='https://gpu.userbenchmark.com/Compare/Nvidia-GTX-1080-Ti-vs-Nvidia-GTX-1060-3GB/3918vs3646'>UserBenchmark</a>) is 35 sec/epoch). Acoording to the terminal output, the GPU was correctly activated (<code>2019-12-03 02:48:20.844426: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2103 MB memory) -&gt; physical GPU (device: 0, name: GeForce GTX 1060, pci bus id: 0000:01:00.0, compute capability: 6.1)</code>), but the GPU load is only around 20% during the training. Probably there are some other configurations to set in order to make full use of the GPU.</p>
 <div>
+    <br>
     <center>
         <span style="float:left">
             <a href="/blogs.html">Blogs</a>

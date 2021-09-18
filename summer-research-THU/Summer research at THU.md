@@ -203,17 +203,3 @@ In order to find out the essential connections that differs between conditions, 
 We are now designing new experiments to incorporate more conditions, especially the self-oriented conditions that reflects the activity of DMN. And we also want to test our method with a larger dataset. The latest result is in [here](../microstate-research/index.html).
 
 
-
----
-
-<div>
-    <center>
-    	<span style = "float: left">
-    		<a href = "https://rq-chen.github.io/summer-school/index.html">Before: Summer school</a>
-    	</span>
-        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
-    	<span style = "float: right">
-    		<a href = "https://rq-chen.github.io/microstate-research/index.html">Next: Microstate research</a>
-    	</span>
-    </center>
-</div></br></br>
