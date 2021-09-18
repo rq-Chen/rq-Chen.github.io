@@ -195,12 +195,15 @@ table thead:first-child tr:first-child td {
 table tbody+tbody {
 	border-top: 2px solid #ddd
 }
+pre {
+	border: 1px solid #ccc;
+}
 code, .md-fences {
 	padding: .5em;
-	/*background: #f0f0f0;*/
-	border: 1px solid #ccc;
+	/* background: #f0f0f0; */
 	padding: .1em;
 	font-size: 0.9em;
+	font-family: var(--monospace);
 	margin-left: 0.2em;
 	margin-right: 0.2em;
 }
