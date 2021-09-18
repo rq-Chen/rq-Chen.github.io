@@ -1,0 +1,1 @@
+Adapted from the theme "Gothic" of [typora](typora.io).
