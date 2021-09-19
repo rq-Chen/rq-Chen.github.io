@@ -4,7 +4,7 @@ The idea is to build the website in the easiest way. From my point of view, comp
 
 1. Download Typora.
 
-2. Go to Preferences-Export:
+2. Go to "Preferences"-"Export":
 
    1. Create a new output type by clicking the plus sign.
 
@@ -23,6 +23,8 @@ The idea is to build the website in the easiest way. From my point of view, comp
 
 4. Create a folder `/css` under the root of your github pages repo. Find a css you like, rename it to `global.css` and put it under this folder.
 
+   (Note: if you are as lazy as me, you can go to "themes"-"open themes folder" and find Typora's default themes there)
+
 5. Whenever you need to display a page with additional format, create a folder `/css` in the same place and put in a `local.css`.
 
 You can add javascripts to all your pages by modifying "Append in \<head/\>" too. For example, I add some syntax highlighting with `highlight.js`:
@@ -31,7 +33,6 @@ You can add javascripts to all your pages by modifying "Append in \<head/\>" too
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/stackoverflow-light.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
 <script >hljs.initHighlightingOnLoad();</script>
-
 ```
 
 You can also modify the "Append in \<body/\>" section to put something at the bottom of your pages, e.g. a link to the homepage.
