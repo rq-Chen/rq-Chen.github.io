@@ -174,19 +174,3 @@ The training loss was steadily decreasing, but it seems that the accuracy contin
 <img src = "TrainingProcess.png" style = "zoom:40%" />
 
 A little problem is that the training process seems to be too slow (170 sec/epoch, while the benchmark on GTX 1080Ti (just 140% more powerful than my GPU, according to the [UserBenchmark](https://gpu.userbenchmark.com/Compare/Nvidia-GTX-1080-Ti-vs-Nvidia-GTX-1060-3GB/3918vs3646)) is 35 sec/epoch). Acoording to the terminal output, the GPU was correctly activated (`2019-12-03 02:48:20.844426: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2103 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060, pci bus id: 0000:01:00.0, compute capability: 6.1)`), but the GPU load is only around 20% during the training. Probably there are some other configurations to set in order to make full use of the GPU.
-
-
-
----
-
-<div>
-    <center>
-    	<span style = "float: left">
-    		<a href = "https://rq-chen.github.io/visualization-project/index.html">Before: Visualization project</a>
-    	</span>
-        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
-    	<span style = "float: right">
-    		<a href = "https://rq-chen.github.io/summer-school/index.html">Next: Summer school</a>
-    	</span>
-    </center>
-</div>

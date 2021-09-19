@@ -165,17 +165,3 @@ We can see that the representation is relatively stable, so the decoder can gene
 - Preliminary behavioral, ERP, time-frequency and decoding analysis was done by Fieldtrip ([Detais](https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis)):
 
 
-
----
-
-<div>
-    <center>
-    	<span style = "float: left">
-    		<a href = "https://rq-chen.github.io/microstate-research/index.html">Before: Microstate research</a>
-    	</span>
-        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
-    	<span style = "float: right">
-    		<a href = "https://rq-chen.github.io/traveling-wave/index.html">Next: Traveling wave project</a>
-    	</span>
-    </center>
-</div>

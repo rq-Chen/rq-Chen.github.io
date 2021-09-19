@@ -317,16 +317,3 @@ Finally, we may apply these methods to experimental data.
 
 For my second (and more formal) experiment about planar TWs at mesoscopic scale, click [here](https://rq-chen.github.io/traveling-wave/index.html).
 
----
-
-<div>
-    <center>
-    	<span style = "float: left">
-    		<a href = "https://rq-chen.github.io/undergraduate-research/index.html">Before: Working memory project</a>
-    	</span>
-        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
-    	<span style = "float: right">
-    		<a href = "https://rq-chen.github.io/traveling-wave/index.html">Next: Mesoscopic traveling wave</a>
-    	</span>
-    </center>
-</div>

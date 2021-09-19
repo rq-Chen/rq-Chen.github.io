@@ -204,17 +204,3 @@ At last, we defined the ROIs (window length, k, PFC and PPC channels, state) bas
 I thank Prof. Bo Hong for his patient and insightful guidance on our research, and Miss Diya Yi for collaboration and inspirations. I also thank the senior members in Prof. Hong's lab, including Ruxue Wang, Chen Hong, Wenzheng Li and many others, for their assistance and suggestions during the research.
 
 
-
----
-
-<div>
-    <center>
-		<span style = "float: left">
-			<a href = "https://rq-chen.github.io/summer-research-THU/index.html">Before: Summer research at THU</a>
-		</span>
-        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
-		<span style = "float: right">
-			<a href = "https://rq-chen.github.io/undergraduate-research/index.html">Next: Working memory project</a>
-		</span>
-    </center>
-</div></br></br>

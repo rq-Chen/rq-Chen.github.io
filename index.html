@@ -2,225 +2,196 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Homepage</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
-button, input, select, textarea { color: inherit; font: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
+<title>Homepage</title>
+<link rel="stylesheet" type="text/css" href="/css/global.css">
+<link rel="stylesheet" type="text/css" href="css/local.css"></head>
+<body><p>&nbsp;</p>
+<h1 id='welcome-to-ruiqi-chens-homepage'>Welcome to Ruiqi Chen&#39;s Homepage</h1>
+<p>&nbsp;</p>
+<p>Hello, I&#39;m Ruiqi Chen (<a href='https://www.howtopronounce.com/u/RuiqiChen'>Pronunciation</a>), a pre-doc student in the Neurosciences Program at Washington University in St. Louis.</p>
+<p><strong>You can find me at (last name)(DOT)(first name)(AT)(wustl)(DOT)(edu).</strong></p>
+<p><strong>You can download my CV <a href='Ruiqi_Chen_CV.pdf'>here</a>.</strong></p>
+<p>&nbsp;</p>
+<h2 id='highlights'>Highlights</h2>
+<ul>
+<li>I will begin my first rotation in WUSTL with Prof. <a href='https://engineering.wustl.edu/faculty/ShiNung-Ching.html'>ShiNung Ching</a> to investigate the function of multiple timescales in working memory and reinforcement learning through optimization and dynamic system analysis of RNN models.</li>
+<li>I was admitted to the <a href='https://dbbs.wustl.edu/divprograms/neuro/Pages/default.aspx'>Neurosciences PhD Program</a> at Washington University in St. Louis! (Some <a href='PhD-Admission/index.html'>advice</a> for future Chinese applicants)</li>
 
+</ul>
+<p>&nbsp;</p>
+<p><strong>Last updated:</strong> Aug/31/2021</p>
+<p>&nbsp;</p>
+<hr />
+<p>&nbsp;</p>
+<h2 id='undergraduate'>Undergraduate</h2>
+<ul>
+<li>I finished my undergraduate thesis with Prof. <a href='https://mgv.pku.edu.cn/english/people/lbd/soeeace/267528.htm'>Si Wu</a> on gait recognition with reservoir computing.</li>
+<li>I simulated an auditory sequential working memory experiment with recurrent neural networks and explored the neural representation of frequency and sequential position in the network, result being consistent with previous finding on humans. (<a href='microstate-research/index.html'>Details</a>)</li>
+<li>I explored the simulation and detection of cortical traveling waves during summer 2020 with the guidance of Prof. <a href='http://www.bestmannlab.com/'>Sven Bestmann</a>. I implemented different methods on my synthetic dataset and evaluated their performance under different SNRs. (<a href='/traveling-wave/'>Details</a>)</li>
+<li>I conducted EEG functional connectivity microstate analysis on an open dataset. I illustrated the consistency between functional-connectivity-based and voltage-distribution-based microstates and found a microstate biomarker of the activity of the Default Mode Network. (<a href='microstate-research/index.html'>Details</a>)</li>
+<li>I designed an auditory working memory experiment and demonstrated the ERP amplitude modulation of left centroparietal area over different kinds of mental manipulations of the memory contents. Working on the time-frequency and decoding analysis currently. (<a href='undergraduate-research/index.html'>Details</a>)</li>
+<li>I contributed to the well-known <em>Fieldtrip toolbox</em> with a <a href='https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316'>bug fix</a>. I also helped fix the <a href='https://github.com/sccn/eeglab/issues/61'>bugs</a> in <code>binica.m</code> of <em>EEGLAB toolbox</em> before.</li>
+<li>I compared the performance of different word-embedding strategies and RNN decoders on the IMDb dataset (<a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Programming/Sentiment Classification'>Details</a>).</li>
+<li>I trained a deep residual network (<em>ResNet-20</em>) with <em>Keras</em> on <em>CIFAR10</em> and achieved high accuracy. (<a href='deep-learning-startup/index.html'>Details</a>)</li>
+<li>I finished my first data visualization project with <em>D3.js</em>. (<a href='visualization-project/index.html'>Details</a>)</li>
+<li>I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. <a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html'>Hong, Bo</a>&#39;s lab at Tsinghua University (THU), China. (<a href='summer-research-THU/index.html'>Details</a>)</li>
+<li>I participated in the <em>2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science</em> at THU in summer. (<a href='summer-school/index.html'>Details</a>)</li>
 
-:root { --window-border: none; --typora-center-window-title: true; --active-file-bg-color: #f3f3f3; --bg-color: #fcfcfc; --control-text-color: #777; }
-.mac-seamless-mode #typora-sidebar { top: var(--mac-title-bar-height); padding-top: 0px; height: auto; }
-html, body, #write { background: rgb(252, 252, 252); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Raleway, STHeiti, sans-serif; font-weight: 300; }
-h1, h2, h3, h4, h5, h6 { color: rgb(17, 17, 17); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Ubuntu, STHeiti, sans-serif; }
-html { font-size: 16px; }
-#write { max-width: 914px; text-align: justify; }
-#write > h1:first-child { margin-top: 2.75rem; }
-#write > h2:first-child { margin-top: 1.75rem; }
-#write > h3:first-child { margin-top: 1rem; }
-#write > h4:first-child { margin-top: 0.5rem; }
-h1 { font-weight: normal; line-height: 4rem; margin: 4rem 0px 1.75rem; padding: 20px 30px; text-align: center; text-transform: uppercase; }
-h2 { font-weight: normal; line-height: 3rem; margin: 3rem 0px 1.9375rem; padding: 0px 30px; text-align: center; text-transform: uppercase; }
-h3 { font-weight: normal; }
-h4 { font-weight: normal; }
-h5 { font-size: 1.125rem; font-weight: normal; }
-h6 { font-size: 1rem; font-weight: bold; }
-p { color: rgb(17, 17, 17); font-size: 1rem; line-height: 1.75rem; margin: 0px 0px 1.25rem; }
-#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
-#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
-#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
-#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
-@media screen and (max-width: 48em) {
-  blockquote { margin-left: 1rem; margin-right: 0px; padding: 0.5em; }
-  .h1, h1 { font-size: 2.827rem; }
-  .h2, h2 { font-size: 1.999rem; }
-  .h3, h3 { font-size: 1.413rem; }
-  .h4, h4 { font-size: 1.25rem; }
-  .h5, h5 { font-size: 1.15rem; }
-  .h6, h6 { font-size: 1rem; }
-}
-a, .md-def-url { color: rgb(153, 0, 0); text-decoration: none; }
-a:hover { text-decoration: underline; }
-table { margin-bottom: 20px; }
-table th, table td { padding: 8px; line-height: 1.25rem; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); }
-table th { font-weight: bold; }
-table thead th { vertical-align: bottom; }
-table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
-table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
-code, .md-fences { border: 1px solid rgb(204, 204, 204); padding: 0.1em; font-size: 0.9em; margin-left: 0.2em; margin-right: 0.2em; }
-.md-fences { margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
-.task-list { padding-left: 0px; }
-.task-list-item { padding-left: 2.125rem; }
-.task-list-item input { top: 3px; }
-.task-list-item input::before { content: ""; display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; text-align: center; border: 1px solid gray; background-color: rgb(253, 253, 253); margin-left: 0px; margin-top: -0.8rem; }
-.task-list-item input:checked::before, .task-list-item input[checked]::before { content: "◼"; font-size: 0.8125rem; line-height: 0.9375rem; margin-top: -1rem; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-  .task-list-item input::before { margin-top: -0.2rem; }
-  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
-}
-blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid gray; }
-blockquote, blockquote p { line-height: 1.6; color: rgb(111, 111, 111); }
-#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin-top: -1.5em; color: rgb(153, 153, 153); width: 100vw; max-width: calc(100% + 60px); margin-left: -30px; border-left: 30px solid rgb(248, 248, 248); border-right: 30px solid rgb(248, 248, 248); }
-.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
-p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
-.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
-.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
-.md-image > img { margin-top: 2px; }
-.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
-#typora-source { color: rgb(85, 85, 85); }
-#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
-#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
-#md-notification::before { top: 14px; }
-#md-notification { background: rgb(238, 238, 238); }
-.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
-#typora-sidebar { box-shadow: none; }
-.file-list-item, .show-folder-name .file-list-item { padding-top: 20px; padding-bottom: 20px; line-height: 20px; }
-.file-list-item-summary { height: 40px; line-height: 20px; }
+</ul>
+<p>&nbsp;</p>
+<h2 id='undergraduate-research-experience'>Undergraduate Research Experience</h2>
+<h3 id='institute-of-neurology--university-college-london-remote--20207---202010'>Institute of Neurology | University College London (Remote) | 2020.7 - 2020.10</h3>
+<p>Advisor: Prof. <a href='http://www.bestmannlab.com/team'>Bestmann, Sven</a></p>
+<p><strong>Project (Independent): <a href='/traveling-wave/'>Simulation &amp; Detection of Cortical Traveling Waves</a></strong></p>
+<ul>
+<li><p>Simulated stable mesoscopic cortical traveling waves of different speeds, in different frequency bands under different levels of Signal-to-Noise-Ratio (SNR), with more than 300,000 trials in total</p>
+<ul>
+<li>Quantified the precision of linear-regression-based estimation of wave orientation and speed </li>
+<li>Illustrated that the estimation of orientation improved as SNR and spatial frequency increased, but there might be an optimal spatial frequency interval for the estimation of speed</li>
+<li>Found that performing a single regression at each time point would be generally better than over the whole trial, and estimating by the median of speed distribution would be more accurate than the mean</li>
 
+</ul>
+</li>
+<li><p>Simulated dynamic macroscopic spherical traveling wave with rapidly changing sources, and evaluated the performance of different traveling wave detection algorithms on the dataset (<a href='https://rq-chen.github.io/traveling-wave/Exp1/'>Link</a>)</p>
+<ul>
+<li>Revealed that neither the clustering method in <a href='https://doi.org/10.1371/journal.pone.0148413'>(Alexander et. al., 2016)</a> nor the PCA method in <a href='https://doi.org/10.1371/journal.pcbi.1007316'>(Alexander et. al., 2019)</a>  could reliably classify the spatial structure of the traveling wave</li>
+<li>Demonstrated that directly clustering the data samples at each time point provided satisfactory results and common phase offset removal might increase the sensitivity of the clustering algorithm</li>
 
-</style>
-</head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h1><a name="welcome-to-ruiqi-chen's-homepage" class="md-header-anchor"></a><span>Welcome to Ruiqi Chen&#39;s Homepage</span></h1><p>&nbsp;</p><p><span>Hello, I&#39;m Ruiqi Chen (</span><a href='https://www.howtopronounce.com/u/RuiqiChen'><span>Pronunciation</span></a><span>), a pre-doc student in the Neurosciences Program at Washington University in St. Louis.</span></p><p><strong><span>You can find me at (last name)(DOT)(first name)(AT)(wustl)(DOT)(edu).</span></strong></p><p><strong><span>You can download my CV </span><a href='Ruiqi_Chen_CV.pdf'><span>here</span></a><span>.</span></strong></p><p>&nbsp;</p><h2><a name="highlights" class="md-header-anchor"></a><span>Highlights</span></h2><ul><li><span>I will begin my first rotation in WUSTL with Prof. </span><a href='https://engineering.wustl.edu/faculty/ShiNung-Ching.html'><span>ShiNung Ching</span></a><span> to investigate the function of multiple timescales in working memory and reinforcement learning through optimization and dynamic system analysis of RNN models.</span></li><li><span>I was admitted to the </span><a href='https://dbbs.wustl.edu/divprograms/neuro/Pages/default.aspx'><span>Neurosciences PhD Program</span></a><span> at Washington University in St. Louis! (Some </span><a href='PhD-Admission/index.html'><span>advice</span></a><span> for future Chinese applicants)</span></li></ul><p>&nbsp;</p><p><strong><span>Last updated:</span></strong><span> Aug/31/2021</span></p><p>&nbsp;</p><hr /><p>&nbsp;</p><h2><a name="undergraduate" class="md-header-anchor"></a><span>Undergraduate</span></h2><ul><li><span>I finished my undergraduate thesis with Prof. </span><a href='https://mgv.pku.edu.cn/english/people/lbd/soeeace/267528.htm'><span>Si Wu</span></a><span> on gait recognition with reservoir computing.</span></li><li><span>I simulated an auditory sequential working memory experiment with recurrent neural networks and explored the neural representation of frequency and sequential position in the network, result being consistent with previous finding on humans. (</span><a href='microstate-research/index.html'><span>Details</span></a><span>)</span></li><li><span>I explored the simulation and detection of cortical traveling waves during summer 2020 with the guidance of Prof. </span><a href='http://www.bestmannlab.com/'><span>Sven Bestmann</span></a><span>. I implemented different methods on my synthetic dataset and evaluated their performance under different SNRs. (</span><a href='/traveling-wave/'><span>Details</span></a><span>)</span></li><li><span>I conducted EEG functional connectivity microstate analysis on an open dataset. I illustrated the consistency between functional-connectivity-based and voltage-distribution-based microstates and found a microstate biomarker of the activity of the Default Mode Network. (</span><a href='microstate-research/index.html'><span>Details</span></a><span>)</span></li><li><span>I designed an auditory working memory experiment and demonstrated the ERP amplitude modulation of left centroparietal area over different kinds of mental manipulations of the memory contents. Working on the time-frequency and decoding analysis currently. (</span><a href='undergraduate-research/index.html'><span>Details</span></a><span>)</span></li><li><span>I contributed to the well-known </span><em><span>Fieldtrip toolbox</span></em><span> with a </span><a href='https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316'><span>bug fix</span></a><span>. I also helped fix the </span><a href='https://github.com/sccn/eeglab/issues/61'><span>bugs</span></a><span> in </span><code>binica.m</code><span> of </span><em><span>EEGLAB toolbox</span></em><span> before.</span></li><li><span>I compared the performance of different word-embedding strategies and RNN decoders on the IMDb dataset (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Programming/Sentiment Classification'><span>Details</span></a><span>).</span></li><li><span>I trained a deep residual network (</span><em><span>ResNet-20</span></em><span>) with </span><em><span>Keras</span></em><span> on </span><em><span>CIFAR10</span></em><span> and achieved high accuracy. (</span><a href='deep-learning-startup/index.html'><span>Details</span></a><span>)</span></li><li><span>I finished my first data visualization project with </span><em><span>D3.js</span></em><span>. (</span><a href='visualization-project/index.html'><span>Details</span></a><span>)</span></li><li><span>I finished a five-week long summer research about EEG functional connectivity microstates and its implications at Prof. </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html'><span>Hong, Bo</span></a><span>&#39;s lab at Tsinghua University (THU), China. (</span><a href='summer-research-THU/index.html'><span>Details</span></a><span>)</span></li><li><span>I participated in the </span><em><span>2019 Tsinghua-Peking McGovern CLS CIBR Summer Program for Neuroscience and Cognitive Science</span></em><span> at THU in summer. (</span><a href='summer-school/index.html'><span>Details</span></a><span>)</span></li></ul><p>&nbsp;</p><h2><a name="undergraduate-research-experience" class="md-header-anchor"></a><span>Undergraduate Research Experience</span></h2><h3><a name="institute-of-neurology-|-university-college-london-(remote)-|-2020.7---2020.10" class="md-header-anchor"></a><span>Institute of Neurology | University College London (Remote) | 2020.7 - 2020.10</span></h3><p><span>Advisor: Prof. </span><a href='http://www.bestmannlab.com/team'><span>Bestmann, Sven</span></a></p><p><strong><span>Project (Independent): </span><a href='/traveling-wave/'><span>Simulation &amp; Detection of Cortical Traveling Waves</span></a></strong></p><ul><li><p><span>Simulated stable mesoscopic cortical traveling waves of different speeds, in different frequency bands under different levels of Signal-to-Noise-Ratio (SNR), with more than 300,000 trials in total</span></p><ul><li><span>Quantified the precision of linear-regression-based estimation of wave orientation and speed </span></li><li><span>Illustrated that the estimation of orientation improved as SNR and spatial frequency increased, but there might be an optimal spatial frequency interval for the estimation of speed</span></li><li><span>Found that performing a single regression at each time point would be generally better than over the whole trial, and estimating by the median of speed distribution would be more accurate than the mean</span></li></ul></li><li><p><span>Simulated dynamic macroscopic spherical traveling wave with rapidly changing sources, and evaluated the performance of different traveling wave detection algorithms on the dataset (</span><a href='https://rq-chen.github.io/traveling-wave/Exp1/'><span>Link</span></a><span>)</span></p><ul><li><span>Revealed that neither the clustering method in </span><a href='https://doi.org/10.1371/journal.pone.0148413'><span>(Alexander et. al., 2016)</span></a><span> nor the PCA method in </span><a href='https://doi.org/10.1371/journal.pcbi.1007316'><span>(Alexander et. al., 2019)</span></a><span>  could reliably classify the spatial structure of the traveling wave</span></li><li><span>Demonstrated that directly clustering the data samples at each time point provided satisfactory results and common phase offset removal might increase the sensitivity of the clustering algorithm</span></li></ul></li></ul><p>&nbsp;</p><h3><a name="idg/mcgovern-institute-for-brain-research-\|-tsinghua-university-|-2019.7---present" class="md-header-anchor"></a><span>IDG/McGovern Institute for Brain Research </span><span>|</span><span> Tsinghua University | 2019.7 - Present</span></h3><p><span>Advisor: Prof. </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html'><span>Hong, Bo</span></a><span> (PI)</span></p><p><strong><span>Project (Leader): </span><a href='microstate-research/'><span>Functional Connectivity Microstates as Biomarkers of the Mind</span></a><span> | 2019.9 - Present</span></strong></p><ul><li><span>Discovered the hierarchical, self-similar structure of EEG functional connectivity microstates by analyzing the results with different sliding window length and different number of clusters</span></li><li><span>Illustrated the consistency between functional-connectivity-based and voltage-distribution-based EEG microstates by their similarity in spatial topology and temporal dynamics</span></li><li><span>Established the link between the proportion/stability/connectivity profile of a specific microstate and activity of the Default Mode Network (DMN) under different task conditions</span></li><li><span>Explored the interaction between alpha oscillation and microstates’ internal dynamics</span></li></ul><p><strong><a href='summer-research-THU/index.html'><span>Pilot Study about EEG Microstates</span></a><span> | 2019.8</span></strong></p><ul><li><p><span>Conducted EEG microstate analysis with </span><em><span>MATLAB</span></em></p><ul><li><span>Global-field-power-based analysis with </span><em><span>Microstate EEGlab Toolbox</span></em></li><li><span>Functional-connectivity-based analysis with the </span><em><span>Statistics and Machine Learning Toolbox</span></em></li></ul></li><li><p><span>Consolidated a variety of data analysis technique</span></p><ul><li><span>k-means clustering, multidimensional scaling, silhouette evaluation</span></li><li><span>Dynamic general linear model, unsupervised learning</span></li></ul></li></ul><p><strong><a href='summer-research-THU/index.html'><span>EEG Oddball Experiment</span></a><span> | 2019.7</span></strong></p><ul><li><p><span>Designed an auditory oddball experiment with </span><em><span>Psychtoolbox</span></em></p></li><li><p><span>Performed EEG experiment on </span><em><span>Neuroscan</span></em><span> platform</span></p></li><li><p><span>Conducted event-related potential (ERP) analysis with </span><em><span>EEGLAB</span></em></p><ul><li><span>Filtering, artifact rejection / correction, ERP plot, etc.</span></li><li><span>Read part of </span><em><span>An Introduction to the Event-Related Potential Technique</span></em><span> by </span><em><span>Steven Luck</span></em></li></ul></li></ul><p>&nbsp;</p><h3><a name="idg/mcgovern-institute-for-brain-research-\|-peking-university-|-2019.3---present" class="md-header-anchor"></a><span>IDG/McGovern Institute for Brain Research </span><span>|</span><span> Peking University | 2019.3 - Present</span></h3><p><span>Advisor: Prof. </span><a href='http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm'><span>Luo, Huan</span></a><span> (PI)</span></p><p><strong><span>Project (Independent): </span><a href='undergraduate-research/index.html'><span>The representation of time and order in working memory</span></a><span> | 2019.4 - Present</span></strong><span> </span></p><ul><li><p><span>Simulated an auditory working memory cueing task with a Recurrent Neural Network (RNN)</span></p><ul><li><span>Computed the tuning curves and representational similarity matrices for frequency and sequential position</span></li><li><span>Discovered that frequency and position were encoded jointly in network activity, but the dominance of frequency encoding increased as task difficulty increased</span></li><li><span>Proved that the representation of frequency, but not position, was preserved after an auditory perturbation</span></li><li><span>Both results being consistent with the lab’s previous findings in human research</span></li></ul></li><li><p><span>Designed an EEG experiment to explore the neural mechanism underlying the manipulation of contents in auditory working memory and collected data from 16 subjects (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Experiment'><span>Codes</span></a><span>)</span></p><ul><li><span>Pre-processed the data with </span><em><span>EEGLAB</span></em><span> and analyzed the results with </span><em><span>Fieldtrip</span></em></li><li><span>Learned the rationale of cluster-level permutation test and applied it to ERP &amp; time-frequency analysis (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis'><span>Codes</span></a><span>), result being consistent with </span><a href='https://www.cell.com/neuron/pdf/S0896-6273(17)30198-8.pdf'><span>(Albouy et al., Neuron, 2017)</span></a><span>; helped fix a </span><a href='https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316'><span>bug</span></a><span> in </span><em><span>Fieldtrip</span></em><span> during the process</span></li><li><span>Decoded the memory content with an LSTM network and conducted temporal generalization analysis</span></li></ul></li><li><p><span>Wrote an intensive review about the temporal organization in working memory and another for the computational models and functions of neural oscillation in working memory (</span><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading'><span>Link</span></a><span>)</span></p></li></ul><p><strong><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/EEG_Visual_Decoding'><span>Working Memory Decoding Analysis</span></a><span> | 2019.3</span></strong></p><ul><li><span>Implemented an inverted encoding model based on the EEG data collected in a visual working memory task</span></li><li><span>Reconstructed the tuning curve for the orientation of two Gabor stimuli</span></li><li><span>Practiced MATLAB programming and multivariate pattern analysis (MVPA) through self-learning</span></li></ul><p>&nbsp;</p><h2><a name="programming-projects" class="md-header-anchor"></a><span>Programming Projects</span></h2><p><strong><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Programming/Sentiment Classification'><span>Word Embedding Strategies &amp; RNN Decoders for Sentiment Classification</span></a><span> | 2020.4</span></strong></p><ul><li><span>Compared the performance of three word embedding strategies (Skip-gram, CBOW &amp; Task-oriented) and three decoding networks (LSTM, GRU, simple RNN) on the IMDb dataset after controlling the number of parameters</span></li><li><span>Found that LSTM generalized best while simple RNN was highly unstable; Task-oriented encoding is optimal</span></li></ul><p><strong><a href='https://rq-chen.github.io/deep-learning-startup/'><span>Training a Deep Neural Network on CIFAR-10</span></a><span> | 2019.12</span></strong></p><ul><li><span>Trained a </span><em><span>ResNet-20</span></em><span> model from scratch on </span><em><span>CIFAR-10</span></em><span> dataset and achieved high accuracy</span></li><li><span>Practiced DNN implementation with </span><em><span>Keras</span></em><span> and </span><em><span>TensorFlow</span></em><span> (self-taught within one week)</span></li></ul><p><strong><a href='https://rq-chen.github.io/visualization-project/'><span>Visualization of NSFC Funding 2018</span></a><span> | 2019.10</span></strong></p><ul><li><span>Visualized the </span><em><span>National Natural Science Foundation of China</span></em><span> (NSFC) funding allocation and revealed the hidden disparity among different academic institutions and regions in China</span></li><li><span>Practiced front-end programming (HTML/CSS/JavaScript/SVG/D3.js, self-taught within one week)</span></li><li><span>Acquired visualization skill to facilitate high-dimensional big data analysis</span></li></ul><p>&nbsp;</p><h2><a name="activities" class="md-header-anchor"></a><span>Activities</span></h2><ul><li><span>I participated in the </span><em><span>2019 Tsinghua-Peking McGovern CLS CIBR </span><a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1824.html'><span>Summer Program</span></a><span> for Neuroscience and Cognitive Science</span></em><span> at THU in July 2019. (</span><a href='summer-school/index.html'><span>Details</span></a><span>)</span></li></ul><p>&nbsp;</p><h2><a name="relevant-courses" class="md-header-anchor"></a><span>Relevant Courses</span></h2><ul><li><strong><span>Cognitive Neuroscience:</span></strong><span> Abnormal Psychology (ongoing), Neuropsychology, The Brain and Cognitive Science, Experimental Psychology, Physiological Psychology</span></li><li><strong><span>Computational Modeling:</span></strong><span> Computational Modeling for Psychology and Neuroscience, Computational Neuroscience, Computational Perception and Scene Analysis</span></li><li><strong><span>Mathematics:</span></strong><span> Psychological Statistics II, Probability Theory and Statistics, Introduction to Stochastic Processes, Signals and Systems, Introduction to Pattern Recognition, Set Theory and Graph Theory, Machine learning</span></li></ul><h2><a name="skills" class="md-header-anchor"></a><span>Skills</span></h2><ul><li><strong><span>Programming</span></strong><span>: (Proficient) MATLAB (EEGLAB,  Fieldtrip, Psychtoolbox), Python (TensorFlow, OpenCV);  (Intermediate) C/C++, HTML, CSS, JavaScript (d3), SVG; (Basic) R, SPSS</span></li><li><strong><span>Signal Analysis</span></strong><span>: EEG recording &amp; preprocessing, ERP &amp; time frequency analysis, MVPA, dynamic GLM, clustering &amp; classification, connectivity, microstates, traveling wave</span></li><li><strong><span>Modeling</span></strong><span>: Bayesian modeling &amp; MCMC, Inverted Encoding Model (IEM), Convolutional &amp; Recurrent Neural Network (CNN &amp; RNN)</span></li><li><strong><span>English</span></strong><span>: GRE Verbal 168, Quantitative 170, Analytic Writing 4; TOEFL 112 (Speaking 23); CET6 618</span></li></ul><p>&nbsp;</p></div>
-</body>
+</ul>
+</li>
+
+</ul>
+<p>&nbsp;</p>
+<h3 id='idgmcgovern-institute-for-brain-research--tsinghua-university--20197---present'>IDG/McGovern Institute for Brain Research | Tsinghua University | 2019.7 - Present</h3>
+<p>Advisor: Prof. <a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html'>Hong, Bo</a> (PI)</p>
+<p><strong>Project (Leader): <a href='microstate-research/'>Functional Connectivity Microstates as Biomarkers of the Mind</a> | 2019.9 - Present</strong></p>
+<ul>
+<li>Discovered the hierarchical, self-similar structure of EEG functional connectivity microstates by analyzing the results with different sliding window length and different number of clusters</li>
+<li>Illustrated the consistency between functional-connectivity-based and voltage-distribution-based EEG microstates by their similarity in spatial topology and temporal dynamics</li>
+<li>Established the link between the proportion/stability/connectivity profile of a specific microstate and activity of the Default Mode Network (DMN) under different task conditions</li>
+<li>Explored the interaction between alpha oscillation and microstates’ internal dynamics</li>
+
+</ul>
+<p><strong><a href='summer-research-THU/index.html'>Pilot Study about EEG Microstates</a> | 2019.8</strong></p>
+<ul>
+<li><p>Conducted EEG microstate analysis with <em>MATLAB</em></p>
+<ul>
+<li>Global-field-power-based analysis with <em>Microstate EEGlab Toolbox</em></li>
+<li>Functional-connectivity-based analysis with the <em>Statistics and Machine Learning Toolbox</em></li>
+
+</ul>
+</li>
+<li><p>Consolidated a variety of data analysis technique</p>
+<ul>
+<li>k-means clustering, multidimensional scaling, silhouette evaluation</li>
+<li>Dynamic general linear model, unsupervised learning</li>
+
+</ul>
+</li>
+
+</ul>
+<p><strong><a href='summer-research-THU/index.html'>EEG Oddball Experiment</a> | 2019.7</strong></p>
+<ul>
+<li><p>Designed an auditory oddball experiment with <em>Psychtoolbox</em></p>
+</li>
+<li><p>Performed EEG experiment on <em>Neuroscan</em> platform</p>
+</li>
+<li><p>Conducted event-related potential (ERP) analysis with <em>EEGLAB</em></p>
+<ul>
+<li>Filtering, artifact rejection / correction, ERP plot, etc.</li>
+<li>Read part of <em>An Introduction to the Event-Related Potential Technique</em> by <em>Steven Luck</em></li>
+
+</ul>
+</li>
+
+</ul>
+<p>&nbsp;</p>
+<h3 id='idgmcgovern-institute-for-brain-research--peking-university--20193---present'>IDG/McGovern Institute for Brain Research | Peking University | 2019.3 - Present</h3>
+<p>Advisor: Prof. <a href='http://mgv.pku.edu.cn/english/people/lbd/sopacs/220154.htm'>Luo, Huan</a> (PI)</p>
+<p><strong>Project (Independent): <a href='undergraduate-research/index.html'>The representation of time and order in working memory</a> | 2019.4 - Present</strong> </p>
+<ul>
+<li><p>Simulated an auditory working memory cueing task with a Recurrent Neural Network (RNN)</p>
+<ul>
+<li>Computed the tuning curves and representational similarity matrices for frequency and sequential position</li>
+<li>Discovered that frequency and position were encoded jointly in network activity, but the dominance of frequency encoding increased as task difficulty increased</li>
+<li>Proved that the representation of frequency, but not position, was preserved after an auditory perturbation</li>
+<li>Both results being consistent with the lab’s previous findings in human research</li>
+
+</ul>
+</li>
+<li><p>Designed an EEG experiment to explore the neural mechanism underlying the manipulation of contents in auditory working memory and collected data from 16 subjects (<a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Experiment'>Codes</a>)</p>
+<ul>
+<li>Pre-processed the data with <em>EEGLAB</em> and analyzed the results with <em>Fieldtrip</em></li>
+<li>Learned the rationale of cluster-level permutation test and applied it to ERP &amp; time-frequency analysis (<a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Auditory%20Working%20Memory/Analysis'>Codes</a>), result being consistent with <a href='https://www.cell.com/neuron/pdf/S0896-6273(17)30198-8.pdf'>(Albouy et al., Neuron, 2017)</a>; helped fix a <a href='https://github.com/fieldtrip/fieldtrip/commit/22cbd13cd314efd831314cb5cb08dbf5011b2316'>bug</a> in <em>Fieldtrip</em> during the process</li>
+<li>Decoded the memory content with an LSTM network and conducted temporal generalization analysis</li>
+
+</ul>
+</li>
+<li><p>Wrote an intensive review about the temporal organization in working memory and another for the computational models and functions of neural oscillation in working memory (<a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Reading'>Link</a>)</p>
+</li>
+
+</ul>
+<p><strong><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/EEG_Visual_Decoding'>Working Memory Decoding Analysis</a> | 2019.3</strong></p>
+<ul>
+<li>Implemented an inverted encoding model based on the EEG data collected in a visual working memory task</li>
+<li>Reconstructed the tuning curve for the orientation of two Gabor stimuli</li>
+<li>Practiced MATLAB programming and multivariate pattern analysis (MVPA) through self-learning</li>
+
+</ul>
+<p>&nbsp;</p>
+<h2 id='programming-projects'>Programming Projects</h2>
+<p><strong><a href='https://github.com/rq-Chen/Undergraduate_Research_at_PKU/tree/master/Programming/Sentiment Classification'>Word Embedding Strategies &amp; RNN Decoders for Sentiment Classification</a> | 2020.4</strong></p>
+<ul>
+<li>Compared the performance of three word embedding strategies (Skip-gram, CBOW &amp; Task-oriented) and three decoding networks (LSTM, GRU, simple RNN) on the IMDb dataset after controlling the number of parameters</li>
+<li>Found that LSTM generalized best while simple RNN was highly unstable; Task-oriented encoding is optimal</li>
+
+</ul>
+<p><strong><a href='https://rq-chen.github.io/deep-learning-startup/'>Training a Deep Neural Network on CIFAR-10</a> | 2019.12</strong></p>
+<ul>
+<li>Trained a <em>ResNet-20</em> model from scratch on <em>CIFAR-10</em> dataset and achieved high accuracy</li>
+<li>Practiced DNN implementation with <em>Keras</em> and <em>TensorFlow</em> (self-taught within one week)</li>
+
+</ul>
+<p><strong><a href='https://rq-chen.github.io/visualization-project/'>Visualization of NSFC Funding 2018</a> | 2019.10</strong></p>
+<ul>
+<li>Visualized the <em>National Natural Science Foundation of China</em> (NSFC) funding allocation and revealed the hidden disparity among different academic institutions and regions in China</li>
+<li>Practiced front-end programming (HTML/CSS/JavaScript/SVG/D3.js, self-taught within one week)</li>
+<li>Acquired visualization skill to facilitate high-dimensional big data analysis</li>
+
+</ul>
+<p>&nbsp;</p>
+<h2 id='activities'>Activities</h2>
+<ul>
+<li>I participated in the <em>2019 Tsinghua-Peking McGovern CLS CIBR <a href='http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1824.html'>Summer Program</a> for Neuroscience and Cognitive Science</em> at THU in July 2019. (<a href='summer-school/index.html'>Details</a>)</li>
+
+</ul>
+<p>&nbsp;</p>
+<h2 id='relevant-courses'>Relevant Courses</h2>
+<ul>
+<li><strong>Cognitive Neuroscience:</strong> Abnormal Psychology (ongoing), Neuropsychology, The Brain and Cognitive Science, Experimental Psychology, Physiological Psychology</li>
+<li><strong>Computational Modeling:</strong> Computational Modeling for Psychology and Neuroscience, Computational Neuroscience, Computational Perception and Scene Analysis</li>
+<li><strong>Mathematics:</strong> Psychological Statistics II, Probability Theory and Statistics, Introduction to Stochastic Processes, Signals and Systems, Introduction to Pattern Recognition, Set Theory and Graph Theory, Machine learning</li>
+
+</ul>
+<h2 id='skills'>Skills</h2>
+<ul>
+<li><strong>Programming</strong>: (Proficient) MATLAB (EEGLAB,  Fieldtrip, Psychtoolbox), Python (TensorFlow, OpenCV);  (Intermediate) C/C++, HTML, CSS, JavaScript (d3), SVG; (Basic) R, SPSS</li>
+<li><strong>Signal Analysis</strong>: EEG recording &amp; preprocessing, ERP &amp; time frequency analysis, MVPA, dynamic GLM, clustering &amp; classification, connectivity, microstates, traveling wave</li>
+<li><strong>Modeling</strong>: Bayesian modeling &amp; MCMC, Inverted Encoding Model (IEM), Convolutional &amp; Recurrent Neural Network (CNN &amp; RNN)</li>
+<li><strong>English</strong>: GRE Verbal 168, Quantitative 170, Analytic Writing 4; TOEFL 112 (Speaking 23); CET6 618</li>
+
+</ul>
+<p>&nbsp;</p>
+<div>
+    <br>
+    <center>
+        <span style="float:left">
+            <a href="/blogs.html">Blogs</a>
+        </span>
+        <a href="#top">Back to top</a>
+    	<span style="float: right">
+    		<a href="/index.html">Homepage</a>
+    	</span>
+    </center>
+</div></body>
 </html>

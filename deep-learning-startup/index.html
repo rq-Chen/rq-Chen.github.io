@@ -2,299 +2,10 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Deep learning startup</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-@media screen and (max-width: 500px) {
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
-button, input, select, textarea { color: inherit; font: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
-.CodeMirror-linenumber { user-select: none; }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) {
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; vertical-align: initial; }
-a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none 0s ease 0s; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-
-
-.CodeMirror { height: auto; }
-.CodeMirror.cm-s-inner { background: inherit; }
-.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
-.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
-.CodeMirror-gutters { border-right: 1px solid rgb(221, 221, 221); background: inherit; white-space: nowrap; }
-.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
-.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
-.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
-.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
-.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
-.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
-.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
-.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
-.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
-.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
-.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
-.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
-.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
-.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
-.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
-.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
-.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
-.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
-.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
-.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
-.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
-.cm-negative { color: rgb(221, 68, 68); }
-.cm-positive { color: rgb(34, 153, 34); }
-.cm-header, .cm-strong { font-weight: 700; }
-.cm-del { text-decoration: line-through; }
-.cm-em { font-style: italic; }
-.cm-link { text-decoration: underline; }
-.cm-error { color: red; }
-.cm-invalidchar { color: red; }
-.cm-constant { color: rgb(38, 139, 210); }
-.cm-defined { color: rgb(181, 137, 0); }
-div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
-div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
-.cm-s-inner .CodeMirror-activeline-background { background: inherit; }
-.CodeMirror { position: relative; overflow: hidden; }
-.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background: inherit; }
-.CodeMirror-sizer { position: relative; }
-.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; }
-.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
-.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: hidden; }
-.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
-.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
-.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
-.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
-.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; background: 0px 0px !important; border: none !important; }
-.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
-.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
-.CodeMirror-lines { cursor: text; }
-.CodeMirror pre { border-radius: 0px; border-width: 0px; background: 0px 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; overflow-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; }
-.CodeMirror-wrap pre { overflow-wrap: break-word; white-space: pre-wrap; word-break: normal; }
-.CodeMirror-code pre { border-right: 30px solid transparent; width: fit-content; }
-.CodeMirror-wrap .CodeMirror-code pre { border-right: none; width: auto; }
-.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
-.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
-.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
-.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
-.CodeMirror-measure pre { position: static; }
-.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right: none; width: 0px; }
-.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
-.cm-searching { background: rgba(255, 255, 0, 0.4); }
-@media print {
-  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
-}
-
-
-:root { --window-border: none; --typora-center-window-title: true; --active-file-bg-color: #f3f3f3; --bg-color: #fcfcfc; --control-text-color: #777; }
-.mac-seamless-mode #typora-sidebar { top: var(--mac-title-bar-height); padding-top: 0px; height: auto; }
-html, body, #write { background: rgb(252, 252, 252); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Raleway, STHeiti, sans-serif; font-weight: 300; }
-h1, h2, h3, h4, h5, h6 { color: rgb(17, 17, 17); font-family: TeXGyreAdventor, "Century Gothic", "Microsoft YaHei Light", "Yu Gothic", Ubuntu, STHeiti, sans-serif; }
-html { font-size: 16px; }
-#write { max-width: 914px; text-align: justify; }
-#write > h1:first-child { margin-top: 2.75rem; }
-#write > h2:first-child { margin-top: 1.75rem; }
-#write > h3:first-child { margin-top: 1rem; }
-#write > h4:first-child { margin-top: 0.5rem; }
-h1 { font-weight: normal; line-height: 4rem; margin: 4rem 0px 1.75rem; padding: 20px 30px; text-align: center; text-transform: uppercase; }
-h2 { font-weight: normal; line-height: 3rem; margin: 3rem 0px 1.9375rem; padding: 0px 30px; text-align: center; text-transform: uppercase; }
-h3 { font-weight: normal; }
-h4 { font-weight: normal; }
-h5 { font-size: 1.125rem; font-weight: normal; }
-h6 { font-size: 1rem; font-weight: bold; }
-p { color: rgb(17, 17, 17); font-size: 1rem; line-height: 1.75rem; margin: 0px 0px 1.25rem; }
-#write > h3.md-focus::before { left: -1.875rem; top: 0.5rem; padding: 2px; }
-#write > h4.md-focus::before { left: -1.875rem; top: 0.3125rem; padding: 2px; }
-#write > h5.md-focus::before { left: -1.875rem; top: 0.25rem; padding: 2px; }
-#write > h6.md-focus::before { left: -1.875rem; top: 0.125rem; padding: 2px; }
-@media screen and (max-width: 48em) {
-  blockquote { margin-left: 1rem; margin-right: 0px; padding: 0.5em; }
-  .h1, h1 { font-size: 2.827rem; }
-  .h2, h2 { font-size: 1.999rem; }
-  .h3, h3 { font-size: 1.413rem; }
-  .h4, h4 { font-size: 1.25rem; }
-  .h5, h5 { font-size: 1.15rem; }
-  .h6, h6 { font-size: 1rem; }
-}
-a, .md-def-url { color: rgb(153, 0, 0); text-decoration: none; }
-a:hover { text-decoration: underline; }
-table { margin-bottom: 20px; }
-table th, table td { padding: 8px; line-height: 1.25rem; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); }
-table th { font-weight: bold; }
-table thead th { vertical-align: bottom; }
-table caption + thead tr:first-child th, table caption + thead tr:first-child td, table colgroup + thead tr:first-child th, table colgroup + thead tr:first-child td, table thead:first-child tr:first-child th, table thead:first-child tr:first-child td { border-top: 0px; }
-table tbody + tbody { border-top: 2px solid rgb(221, 221, 221); }
-code, .md-fences { border: 1px solid rgb(204, 204, 204); padding: 0.1em; font-size: 0.9em; margin-left: 0.2em; margin-right: 0.2em; }
-.md-fences { margin: 0px 0px 20px; font-size: 1em; padding: 0.4em 1em 0.3em; }
-.task-list { padding-left: 0px; }
-.task-list-item { padding-left: 2.125rem; }
-.task-list-item input { top: 3px; }
-.task-list-item input::before { content: ""; display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; text-align: center; border: 1px solid gray; background-color: rgb(253, 253, 253); margin-left: 0px; margin-top: -0.8rem; }
-.task-list-item input:checked::before, .task-list-item input[checked]::before { content: "◼"; font-size: 0.8125rem; line-height: 0.9375rem; margin-top: -1rem; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-  .task-list-item input::before { margin-top: -0.2rem; }
-  .task-list-item input:checked::before, .task-list-item input[checked]::before { margin-top: -0.2rem; }
-}
-blockquote { margin: 0px 0px 1.11111rem; padding: 0.5rem 1.11111rem 0px 1.05556rem; border-left: 1px solid gray; }
-blockquote, blockquote p { line-height: 1.6; color: rgb(111, 111, 111); }
-#write pre.md-meta-block { min-height: 30px; background: rgb(248, 248, 248); padding: 3em 1.5em 1.5em; font-weight: 300; font-size: 1em; margin-top: -1.5em; color: rgb(153, 153, 153); width: 100vw; max-width: calc(100% + 60px); margin-left: -30px; border-left: 30px solid rgb(248, 248, 248); border-right: 30px solid rgb(248, 248, 248); }
-.MathJax_Display { font-size: 0.9em; margin-top: 0.5em; margin-bottom: 0px; }
-p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
-.mathjax-block > .code-tooltip { bottom: 5px; box-shadow: none; }
-.md-image > .md-meta { padding-left: 0.5em; padding-right: 0.5em; }
-.md-image > img { margin-top: 2px; }
-.md-image > .md-meta:first-of-type::before { padding-left: 4px; }
-#typora-source { color: rgb(85, 85, 85); }
-#md-searchpanel { border-bottom: 1px solid rgb(204, 204, 204); }
-#md-searchpanel .btn { border: 1px solid rgb(204, 204, 204); }
-#md-notification::before { top: 14px; }
-#md-notification { background: rgb(238, 238, 238); }
-.megamenu-menu-panel .btn { border: 1px solid rgb(204, 204, 204); }
-#typora-sidebar { box-shadow: none; }
-.file-list-item, .show-folder-name .file-list-item { padding-top: 20px; padding-bottom: 20px; line-height: 20px; }
-.file-list-item-summary { height: 40px; line-height: 20px; }
-
-
-</style>
-</head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><div>
+<title>Deep learning startup</title>
+<link rel="stylesheet" type="text/css" href="/css/global.css">
+<link rel="stylesheet" type="text/css" href="css/local.css"></head>
+<body><div>
     <center>
     	<span style="float: left">
     		<a href="https://rq-chen.github.io/visualization-project/index.html">Before: Visualization project</a>
@@ -304,16 +15,144 @@ p.mathjax-block, .mathjax-block { padding-bottom: 0px; }
     		<a href="https://rq-chen.github.io/summer-school/index.html">Next: Summer school</a>
     	</span>
     </center>
-</div><hr /><h1><a name="train-a-resnet20-v1-on-cifar10" class="md-header-anchor"></a><span>Train a ResNet20-v1 on CIFAR10</span></h1><p>&nbsp;</p><h2><a name="introduction" class="md-header-anchor"></a><span>Introduction</span></h2><p><span>I try to implement a deep neural network on my laptop. Due to the weak computing capability (NVIDIA GTX 1060 3GB), I decided to train a relatively small network from scratch on a relatively small dataset. Therefore, I choosed </span><a href='https://towardsdatascience.com/resnets-for-cifar-10-e63e900524e0'><span>ResNet20-v1</span></a><span> and </span><a href='https://www.cs.toronto.edu/~kriz/cifar.html'><span>CIFAR10</span></a><span> dataset.</span></p><p><strong><span>My codes are available </span><a href='trainRes20.py'><span>here</span></a><span>, and the model weights are available </span><a href='saved_models/'><span>here</span></a><span>.</span></strong></p><p><span>ResNet is a famous convolutional neural network structure. It adopts identity/weighted shortcuts to facilitate the convergence of the model, which enables training super-deep neural networks (up to 1001 layers, much higher than the former models which only have no more than 20 layers). It&#39;s most characteristics structure is the residual block, where the arc arrow represents a shortcut connection:</span></p><p><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/ResNets.svg/440px-ResNets.svg.png" style = "zoom:60%" /></p><p><span>The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. </span></p><p><span>I implement the model with </span><a href='https://keras.io/'><span>Keras</span></a><span> using </span><a href='https://www.tensorflow.org/'><span>Tensorflow 2</span></a><span> based on Python 3.7 (</span><a href='https://www.anaconda.com/'><span>Anaconda 3</span></a><span>) on Windows 10 (64bit). As a beginner, I referred to the </span><a href='https://keras.io/examples/cifar10_resnet/'><span>example code</span></a><span> provided by Keras. I understood and rewrite the code, but the structure and hyper-parameters are identical. I got hands-on experience with deep learning during this process, and became familiar with Keras model implementation and training.</span></p><p>&nbsp;</p><h2><a name="environment" class="md-header-anchor"></a><span>Environment</span></h2><p><span>It is probably the most tiresome part:</span></p><ol start='' ><li><p><span>Download and install </span><a href='https://www.anaconda.com/distribution/'><span>Anaconda 3</span></a><span> (using default settings).</span></p><p><span>Anaconda helps maintain Python packages and enables switching between different python version (e.g. python 2.7 and python 3.6) through virtual environments. In my case, I use python 3.7 as the default python, and create another environment for deep learning with </span><code>numpy</code><span>, </span><code>scipy</code><span>, </span><code>tensorflow</code><span>, </span><code>keras</code><span> and so on. Besides, I also installed Anaconda 2 (32bit) with python 2.7 (32bit) for other purpose. And there is no conflict among these different python environments up to now.</span></p></li><li><p><span>Add Anaconda directories to the system path:</span></p><ol start='' ><li><code>C:\Users\YOURNAME\Anaconda3</code></li><li><code>C:\Users\YOURNAME\Anaconda3\Scripts</code></li><li><code>C:\Users\YOURNAME\Anaconda3\Library\bin</code></li></ol></li><li><p><span>Create a virtual environment for deep learning (optional):</span></p><p><span>Enter the command in cmd or Anaconda prompt (replace YOURENVNAME with the name your want, e.g. </span><code>tensorflow2py37</code><span>):</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="shell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="shell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 33.1597px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>2</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28.993px; width: 29px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 20px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">conda create <span class="cm-attribute">-n</span> YOURENVNAME</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -28.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 20px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">conda activate YOURENVNAME</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 45px;"></div><div class="CodeMirror-gutters" style="height: 45px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 28px;"></div></div></div></div></pre></li><li><p><span>Install tensorflow and relevant packages:</span></p><p><span>(If you&#39;re in China, probably you need to change the channel first in order to improve the download speed:</span></p><p><code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/</code><span>)</span></p><p><span>Enter the command:</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="shell"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="shell"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 33.1597px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 29px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -28.993px; width: 29px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -28.993px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 20px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">conda install tensorflow-gpu</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="height: 23px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 28px;"></div></div></div></div></pre><p><span>And Anaconda will prepare everything for you.</span></p></li><li><p><span>Install other required packages:</span></p><p><span>View </span><a href='https://keras.io/#installation'><span>Keras installation guidance</span></a><span> to see if all dependencies are installed, if not, use </span><code>conda install xx</code><span> to install them.</span></p></li><li><p><span>Install Keras: </span><code>pip install keras</code><span>. You can deactivate the virtual environment now by </span><code>conda deactivate</code><span>.</span></p></li><li><p><span>Update the GPU driver with NVIDIA Geforce Experince.</span></p></li><li><p><span>Begin coding:</span></p><p><span>I launch </span><a href='https://code.visualstudio.com/'><span>Visual Studio Code</span></a><span> for programming in the Anaconda Navigator GUI, after choosing the python version (</span><strong><span>CAUTION: DON&#39;T OPEN VSCODE DIRECTLY OUTSIDE ANACONDA, otherwise the virtual environment won&#39;t work</span></strong><span>).</span></p></li></ol><p>&nbsp;</p><h2><a name="coding" class="md-header-anchor"></a><span>Coding</span></h2><p><span>I rewrote the ResNet layer function to make it more concise:</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="python" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 42.1658px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 38px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -37.9991px; width: 38px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">def</span> <span class="cm-def">resLayer</span>(<span class="cm-variable">_input</span>, <span class="cm-variable">_filters</span> = <span class="cm-variable">NBASEFILTERS</span>, <span class="cm-variable">_kernelSize</span> = <span class="cm-number">3</span>, <span class="cm-variable">_stride</span> = <span class="cm-number">1</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; <span class="cm-variable">_norm</span> = <span class="cm-keyword">True</span>, <span class="cm-variable">_acti</span> = <span class="cm-keyword">True</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string">"""A ResNet layer: Conv + BN + ReLu</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp;  The last (3rd) layer in each block has no ReLu.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp;  Projection shortcut has no BN and no ReLu.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp;  """</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">x</span> = <span class="cm-variable">_input</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">x</span> = <span class="cm-variable">Conv2D</span>(<span class="cm-variable">_filters</span>, <span class="cm-variable">kernel_size</span>=<span class="cm-variable">_kernelSize</span>, <span class="cm-variable">strides</span>=<span class="cm-variable">_stride</span>, <span class="cm-variable">padding</span>=<span class="cm-string">'same'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">kernel_initializer</span>=<span class="cm-string">'he_normal'</span>, <span class="cm-variable">kernel_regularizer</span>=<span class="cm-variable">l2</span>(<span class="cm-variable">L2WEIGHT</span>))(<span class="cm-variable">x</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">if</span> <span class="cm-variable">_norm</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">x</span> = <span class="cm-variable">BatchNormalization</span>()(<span class="cm-variable">x</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">if</span> <span class="cm-variable">_acti</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">x</span> = <span class="cm-variable">Activation</span>(<span class="cm-string">'relu'</span>)(<span class="cm-variable">x</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">x</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 363px;"></div><div class="CodeMirror-gutters" style="height: 363px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 37px;"></div></div></div></div></pre><p><span>And I extracted the residual block as a function for clearer model design:</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="python" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 42.1658px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 38px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>24</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -37.9991px; width: 38px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">def</span> <span class="cm-def">resBlock</span>(<span class="cm-variable">_input</span>, <span class="cm-variable">_stage</span>, <span class="cm-variable">_block</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string">"""resBlock - a residual block containing 2 conv and 1 shortcut</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp;  """</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">nFilters</span> = <span class="cm-variable">NBASEFILTERS</span> <span class="cm-operator">*</span> (<span class="cm-number">2</span> <span class="cm-operator">**</span> <span class="cm-variable">_stage</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">if</span> <span class="cm-variable">_stage</span> <span class="cm-operator">&gt;</span> <span class="cm-number">0</span> <span class="cm-keyword">and</span> <span class="cm-variable">_block</span> == <span class="cm-number">0</span>: &nbsp;<span class="cm-comment"># downsample</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">strides</span> = <span class="cm-number">2</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">else</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">strides</span> = <span class="cm-number">1</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment"># 2 conv</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">output</span> = <span class="cm-variable">resLayer</span>(<span class="cm-variable">_input</span>, <span class="cm-variable">nFilters</span>, <span class="cm-variable">_stride</span>=<span class="cm-variable">strides</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">output</span> = <span class="cm-variable">resLayer</span>(<span class="cm-variable">output</span>, <span class="cm-variable">nFilters</span>, <span class="cm-variable">_acti</span>=<span class="cm-keyword">False</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment"># shortcut</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">if</span> <span class="cm-variable">_stage</span> <span class="cm-operator">&gt;</span> <span class="cm-number">0</span> <span class="cm-keyword">and</span> <span class="cm-variable">_block</span> == <span class="cm-number">0</span>: &nbsp;<span class="cm-comment"># projection</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment"># Caution: here the Keras document implementation differs from </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment"># &nbsp; the one mentioned before (in kernel size), and we use Keras's.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">_input</span> = <span class="cm-variable">resLayer</span>(<span class="cm-variable">_input</span>, <span class="cm-variable">nFilters</span>, <span class="cm-variable">_kernelSize</span>=<span class="cm-number">1</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">_stride</span>=<span class="cm-variable">strides</span>, <span class="cm-variable">_norm</span>=<span class="cm-keyword">False</span>, <span class="cm-variable">_acti</span>=<span class="cm-keyword">False</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">output</span> = <span class="cm-variable">keras</span>.<span class="cm-property">layers</span>.<span class="cm-property">add</span>([<span class="cm-variable">_input</span>, <span class="cm-variable">output</span>])</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">output</span> = <span class="cm-variable">Activation</span>(<span class="cm-string">'relu'</span>)(<span class="cm-variable">output</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">output</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 544px;"></div><div class="CodeMirror-gutters" style="height: 544px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 37px;"></div></div></div></div></pre><p><span>The model generator:</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang="python" style="break-inside: unset;"><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang="python"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 42.1658px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 38px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>21</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -37.9991px; width: 38px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">def</span> <span class="cm-def">ResNet20</span>(<span class="cm-variable">inputShape</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-string">"""ResNet20 - the network</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp;  Returns a Keras model.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-string"> &nbsp;  """</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">inputs</span> = <span class="cm-variable">Input</span>(<span class="cm-variable">shape</span>=<span class="cm-variable">inputShape</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">x</span> = <span class="cm-variable">resLayer</span>(<span class="cm-variable">inputs</span>) &nbsp;<span class="cm-comment"># resLayer1</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment"># resBlocks</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">for</span> <span class="cm-variable">nStage</span> <span class="cm-keyword">in</span> <span class="cm-builtin">range</span>(<span class="cm-number">3</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">for</span> <span class="cm-variable">nBlock</span> <span class="cm-keyword">in</span> <span class="cm-builtin">range</span>(<span class="cm-number">3</span>):</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">x</span> = <span class="cm-variable">resBlock</span>(<span class="cm-variable">x</span>, <span class="cm-variable">nStage</span>, <span class="cm-variable">nBlock</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">x</span> = <span class="cm-variable">AveragePooling2D</span>(<span class="cm-variable">pool_size</span>=<span class="cm-number">8</span>)(<span class="cm-variable">x</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">y</span> = <span class="cm-variable">Flatten</span>()(<span class="cm-variable">x</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">outputs</span> = <span class="cm-variable">Dense</span>(<span class="cm-number">10</span>, <span class="cm-variable">activation</span>=<span class="cm-string">'softmax'</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">kernel_initializer</span>=<span class="cm-string">'he_normal'</span>)(<span class="cm-variable">y</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 29px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-comment"># Generate model</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">model</span> = <span class="cm-variable">Model</span>(<span class="cm-variable">inputs</span>=<span class="cm-variable">inputs</span>, <span class="cm-variable">outputs</span>=<span class="cm-variable">outputs</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -37.9991px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 29px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">model</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 476px;"></div><div class="CodeMirror-gutters" style="height: 476px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 37px;"></div></div></div></div></pre><p><span>The training configuration was roughly the same as the Keras example, but I didn&#39;t use data augmentation.</span></p><p>&nbsp;</p><h2><a name="result" class="md-header-anchor"></a><span>Result</span></h2><p><span>I trained for 50 epochs:</span></p><p><img src = "models_saved.png" style = "zoom:40%" /></p><p><span>The training loss was steadily decreasing, but it seems that the accuracy continued to fluctuate. The final loss and accuracy are roughly the same on tesing and training set. Even though it seems that the model was still under-fitting, it performed well (80% accuracy, much higher than chance level 10%) on the testing set (since I was not so familiar with Keras visualization, I use Matlab to plot).</span></p><p><img src = "TrainingProcess.png" style = "zoom:40%" /></p><p><span>A little problem is that the training process seems to be too slow (170 sec/epoch, while the benchmark on GTX 1080Ti (just 140% more powerful than my GPU, according to the </span><a href='https://gpu.userbenchmark.com/Compare/Nvidia-GTX-1080-Ti-vs-Nvidia-GTX-1060-3GB/3918vs3646'><span>UserBenchmark</span></a><span>) is 35 sec/epoch). Acoording to the terminal output, the GPU was correctly activated (</span><code>2019-12-03 02:48:20.844426: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2103 MB memory) -&gt; physical GPU (device: 0, name: GeForce GTX 1060, pci bus id: 0000:01:00.0, compute capability: 6.1)</code><span>), but the GPU load is only around 20% during the training. Probably there are some other configurations to set in order to make full use of the GPU.</span></p><p>&nbsp;</p><hr /><div>
+</div>
+<hr />
+<h1 id='train-a-resnet20-v1-on-cifar10'>Train a ResNet20-v1 on CIFAR10</h1>
+<p>&nbsp;</p>
+<h2 id='introduction'>Introduction</h2>
+<p>I try to implement a deep neural network on my laptop. Due to the weak computing capability (NVIDIA GTX 1060 3GB), I decided to train a relatively small network from scratch on a relatively small dataset. Therefore, I choosed <a href='https://towardsdatascience.com/resnets-for-cifar-10-e63e900524e0'>ResNet20-v1</a> and <a href='https://www.cs.toronto.edu/~kriz/cifar.html'>CIFAR10</a> dataset.</p>
+<p><strong>My codes are available <a href='trainRes20.py'>here</a>, and the model weights are available <a href='saved_models/'>here</a>.</strong></p>
+<p>ResNet is a famous convolutional neural network structure. It adopts identity/weighted shortcuts to facilitate the convergence of the model, which enables training super-deep neural networks (up to 1001 layers, much higher than the former models which only have no more than 20 layers). It&#39;s most characteristics structure is the residual block, where the arc arrow represents a shortcut connection:</p>
+<p><img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/ResNets.svg/440px-ResNets.svg.png" style = "zoom:60%" /></p>
+<p>The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. </p>
+<p>I implement the model with <a href='https://keras.io/'>Keras</a> using <a href='https://www.tensorflow.org/'>Tensorflow 2</a> based on Python 3.7 (<a href='https://www.anaconda.com/'>Anaconda 3</a>) on Windows 10 (64bit). As a beginner, I referred to the <a href='https://keras.io/examples/cifar10_resnet/'>example code</a> provided by Keras. I understood and rewrite the code, but the structure and hyper-parameters are identical. I got hands-on experience with deep learning during this process, and became familiar with Keras model implementation and training.</p>
+<p>&nbsp;</p>
+<h2 id='environment'>Environment</h2>
+<p>It is probably the most tiresome part:</p>
+<ol start='' >
+<li><p>Download and install <a href='https://www.anaconda.com/distribution/'>Anaconda 3</a> (using default settings).</p>
+<p>Anaconda helps maintain Python packages and enables switching between different python version (e.g. python 2.7 and python 3.6) through virtual environments. In my case, I use python 3.7 as the default python, and create another environment for deep learning with <code>numpy</code>, <code>scipy</code>, <code>tensorflow</code>, <code>keras</code> and so on. Besides, I also installed Anaconda 2 (32bit) with python 2.7 (32bit) for other purpose. And there is no conflict among these different python environments up to now.</p>
+</li>
+<li><p>Add Anaconda directories to the system path:</p>
+<ol start='' >
+<li><code>C:\Users\YOURNAME\Anaconda3</code></li>
+<li><code>C:\Users\YOURNAME\Anaconda3\Scripts</code></li>
+<li><code>C:\Users\YOURNAME\Anaconda3\Library\bin</code></li>
+
+</ol>
+</li>
+<li><p>Create a virtual environment for deep learning (optional):</p>
+<p>Enter the command in cmd or Anaconda prompt (replace YOURENVNAME with the name your want, e.g. <code>tensorflow2py37</code>):</p>
+<pre><code class='language-shell' lang='shell'>conda create -n YOURENVNAME
+conda activate YOURENVNAME
+</code></pre>
+</li>
+<li><p>Install tensorflow and relevant packages:</p>
+<p>(If you&#39;re in China, probably you need to change the channel first in order to improve the download speed:</p>
+<p><code>conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/win-64/</code>)</p>
+<p>Enter the command:</p>
+<pre><code class='language-shell' lang='shell'>conda install tensorflow-gpu
+</code></pre>
+<p>And Anaconda will prepare everything for you.</p>
+</li>
+<li><p>Install other required packages:</p>
+<p>View <a href='https://keras.io/#installation'>Keras installation guidance</a> to see if all dependencies are installed, if not, use <code>conda install xx</code> to install them.</p>
+</li>
+<li><p>Install Keras: <code>pip install keras</code>. You can deactivate the virtual environment now by <code>conda deactivate</code>.</p>
+</li>
+<li><p>Update the GPU driver with NVIDIA Geforce Experince.</p>
+</li>
+<li><p>Begin coding:</p>
+<p>I launch <a href='https://code.visualstudio.com/'>Visual Studio Code</a> for programming in the Anaconda Navigator GUI, after choosing the python version (<strong>CAUTION: DON&#39;T OPEN VSCODE DIRECTLY OUTSIDE ANACONDA, otherwise the virtual environment won&#39;t work</strong>).</p>
+</li>
+
+</ol>
+<p>&nbsp;</p>
+<h2 id='coding'>Coding</h2>
+<p>I rewrote the ResNet layer function to make it more concise:</p>
+<pre><code class='language-python' lang='python'>def resLayer(_input, _filters = NBASEFILTERS, _kernelSize = 3, _stride = 1,
+     _norm = True, _acti = True):
+    &quot;&quot;&quot;A ResNet layer: Conv + BN + ReLu
+
+    The last (3rd) layer in each block has no ReLu.
+    Projection shortcut has no BN and no ReLu.
+    &quot;&quot;&quot;
+    x = _input
+    x = Conv2D(_filters, kernel_size=_kernelSize, strides=_stride, padding=&#39;same&#39;,
+        kernel_initializer=&#39;he_normal&#39;, kernel_regularizer=l2(L2WEIGHT))(x);
+    if _norm:
+        x = BatchNormalization()(x);
+    if _acti:
+        x = Activation(&#39;relu&#39;)(x);
+    return x
+</code></pre>
+<p>And I extracted the residual block as a function for clearer model design:</p>
+<pre><code class='language-python' lang='python'>def resBlock(_input, _stage, _block):
+    &quot;&quot;&quot;resBlock - a residual block containing 2 conv and 1 shortcut
+
+    &quot;&quot;&quot;
+    nFilters = NBASEFILTERS * (2 ** _stage)
+    if _stage &gt; 0 and _block == 0:  # downsample
+        strides = 2
+    else:
+        strides = 1
+
+    # 2 conv
+    output = resLayer(_input, nFilters, _stride=strides)
+    output = resLayer(output, nFilters, _acti=False)
+
+    # shortcut
+    if _stage &gt; 0 and _block == 0:  # projection
+        # Caution: here the Keras document implementation differs from 
+        #   the one mentioned before (in kernel size), and we use Keras&#39;s.
+        _input = resLayer(_input, nFilters, _kernelSize=1,
+            _stride=strides, _norm=False, _acti=False)
+
+    output = keras.layers.add([_input, output])
+    output = Activation(&#39;relu&#39;)(output)
+    return output
+</code></pre>
+<p>The model generator:</p>
+<pre><code class='language-python' lang='python'>def ResNet20(inputShape):
+    &quot;&quot;&quot;ResNet20 - the network
+
+    Returns a Keras model.
+    &quot;&quot;&quot;
+    inputs = Input(shape=inputShape)
+    x = resLayer(inputs)  # resLayer1
+
+    # resBlocks
+    for nStage in range(3):
+        for nBlock in range(3):
+            x = resBlock(x, nStage, nBlock)
+
+    x = AveragePooling2D(pool_size=8)(x)
+    y = Flatten()(x)
+    outputs = Dense(10, activation=&#39;softmax&#39;,
+        kernel_initializer=&#39;he_normal&#39;)(y)
+
+    # Generate model
+    model = Model(inputs=inputs, outputs=outputs)
+    return model
+</code></pre>
+<p>The training configuration was roughly the same as the Keras example, but I didn&#39;t use data augmentation.</p>
+<p>&nbsp;</p>
+<h2 id='result'>Result</h2>
+<p>I trained for 50 epochs:</p>
+<p><img src = "models_saved.png" style = "zoom:40%" /></p>
+<p>The training loss was steadily decreasing, but it seems that the accuracy continued to fluctuate. The final loss and accuracy are roughly the same on tesing and training set. Even though it seems that the model was still under-fitting, it performed well (80% accuracy, much higher than chance level 10%) on the testing set (since I was not so familiar with Keras visualization, I use Matlab to plot).</p>
+<p><img src = "TrainingProcess.png" style = "zoom:40%" /></p>
+<p>A little problem is that the training process seems to be too slow (170 sec/epoch, while the benchmark on GTX 1080Ti (just 140% more powerful than my GPU, according to the <a href='https://gpu.userbenchmark.com/Compare/Nvidia-GTX-1080-Ti-vs-Nvidia-GTX-1060-3GB/3918vs3646'>UserBenchmark</a>) is 35 sec/epoch). Acoording to the terminal output, the GPU was correctly activated (<code>2019-12-03 02:48:20.844426: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2103 MB memory) -&gt; physical GPU (device: 0, name: GeForce GTX 1060, pci bus id: 0000:01:00.0, compute capability: 6.1)</code>), but the GPU load is only around 20% during the training. Probably there are some other configurations to set in order to make full use of the GPU.</p>
+<div>
+    <br>
     <center>
-    	<span style="float: left">
-    		<a href="https://rq-chen.github.io/visualization-project/index.html">Before: Visualization project</a>
-    	</span>
-        <a href="https://rq-chen.github.io/index.html">Homepage</a>
+        <span style="float:left">
+            <a href="/blogs.html">Blogs</a>
+        </span>
+        <a href="#top">Back to top</a>
     	<span style="float: right">
-    		<a href="https://rq-chen.github.io/summer-school/index.html">Next: Summer school</a>
+    		<a href="/index.html">Homepage</a>
     	</span>
     </center>
-</div></div>
-</body>
+</div></body>
 </html>

@@ -68,17 +68,3 @@ Besides, the senior students in several laboratory shared with us their PhD life
 I also visited several laboratories during the summer school, which aroused my interest in really doing some research by myself. Therefore, I communicated with Prof. [Hong, Bo](http://mcgovern.med.tsinghua.edu.cn/en/infoshow-1205.html) at Tsinghua University and finished a five-week-long summer research at his laboratory, which turned out to be very fruitful. For details, please click [here](../summer-research-THU/index.html).
 
 
-
----
-
-<div>
-    <center>
-    	<span style = "float: left">
-    		<a href = "https://rq-chen.github.io/deep-learning-startup/index.html">Before: Deep Learning startup</a>
-    	</span>
-        <a href = "https://rq-chen.github.io/index.html">Homepage</a>
-    	<span style = "float: right">
-    		<a href = "https://rq-chen.github.io/summer-research-THU/index.html">Next: Summer research at THU</a>
-    	</span>
-    </center>
-</div></br></br>
