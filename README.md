@@ -1,6 +1,18 @@
 # Ruiqi's Personal Website
 
-The idea is to build the website in the easiest way. From my point of view, compared to the *Jekyll* method, it is even more convenient to use [Typora](typora.io) to generate html file from markdown notes.
+The idea is to build the website in the easiest way. From my point of view, compared to the *Jekyll* method, it is even more convenient to use [Typora](typora.io) to generate html file from markdown notes. Besides, you can maintain a more straightforward folder structure in your website.
+
+**The as-easy-as-possible way:**
+
+1. Download Typora.
+2. Choose a Typora theme you like.
+3. Write your blogs in Typora.
+4. Export them to HTML.
+5. Put HTMLs in your github page repo.
+
+However, in this way all your html files will contain an identitle stylesheet, which is somehow redundant. Besides, you can only use Typora's theme, and it's hard to change the theme for your established website.
+
+**The somewhow-more-concise way:**
 
 1. Download Typora.
 
