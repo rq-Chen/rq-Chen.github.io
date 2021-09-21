@@ -25,8 +25,8 @@ However, in this way all your html files will contain an identitle stylesheet, w
    3. In the "Append in \<head/\>" box, enter:
 
       ```html
-      <link rel="stylesheet" type="text/css" href="/css/global.css"/>
-      <link rel="stylesheet" type="text/css" href="css/local.css"/>
+      <link rel="stylesheet" type="text/css" href="/css/global.css">
+      <link rel="stylesheet" type="text/css" href="css/local.css">
       ```
 
       This will allow you to format all your html pages by a single theme `global.css` under the root of your website. Besides, it allows you to set the theme for a specific page by providing a `local.css` for it.
