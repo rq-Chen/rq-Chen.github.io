@@ -10,6 +10,10 @@ Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChe
 
 **You can download my CV [here](Ruiqi_Chen_CV.pdf).**
 
+**Follow me on twitter: [@\_Ruiqi\_Chen\_](https://twitter.com/_Ruiqi_Chen_)**
+
+**My Github: [rq-Chen](https://github.com/rq-Chen)**
+
 
 
 ## Highlights
