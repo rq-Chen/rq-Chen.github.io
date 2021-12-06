@@ -10,7 +10,7 @@ The idea is to build the website in the easiest way. From my point of view, comp
 4. Export them to HTML.
 5. Put HTMLs in your github page repo.
 
-However, in this way all your html files will contain an identitle stylesheet, which is somehow redundant. Besides, you can only use Typora's theme, and it's hard to change the theme for your established website.
+However, in this way all your html files will contain an identitle stylesheet, which is somewhat redundant. Besides, you can only use Typora's theme, and it's hard to change the theme for your established website.
 
 **The somewhow-more-concise way:**
 
