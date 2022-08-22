@@ -4,7 +4,7 @@
 
 
 
-Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChen)), a pre-doc student in the Neurosciences Program at Washington University in St. Louis.
+Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChen)), a graduate student in the Neurosciences Program at Washington University in St. Louis, working with [Dr. ShiNung Ching](https://engineering.wustl.edu/faculty/ShiNung-Ching.html) and [Dr. Todd Braver](https://sites.wustl.edu/ccplab/).
 
 **You can find me at (last name)(DOT)(first name)(AT)(wustl)(DOT)(edu).**
 
@@ -16,14 +16,17 @@ Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChe
 
 
 
-## Highlights
+## News
 
-- I will begin my first rotation in WUSTL with Prof. [ShiNung Ching](https://engineering.wustl.edu/faculty/ShiNung-Ching.html) to investigate the function of multiple timescales in working memory and reinforcement learning through optimization and dynamic system analysis of RNN models.
+- I will be jointly supervised by [Dr. ShiNung Ching](https://engineering.wustl.edu/faculty/ShiNung-Ching.html) and [Dr. Todd Braver](https://sites.wustl.edu/ccplab/) through the rest of my graduate study!
+- I have been working on my third rotation with [Dr. Todd Braver](https://sites.wustl.edu/ccplab/) and [Michael Freund](https://sites.wustl.edu/ccplab/people/michael-freund/). We investigated the use of hierarchical Bayesian modeling and multivariate pattern analysis in fMRI test-retest reliability analysis.
+- I finished my second rotation with [Dr. Janine Bijsterbosch](https://www.mir.wustl.edu/research/research-centers/computational-imaging-research-center-circ/labs/bijsterbosch-lab) where we investigated multiple strategies to improve the accuracy of fMRI network connectivity based prediction of individual traits. Our results were published on [bioArxiv](https://doi.org/10.1101/2022.04.04.487069).
+- I will begin my first rotation in WUSTL with [Dr. ShiNung Ching](https://engineering.wustl.edu/faculty/ShiNung-Ching.html) to investigate the function of multiple timescales in working memory and reinforcement learning through optimization and dynamic system analysis of RNN models.
 - I was admitted to the [Neurosciences PhD Program](https://dbbs.wustl.edu/divprograms/neuro/Pages/default.aspx) at Washington University in St. Louis! (Some [advice](PhD-Admission/index.html) for future Chinese applicants)
 
 
 
-**Last updated:** Aug/31/2021
+**Last updated:** Aug/22/2022
 
 
 
