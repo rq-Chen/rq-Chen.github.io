@@ -14,7 +14,7 @@ Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChe
 
 **My GitHub: [rq-Chen](https://github.com/rq-Chen)**
 
-**ORCID: **[0000-0001-7770-9307](https://orcid.org/0000-0001-7770-9307)
+**ORCID: [0000-0001-7770-9307](https://orcid.org/0000-0001-7770-9307)**
 
 
 
