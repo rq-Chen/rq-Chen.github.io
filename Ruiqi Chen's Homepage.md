@@ -8,7 +8,9 @@ Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChe
 
 **You can find me at (last name)(DOT)(first name)(AT)(wustl)(DOT)(edu).**
 
-**You can download my CV [here](Ruiqi_Chen_CV.pdf).**
+**My Google Scholar page: [‪Ruiqi Chen‬ - ‪Google Scholar‬](https://scholar.google.com/citations?user=qpMaJKkAAAAJ)**
+
+**You can download my CV [here](Ruiqi_Chen_CV.pdf)** (pretty outdated).
 
 **Follow me on twitter: [@\_Ruiqi\_Chen\_](https://twitter.com/_Ruiqi_Chen_)**
 
