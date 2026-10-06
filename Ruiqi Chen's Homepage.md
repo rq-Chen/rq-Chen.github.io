@@ -4,7 +4,7 @@
 
 
 
-Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChen)), a graduate student in the Neurosciences Program at Washington University in St. Louis, working with [Dr. ShiNung Ching](https://engineering.wustl.edu/faculty/ShiNung-Ching.html) and [Dr. Todd Braver](https://sites.wustl.edu/ccplab/).
+Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChen)), a postdoc at Washington University in St. Louis, working with [Dr. ShiNung Ching](https://engineering.wustl.edu/faculty/ShiNung-Ching.html) and [Dr. Todd Braver](https://sites.wustl.edu/ccplab/).
 
 **You can find me at (last name)(DOT)(first name)(AT)(wustl)(DOT)(edu).**
 
@@ -22,6 +22,7 @@ Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChe
 
 ## News
 
+- (2026/08) I am honored to receive my Ph.D. degree in Biology and Biomedical Sciences from Washington University in St. Louis! I will continue to work as a postdoc with [Dr. ShiNung Ching](https://engineering.wustl.edu/faculty/ShiNung-Ching.html) and [Dr. Todd Braver](https://sites.wustl.edu/ccplab/) at WashU!
 - (2026/04) My new preprint *Task-induced topological and geometrical changes in whole-brain dynamics predict cognitive individual differences* is now available on [bioRxiv](https://doi.org/10.64898/2026.04.19.719533)!
 - (2026/02) I worked with [Dr. Hayoung Song](https://scholar.google.com/citations?hl=en&user=spIErR8AAAAJ) to analyze relationship between attention fluctuations and geometry of modeled whole-brain dynamics. The results are published on [Nature Communications](https://doi.org/10.1038/s41467-026-69041-8)!
 - (2026/01) My paper *Comparing dynamical models through diffeomorphic vector field alignment* was accepted to *Neural Computation*! A preprint version is available on [arXiv](https://arxiv.org/abs/2512.18566).
@@ -35,4 +36,4 @@ Hello, I'm Ruiqi Chen ([Pronunciation](https://www.howtopronounce.com/u/RuiqiChe
 
 
 
-**Last updated:** 2026/04/23
+**Last updated:** 2026/10/06
